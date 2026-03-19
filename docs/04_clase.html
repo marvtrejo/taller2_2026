@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-02-27">
+
+<title>Clase 04: El Concepto de Límite – Taller de Economía Cuantitativa II</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./01_tarea.html" rel="next">
+<link href="./03_clase.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9433637ef549dc8e12c034407cebd572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<script src="site_libs/proj4js-2.3.15/proj4.js"></script>
+
+<link href="site_libs/highcharts-9.3.1/css/motion.css" rel="stylesheet">
+
+<script src="site_libs/highcharts-9.3.1/highcharts.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/highcharts-3d.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/highcharts-more.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/stock.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/map.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/data.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/exporting.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/offline-exporting.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/drilldown.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/item-series.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/overlapping-datalabels.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/annotations.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/export-data.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/funnel.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/heatmap.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/treemap.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/sankey.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/dependency-wheel.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/organization.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/solid-gauge.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/streamgraph.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/sunburst.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/vector.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/wordcloud.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/xrange.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/tilemap.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/venn.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/gantt.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/timeline.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/parallel-coordinates.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/bullet.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/coloraxis.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/dumbbell.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/lollipop.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/series-label.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/plugins/motion.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/custom/reset.js"></script>
+
+<script src="site_libs/highcharts-9.3.1/modules/boost.js"></script>
+
+<script src="site_libs/highchart-binding-0.9.4/highchart.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Taller de Economía Cuantitativa II</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_clase.html">Clases</a></li><li class="breadcrumb-item"><a href="./04_clase.html"><span class="chapter-title">Clase 04: El Concepto de Límite</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introducción</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Presentación del curso</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Clases</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Clase 01: Introducción a las funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Clase 02: tipos de funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Clase 03: Álgebra de funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_clase.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Clase 04: El Concepto de Límite</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tareas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_tarea.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tarea 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_tarea.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tarea 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_tarea.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tarea 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_tarea.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tarea 04</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#funciones-con-restricciones" id="toc-funciones-con-restricciones" class="nav-link active" data-scroll-target="#funciones-con-restricciones">Funciones con restricciones</a>
+  <ul class="collapse">
+  <li><a href="#aproximación-tabular" id="toc-aproximación-tabular" class="nav-link" data-scroll-target="#aproximación-tabular">1. Aproximación tabular</a></li>
+  <li><a href="#comportamiento-gráfico" id="toc-comportamiento-gráfico" class="nav-link" data-scroll-target="#comportamiento-gráfico">2. Comportamiento gráfico</a></li>
+  <li><a href="#solución-algebraica" id="toc-solución-algebraica" class="nav-link" data-scroll-target="#solución-algebraica">3. Solución algebraica</a></li>
+  </ul></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
+  <ul class="collapse">
+  <li><a href="#sustitución-directa" id="toc-sustitución-directa" class="nav-link" data-scroll-target="#sustitución-directa">Sustitución Directa</a></li>
+  <li><a href="#factorización-y-expansión" id="toc-factorización-y-expansión" class="nav-link" data-scroll-target="#factorización-y-expansión">Factorización y expansión</a></li>
+  <li><a href="#racionalización" id="toc-racionalización" class="nav-link" data-scroll-target="#racionalización">Racionalización</a></li>
+  <li><a href="#casos-especiales-límites-inexistentes-o-infinitos" id="toc-casos-especiales-límites-inexistentes-o-infinitos" class="nav-link" data-scroll-target="#casos-especiales-límites-inexistentes-o-infinitos">Casos Especiales (Límites Inexistentes o Infinitos)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_clase.html">Clases</a></li><li class="breadcrumb-item"><a href="./04_clase.html"><span class="chapter-title">Clase 04: El Concepto de Límite</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Clase 04: El Concepto de Límite</span></h1>
+<p class="subtitle lead">Taller de Economía Cuantitativa II</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Última actualización</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Highcharts (www.highcharts.com) is a Highsoft software product which is</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>not free for commercial and Governmental use</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'kableExtra' was built under R version 4.5.2</code></pre>
+</div>
+</div>
+<p>¿Qué ocurre a <span class="math inline">\(f(x)\)</span> cuando la variable <span class="math inline">\(x\)</span> se aproxima al número “<span class="math inline">\(a\)</span>”?</p>
+<p>Para entender la base del cálculo, nos interesa saber <strong>cómo está definida una función <span class="math inline">\(f(x)\)</span> cercana a un valor específico “<span class="math inline">\(a\)</span>”</strong>.</p>
+<p>Tomemos como ejemplo la función <span class="math inline">\(f(x) = x^2 + 2\)</span>.</p>
+<p>Si evaluamos directamente en <span class="math inline">\(a\)</span>, tenemos que <span class="math inline">\(f(a) = a^2 + 2\)</span>.</p>
+<p>La notación formal para analizar esta aproximación es la siguiente: <span class="math display">\[\lim_{x\to a} (x^2 + 2) = a^2 + 2\]</span></p>
+<p>Por ejemplo, si <span class="math inline">\(a = 2\)</span>: <span class="math display">\[\lim_{x\to 2} (x^2 + 2) = 4\]</span></p>
+<p>De manera general, llegamos a la siguiente estructura: <span class="math display">\[\lim_{x\to a} f(x) = L\]</span> <strong>Se lee como “el límite de <span class="math inline">\(f(x)\)</span>, cuando <span class="math inline">\(x\)</span> se aproxima a ‘<span class="math inline">\(a\)</span>’, es igual a ‘<span class="math inline">\(L\)</span>’”).</strong></p>
+<hr>
+<section id="funciones-con-restricciones" class="level2">
+<h2 class="anchored" data-anchor-id="funciones-con-restricciones">Funciones con restricciones</h2>
+<p>¿Qué le pasa a la función cuando nos acercamos a un punto conflictivo, como un punto indeterminado? Analicemos el siguiente límite:</p>
+<p><span class="math display">\[\lim_{x\to 1} \frac{x-1}{x^2-1}\]</span></p>
+<p>Si observamos la función original <span class="math inline">\(f(x) = \frac{x-1}{x^2-1}\)</span>, notaremos que no está definida en <span class="math inline">\(x=1\)</span> ya que el denominador se haría cero, resultando en la forma indeterminada <span class="math inline">\(0/0\)</span>.</p>
+<p><strong>¿La función está definida en ese punto?</strong> No.&nbsp;Sin embargo, la definición del límite <span class="math inline">\(\lim_{x\to a}\)</span> nos dice que debemos considerar valores de <span class="math inline">\(x\)</span> <strong>cercanos, pero no iguales</strong> a “<span class="math inline">\(a\)</span>”. Nos interesa saber a qué <strong>tiende</strong> la función, es decir, hacia dónde se acerca.</p>
+<section id="aproximación-tabular" class="level3">
+<h3 class="anchored" data-anchor-id="aproximación-tabular">1. Aproximación tabular</h3>
+<p>Para descubrir hacia dónde tiende la función, evaluamos valores que se acerquen a <span class="math inline">\(1\)</span> por la izquierda (valores menores que 1) y por la derecha (valores mayores que 1).</p>
+<div class="quarto-layout-panel" style="display: flex; align-items: flex-start;" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: white !important; background-color: rgba(41, 128, 185, 255) !important;">Por la izquierda (x &lt; 1)</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: white !important; background-color: rgba(41, 128, 185, 255) !important;">f(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.9000</td>
+<td style="text-align: center;">0.526000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.9900</td>
+<td style="text-align: center;">0.502000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.9990</td>
+<td style="text-align: center;">0.500250</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.9999</td>
+<td style="text-align: center;">0.500025</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; color: white !important; background-color: rgba(231, 76, 60, 255) !important;">Por la derecha (x &gt; 1)</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; color: white !important; background-color: rgba(231, 76, 60, 255) !important;">f(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1.1000</td>
+<td style="text-align: center;">0.47600</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.0100</td>
+<td style="text-align: center;">0.49700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1.0010</td>
+<td style="text-align: center;">0.49970</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1.0001</td>
+<td style="text-align: center;">0.49997</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p><strong>¿A dónde tiende?</strong> Como podemos observar en ambas tablas, conforme <span class="math inline">\(x\)</span> se acera a <span class="math inline">\(1\)</span>, el valor de <span class="math inline">\(f(x)\)</span> se aproxima a <strong>0.5</strong>.</p>
+</section>
+<section id="comportamiento-gráfico" class="level3">
+<h3 class="anchored" data-anchor-id="comportamiento-gráfico">2. Comportamiento gráfico</h3>
+<p>Si graficamos la función, notaremos que tiene una asíntota vertical en <span class="math inline">\(x = -1\)</span> y un “hueco” exactamente en la coordenada <span class="math inline">\((1, 0.5)\)</span>, corroborando que la función sí tiende a un valor concreto, aunque no esté definida allí.</p>
+<div class="cell">
+<div id="fig-limite-hueco" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-limite-hueco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-5d3c8525295b412da400" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5d3c8525295b412da400">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"f(x)"},"type":"linear","min":-4,"max":4},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"line":{"lineWidth":2}},"series":[{"group":"group","data":[{"x":-3,"y":-0.5},{"x":-2.95,"y":-0.513},{"x":-2.9,"y":-0.526},{"x":-2.85,"y":-0.541},{"x":-2.8,"y":-0.556},{"x":-2.75,"y":-0.571},{"x":-2.7,"y":-0.588},{"x":-2.65,"y":-0.606},{"x":-2.6,"y":-0.625},{"x":-2.55,"y":-0.645},{"x":-2.5,"y":-0.667},{"x":-2.45,"y":-0.6899999999999999},{"x":-2.4,"y":-0.714},{"x":-2.35,"y":-0.741},{"x":-2.3,"y":-0.769},{"x":-2.25,"y":-0.8},{"x":-2.2,"y":-0.833},{"x":-2.15,"y":-0.87},{"x":-2.1,"y":-0.909},{"x":-2.05,"y":-0.952},{"x":-2,"y":-1},{"x":-1.95,"y":-1.053},{"x":-1.9,"y":-1.111},{"x":-1.85,"y":-1.176},{"x":-1.8,"y":-1.25},{"x":-1.75,"y":-1.333},{"x":-1.7,"y":-1.429},{"x":-1.65,"y":-1.538},{"x":-1.6,"y":-1.667},{"x":-1.55,"y":-1.818},{"x":-1.5,"y":-2},{"x":-1.45,"y":-2.222},{"x":-1.4,"y":-2.5},{"x":-1.35,"y":-2.857},{"x":-1.3,"y":-3.333},{"x":-1.25,"y":-4},{"x":-1.2,"y":-5},{"x":-1.15,"y":-6.667},{"x":-1.1,"y":null},{"x":-1.05,"y":null},{"x":-1,"y":null},{"x":-0.95,"y":null},{"x":-0.9,"y":10},{"x":-0.85,"y":6.667},{"x":-0.8,"y":5},{"x":-0.75,"y":4},{"x":-0.7,"y":3.333},{"x":-0.65,"y":2.857},{"x":-0.6,"y":2.5},{"x":-0.55,"y":2.222},{"x":-0.5,"y":2},{"x":-0.45,"y":1.818},{"x":-0.4,"y":1.667},{"x":-0.35,"y":1.538},{"x":-0.3,"y":1.429},{"x":-0.25,"y":1.333},{"x":-0.2,"y":1.25},{"x":-0.15,"y":1.176},{"x":-0.1,"y":1.111},{"x":-0.05,"y":1.053},{"x":0,"y":1},{"x":0.05,"y":0.952},{"x":0.1,"y":0.909},{"x":0.15,"y":0.87},{"x":0.2,"y":0.833},{"x":0.25,"y":0.8},{"x":0.3,"y":0.769},{"x":0.35,"y":0.741},{"x":0.4,"y":0.714},{"x":0.45,"y":0.6899999999999999},{"x":0.5,"y":0.667},{"x":0.55,"y":0.645},{"x":0.6,"y":0.625},{"x":0.65,"y":0.606},{"x":0.7,"y":0.588},{"x":0.75,"y":0.571},{"x":0.8,"y":0.556},{"x":0.85,"y":0.541},{"x":0.9,"y":0.526},{"x":0.95,"y":0.513},{"x":1,"y":null},{"x":1.05,"y":0.488},{"x":1.1,"y":0.476},{"x":1.15,"y":0.465},{"x":1.2,"y":0.455},{"x":1.25,"y":0.444},{"x":1.3,"y":0.435},{"x":1.35,"y":0.426},{"x":1.4,"y":0.417},{"x":1.45,"y":0.408},{"x":1.5,"y":0.4},{"x":1.55,"y":0.392},{"x":1.6,"y":0.385},{"x":1.65,"y":0.377},{"x":1.7,"y":0.37},{"x":1.75,"y":0.364},{"x":1.8,"y":0.357},{"x":1.85,"y":0.351},{"x":1.9,"y":0.345},{"x":1.95,"y":0.339},{"x":2,"y":0.333},{"x":2.05,"y":0.328},{"x":2.1,"y":0.323},{"x":2.15,"y":0.317},{"x":2.2,"y":0.312},{"x":2.25,"y":0.308},{"x":2.3,"y":0.303},{"x":2.35,"y":0.299},{"x":2.4,"y":0.294},{"x":2.45,"y":0.29},{"x":2.5,"y":0.286},{"x":2.55,"y":0.282},{"x":2.6,"y":0.278},{"x":2.65,"y":0.274},{"x":2.7,"y":0.27},{"x":2.75,"y":0.267},{"x":2.8,"y":0.263},{"x":2.85,"y":0.26},{"x":2.9,"y":0.256},{"x":2.95,"y":0.253},{"x":3,"y":0.25}],"type":"line","color":"#8E44AD","name":"f(x)"},{"data":[{"x":1,"y":0.5}],"type":"scatter","name":"No definido (Hueco)","color":"#E74C3C","marker":{"radius":5,"fillColor":"white","lineWidth":2,"lineColor":"#E74C3C"}}],"xAxis":{"type":"linear","title":{"text":"x"},"crosshair":true,"plotLines":[{"value":-1,"color":"gray","dashStyle":"Dash","width":2,"label":{"text":"Asíntota"}}]},"tooltip":{"pointFormat":"<b>f(x):<\/b> {point.y}"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-limite-hueco-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="solución-algebraica" class="level3">
+<h3 class="anchored" data-anchor-id="solución-algebraica">3. Solución algebraica</h3>
+<p>Para evitar hacer tablas o gráficas cada vez que evaluamos un límite indeterminado, podemos recurrir al álgebra. Si factorizamos el denominador utilizando la diferencia de cuadrados <span class="math inline">\(x^2 - 1 = (x+1)(x-1)\)</span>, podemos simplificar la expresión:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lim_{x\to 1} \frac{x-1}{x^2-1} &amp;= \lim_{x\to 1} \frac{x-1}{(x+1)(x-1)} \\
+\end{aligned}
+\]</span></p>
+<p>Simplificamos el término común <span class="math inline">\((x-1)\)</span> tanto en el numerador como en el denominador:</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;= \lim_{x\to 1} \frac{1}{x+1}
+\end{aligned}
+\]</span></p>
+<p>Ahora que hemos eliminado la indeterminación, evaluamos el límite sustituyendo directamente <span class="math inline">\(x = 1\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;= \frac{1}{1+1} \\
+&amp;= \frac{1}{2} = 0.5
+\end{aligned}
+\]</span></p>
+<p>En el ejemplo anterior, <strong>el límite existe porque llegamos al mismo lugar por la izquierda y por la derecha</strong>. Sin embargo, existe la posibilidad de que un límite no exista, por ejemplo evaluemos el mismo límite ahora en <span class="math inline">\(x \to -1\)</span>:</p>
+<p><span class="math display">\[ \lim_{x\to -1} \frac{x-1}{x^2-1} = \lim_{x\to -1} \frac{x-1}{(x+1)(x-1)} = \lim_{x\to -1} \frac{1}{x+1} \]</span></p>
+<p>Si intentamos hacer sustitución directa obtenemos <span class="math inline">\(\frac{1}{0}\)</span>, lo cual <strong>no está definido</strong>.</p>
+<p>¿A dónde llega la función por la derecha y por la izquierda? * Por la izquierda (<span class="math inline">\(x \to -1^-\)</span>): <span class="math inline">\(\lim \frac{1}{x+1} = -\infty\)</span> <em>(un número negativo muy grande)</em> * Por la derecha (<span class="math inline">\(x \to -1^+\)</span>): <span class="math inline">\(\lim \frac{1}{x+1} = +\infty\)</span> <em>(un número positivo muy grande)</em></p>
+<p>Como los límites laterales se disparan a direcciones opuestas, concluimos que <strong>el límite no existe</strong>.</p>
+<div class="cell">
+<div id="fig-limite-no-existe" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-limite-no-existe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-045fd5d98f47bd5a4b9e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-045fd5d98f47bd5a4b9e">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"f(x)"},"type":"linear","min":-15,"max":15},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"x":-3,"y":-0.5},{"x":-2.95,"y":-0.51},{"x":-2.9,"y":-0.53},{"x":-2.85,"y":-0.54},{"x":-2.8,"y":-0.5600000000000001},{"x":-2.75,"y":-0.57},{"x":-2.7,"y":-0.59},{"x":-2.65,"y":-0.61},{"x":-2.6,"y":-0.62},{"x":-2.55,"y":-0.65},{"x":-2.5,"y":-0.67},{"x":-2.45,"y":-0.6899999999999999},{"x":-2.4,"y":-0.71},{"x":-2.35,"y":-0.74},{"x":-2.3,"y":-0.77},{"x":-2.25,"y":-0.8},{"x":-2.2,"y":-0.83},{"x":-2.15,"y":-0.87},{"x":-2.1,"y":-0.91},{"x":-2.05,"y":-0.95},{"x":-2,"y":-1},{"x":-1.95,"y":-1.05},{"x":-1.9,"y":-1.11},{"x":-1.85,"y":-1.18},{"x":-1.8,"y":-1.25},{"x":-1.75,"y":-1.33},{"x":-1.7,"y":-1.43},{"x":-1.65,"y":-1.54},{"x":-1.6,"y":-1.67},{"x":-1.55,"y":-1.82},{"x":-1.5,"y":-2},{"x":-1.45,"y":-2.22},{"x":-1.4,"y":-2.5},{"x":-1.35,"y":-2.86},{"x":-1.3,"y":-3.33},{"x":-1.25,"y":-4},{"x":-1.2,"y":-5},{"x":-1.15,"y":-6.67},{"x":-1.1,"y":null},{"x":-1.05,"y":null},{"x":-1,"y":null},{"x":-0.95,"y":null},{"x":-0.9,"y":10},{"x":-0.85,"y":6.67},{"x":-0.8,"y":5},{"x":-0.75,"y":4},{"x":-0.7,"y":3.33},{"x":-0.65,"y":2.86},{"x":-0.6,"y":2.5},{"x":-0.55,"y":2.22},{"x":-0.5,"y":2},{"x":-0.45,"y":1.82},{"x":-0.4,"y":1.67},{"x":-0.35,"y":1.54},{"x":-0.3,"y":1.43},{"x":-0.25,"y":1.33},{"x":-0.2,"y":1.25},{"x":-0.15,"y":1.18},{"x":-0.1,"y":1.11},{"x":-0.05,"y":1.05},{"x":0,"y":1},{"x":0.05,"y":0.95},{"x":0.1,"y":0.91},{"x":0.15,"y":0.87},{"x":0.2,"y":0.83},{"x":0.25,"y":0.8},{"x":0.3,"y":0.77},{"x":0.35,"y":0.74},{"x":0.4,"y":0.71},{"x":0.45,"y":0.6899999999999999},{"x":0.5,"y":0.67},{"x":0.55,"y":0.65},{"x":0.6,"y":0.62},{"x":0.65,"y":0.61},{"x":0.7,"y":0.59},{"x":0.75,"y":0.57},{"x":0.8,"y":0.5600000000000001},{"x":0.85,"y":0.54},{"x":0.9,"y":0.53},{"x":0.95,"y":0.51},{"x":1,"y":0.5}],"type":"line","color":"#C0392B","name":"f(x) = 1/(x+1)"}],"xAxis":{"type":"linear","title":{"text":"x"},"crosshair":true,"plotLines":[{"value":-1,"color":"black","dashStyle":"Dash","width":2,"label":{"text":"Asíntota x=-1"}}]},"tooltip":{"pointFormat":"<b>f(x):<\/b> {point.y}"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-limite-no-existe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2
+</figcaption>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<p>Para resolver límites, utilizamos tres técnicas algebraicas principales: <strong>sustitución directa</strong>, <strong>factorización</strong> y <strong>racionalización</strong>. A continuación se resuelven los ejercicios vistos en clase.</p>
+<section id="sustitución-directa" class="level3">
+<h3 class="anchored" data-anchor-id="sustitución-directa">Sustitución Directa</h3>
+<p>Si la función es continua en el punto a evaluar, basta con sustituir el valor de <span class="math inline">\(x\)</span>.</p>
+<p><strong>1. <span class="math inline">\(\lim_{x\to 3} (2x+5)\)</span> </strong> <span class="math display">\[ \lim_{x\to 3} (2x+5) = 2(3) + 5 = 6 + 5 = \mathbf{11} \]</span></p>
+<p><strong>2. <span class="math inline">\(\lim_{x\to -2} (x^2-4x+1)\)</span></strong> <span class="math display">\[ \lim_{x\to -2} (x^2-4x+1) = (-2)^2 - 4(-2) + 1 = 4 + 8 + 1 = \mathbf{13} \]</span></p>
+<p><strong>3. <span class="math inline">\(\lim_{x\to 5} \sqrt{x+4}\)</span></strong> <span class="math display">\[ \lim_{x\to 5} \sqrt{x+4} = \sqrt{5+4} = \sqrt{9} = \mathbf{3} \]</span></p>
+<hr>
+</section>
+<section id="factorización-y-expansión" class="level3">
+<h3 class="anchored" data-anchor-id="factorización-y-expansión">Factorización y expansión</h3>
+<p>Cuando obtenemos la forma indeterminada <span class="math inline">\(0/0\)</span>, factorizamos polinomios para simplificar los términos problemáticos.</p>
+<p><strong>4. <span class="math inline">\(\lim_{x\to 2} \frac{x^2-1}{x-2}\)</span></strong> Al evaluar directamente obtenemos <span class="math inline">\(\frac{3}{0}\)</span>. Dado que el numerador no se hace cero pero el denominador sí, tenemos una asíntota vertical. <strong>Resultado:</strong> <span class="math inline">\(\mathbf{\nexists}\)</span> <em>(El límite no existe)</em></p>
+<p><strong>5. <span class="math inline">\(\lim_{x\to 3} \frac{x-3}{x^2-9}\)</span></strong> <span class="math display">\[ \lim_{x\to 3} \frac{x-3}{(x-3)(x+3)} = \lim_{x\to 3} \frac{1}{x+3} = \frac{1}{3+3} = \mathbf{\frac{1}{6}} \]</span></p>
+<p><strong>6. <span class="math inline">\(\lim_{x\to 0} \frac{x^2-2x}{x}\)</span></strong> <span class="math display">\[ \lim_{x\to 0} \frac{x(x-2)}{x} = \lim_{x\to 0} (x-2) = 0 - 2 = \mathbf{-2} \]</span></p>
+<p><strong>9. <span class="math inline">\(\lim_{x\to 0} \frac{(3+x)^2 - 9}{x}\)</span></strong></p>
+<p>Primero desarrollamos el binomio al cuadrado: <span class="math display">\[ \lim_{x\to 0} \frac{(9 + 6x + x^2) - 9}{x} = \lim_{x\to 0} \frac{6x + x^2}{x} = \lim_{x\to 0} \frac{x(6 + x)}{x} = \lim_{x\to 0} (6 + x) = \mathbf{6} \]</span></p>
+<hr>
+</section>
+<section id="racionalización" class="level3">
+<h3 class="anchored" data-anchor-id="racionalización">Racionalización</h3>
+<p>Se utiliza principalmente cuando hay raíces cuadradas involucradas y obtenemos <span class="math inline">\(0/0\)</span>. Consiste en multiplicar numerador y denominador por el <strong>conjugado</strong>.</p>
+<p><strong>10. <span class="math inline">\(\lim_{x\to 0} \frac{\sqrt{x^2+9} - 3}{x^2}\)</span></strong></p>
+<p>Multiplicamos por el conjugado <span class="math inline">\(\sqrt{x^2+9} + 3\)</span>: <span class="math display">\[
+\begin{aligned}
+&amp;= \lim_{x\to 0} \frac{\sqrt{x^2+9} - 3}{x^2} \cdot \left( \frac{\sqrt{x^2+9} + 3}{\sqrt{x^2+9} + 3} \right) \\
+&amp;= \lim_{x\to 0} \frac{(\sqrt{x^2+9})^2 - (3)^2}{x^2(\sqrt{x^2+9} + 3)} \\
+&amp;= \lim_{x\to 0} \frac{x^2 + 9 - 9}{x^2(\sqrt{x^2+9} + 3)} \\
+&amp;= \lim_{x\to 0} \frac{x^2}{x^2(\sqrt{x^2+9} + 3)} \\
+&amp;= \lim_{x\to 0} \frac{1}{\sqrt{x^2+9} + 3} = \frac{1}{\sqrt{9} + 3} = \mathbf{\frac{1}{6}}
+\end{aligned}
+\]</span></p>
+<p><strong>13. <span class="math inline">\(\lim_{x\to 4} \frac{\sqrt{x}-2}{x-4}\)</span></strong></p>
+<p>Multiplicamos por el conjugado <span class="math inline">\(\sqrt{x} + 2\)</span>: <span class="math display">\[ \lim_{x\to 4} \frac{\sqrt{x}-2}{x-4} \cdot \frac{\sqrt{x}+2}{\sqrt{x}+2} = \lim_{x\to 4} \frac{x-4}{(x-4)(\sqrt{x}+2)} = \lim_{x\to 4} \frac{1}{\sqrt{x}+2} = \frac{1}{2+2} = \mathbf{\frac{1}{4}} \]</span></p>
+<p><strong>14. <span class="math inline">\(\lim_{x\to 9} \frac{x-9}{\sqrt{x}-3}\)</span></strong></p>
+<p>Multiplicamos por el conjugado <span class="math inline">\(\sqrt{x} + 3\)</span>: <span class="math display">\[ \lim_{x\to 9} \frac{x-9}{\sqrt{x}-3} \cdot \frac{\sqrt{x}+3}{\sqrt{x}+3} = \lim_{x\to 9} \frac{(x-9)(\sqrt{x}+3)}{x-9} = \lim_{x\to 9} (\sqrt{x}+3) = \sqrt{9} + 3 = \mathbf{6} \]</span></p>
+<p><strong>15. <span class="math inline">\(\lim_{x\to 0} \frac{\sqrt{x+1}-1}{x}\)</span></strong></p>
+<p>Multiplicamos por el conjugado <span class="math inline">\(\sqrt{x+1} + 1\)</span>: <span class="math display">\[ \lim_{x\to 0} \frac{\sqrt{x+1}-1}{x} \cdot \frac{\sqrt{x+1}+1}{\sqrt{x+1}+1} = \lim_{x\to 0} \frac{(x+1)-1}{x(\sqrt{x+1}+1)} = \lim_{x\to 0} \frac{x}{x(\sqrt{x+1}+1)} = \lim_{x\to 0} \frac{1}{\sqrt{x+1}+1} = \frac{1}{\sqrt{1}+1} = \mathbf{\frac{1}{2}} \]</span></p>
+<hr>
+</section>
+<section id="casos-especiales-límites-inexistentes-o-infinitos" class="level3">
+<h3 class="anchored" data-anchor-id="casos-especiales-límites-inexistentes-o-infinitos">Casos Especiales (Límites Inexistentes o Infinitos)</h3>
+<p><strong>7. <span class="math inline">\(\lim_{x\to 0} \frac{|x|}{x}\)</span></strong></p>
+<p>El valor absoluto se comporta distinto dependiendo del lado: por la derecha el límite es <span class="math inline">\(1\)</span>, por la izquierda es <span class="math inline">\(-1\)</span>. <strong>Resultado:</strong> <span class="math inline">\(\mathbf{\nexists}\)</span> <em>(No existe)</em></p>
+<p><strong>8. <span class="math inline">\(\lim_{x\to 0} \frac{1}{x}\)</span></strong></p>
+<p>Por la derecha tiende a <span class="math inline">\(\infty\)</span>, por la izquierda a <span class="math inline">\(-\infty\)</span>. <strong>Resultado:</strong> <span class="math inline">\(\mathbf{\nexists}\)</span> <em>(No existe)</em></p>
+<p><strong>11. <span class="math inline">\(\lim_{x\to 0} \sin\left(\frac{\pi}{x}\right)\)</span></strong></p>
+<p>Conforme <span class="math inline">\(x\)</span> se acerca a cero, la función oscila infinitamente entre <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span> sin estabilizarse. <strong>Resultado:</strong> <span class="math inline">\(\mathbf{\nexists}\)</span> <em>(No existe)</em></p>
+<p><strong>12. <span class="math inline">\(\lim_{x\to 0} \frac{1}{x^2}\)</span></strong></p>
+<p>Dado que cualquier número (positivo o negativo) elevado al cuadrado es positivo, tanto por la izquierda como por la derecha el denominador se acerca a <span class="math inline">\(+0\)</span>. <strong>Resultado:</strong> <span class="math inline">\(\mathbf{\infty}\)</span> <em>(Tiende a infinito positivo)</em></p>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03_clase.html" class="pagination-link" aria-label="Clase 03: Álgebra de funciones">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Clase 03: Álgebra de funciones</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./01_tarea.html" class="pagination-link" aria-label="Tarea 01">
+        <span class="nav-page-text"><span class="chapter-title">Tarea 01</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

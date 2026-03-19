@@ -28,7 +28,7 @@
     "section": "",
     "text": "Definiciones y conceptos clave\nEn términos prácticos, una función describe la relación que existe entre el valor de una magnitud respecto al valor de otra.\nEn economía, la demanda del consumidor representa una función, pues la cantidad que demanda de cualquier bien depende de su precio.\nAl respecto, es importante tener en cuenta los siguientes conceptos:\nPara representar matemáticamente una función, utilizamos la siguiente notación:",
     "crumbs": [
-      "Función",
+      "Clases",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Clase 01: Introducción a las funciones</span>"
     ]
   },
@@ -39,7 +39,7 @@
     "section": "",
     "text": "Función: regla de correspondencia que asigna a cada objeto de un conjunto \\(A\\) exactamente un objeto del conjunto \\(B\\). Podemos pensar en una función como una “transformación de los números en el conjunto ‘\\(A\\)’”\nDominio: Es el conjunto \\(A\\) (conjunto inicial) y corresponde a todos los valores posibles que podemos “ingresar” a la función.\nRango: Es el conjunto \\(B\\) (conjunto final) y corresponde a todos los valores posibles que la función puede “devolver” como resultado.\n\n\nImagen 1. Ejemplos gráficos de funciones\n\n\n\n\n\n\n\n\n\n\n\nFuentes: Liora.io y Wikipedia.\n\n\n\n\nSe denota como \\(f\\), y la expresión \\(f(x)\\) se lee como “efe de equis”.\nLa variable independiente, \\(x\\), representa un elemento del Dominio.\nEl resultado de aplicar la función, \\(f(x)\\), representa un elemento del Rango.\n\n\nEjemplo 1\nA continuación, evaluamos la función \\(f(x) = x^2 + 4\\) para los valores en el intervalo \\([-3, 3]\\). Notemos específicamente el punto donde \\(x=3\\).Para ello:\n\nIdentificamos los valores de \\(x\\) que vamos a evaluar, en este caso \\(x=3\\).\nSustituimos cada valor de ‘\\(x\\)’ en la fórmula de la función por ‘\\(3\\)’. \\[f(3) = (3)^2 + 4\\]\nRealizamos las operaciones aritméticas: \\[f(3) = 9 + 4 = 13\\] En el caso que analizamos podemos decir que al dominio de \\(x=3\\) le corresponde un rango de 13.\n\n\nEjemplo 1. \\(f(x) = x^2 + 4\\)\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-3\n13\n\n\n-2\n8\n\n\n-1\n5\n\n\n0\n4\n\n\n1\n5\n\n\n2\n8\n\n\n3\n13\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFuente: Elaboración propia",
     "crumbs": [
-      "Función",
+      "Clases",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Clase 01: Introducción a las funciones</span>"
     ]
   },
@@ -50,7 +50,7 @@
     "section": "Ejercicios",
     "text": "Ejercicios\nSi \\(f(x) = (x - 2)^{1/2}\\), calcula:\n\\[\n\\text{1) } f(5) \\\\\n\\]\n\\[\n\\begin{aligned}\nf(5) &= (5-2)^{1/2} \\\\\nf(5) &= (3)^{1/2} = \\sqrt{3} \\\\\n\\\\\n\\end{aligned}\n\\]\n\\[\n\\text{2) } f(3) \\\\\n\\]\n\\[\n\\begin{aligned}\nf(3) &= (3-2)^{1/2} \\\\\nf(3) &= (1)^{1/2} = \\sqrt{1}=1 \\\\\n\\\\\n\\\\\n\\end{aligned}\n\\]\n\nEjercicio 1. \\(f(x) = (x - 2)^{1/2}\\)\n\n\n\n\n\n\n\n\n\n\nFuente: Elaboración propia\n\n\nPara una función de precio \\(p(q) = -\\frac{4}{10} q + 25\\), calcula:\n\\[\n\\text{1) } p(10) \\\\\n\\]\n\\[\n\\begin{aligned}\np(10) &= -\\frac{4}{10} (10) + 25\\\\\np(10) &= -\\frac{4(10)}{10} + 25=-4+25\\\\\np(10) &= 21\n\\\\\n\\\\\n\\end{aligned}\n\\]\n\nEjercicio 2. \\(p(q) = -\\frac{4}{10} q + 25\\)\n\n\n\n\n\n\n\n\n\n\nFuente: Elaboración propia",
     "crumbs": [
-      "Función",
+      "Clases",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Clase 01: Introducción a las funciones</span>"
     ]
   },
@@ -61,8 +61,8 @@
     "section": "",
     "text": "Expresiones Logarítmicas\n1. \\(\\log\\left(\\frac{a^3}{b^2}\\right)\\)\n\\[\n\\begin{aligned}\n\\log\\left(\\frac{a^3}{b^2}\\right) &= \\log(a^3) - \\log(b^2) \\\\\n&= 3\\log(a) - 2\\log(b)\n\\end{aligned}\n\\]\n2. \\(\\log(10xy^4)\\)\n\\[\n\\begin{aligned}\n\\log(10xy^4) &= \\log(10) + \\log(x) + \\log(y^4) \\\\\n&= 1 + \\log(x) + 4\\log(y) \\quad \\text{(Asumiendo base 10)}\n\\end{aligned}\n\\]\n3. \\(\\log\\left(\\frac{5m^2}{n^3p}\\right)\\)\n\\[\n\\begin{aligned}\n\\log\\left(\\frac{5m^2}{n^3p}\\right) &= \\log(5m^2) - \\log(n^3p) \\\\\n&= [\\log(5) + \\log(m^2)] - [\\log(n^3) + \\log(p)] \\\\\n&= \\log(5) + 2\\log(m) - 3\\log(n) - \\log(p)\n\\end{aligned}\n\\]\n4. \\(\\log\\left(\\frac{x^5y}{3z^4}\\right)\\)\n\\[\n\\begin{aligned}\n\\log\\left(\\frac{x^5y}{3z^4}\\right) &= \\log(x^5y) - \\log(3z^4) \\\\\n&= [\\log(x^5) + \\log(y)] - [\\log(3) + \\log(z^4)] \\\\\n&= 5\\log(x) + \\log(y) - \\log(3) - 4\\log(z)\n\\end{aligned}\n\\]",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 02</span>"
+      "Tareas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 02</span>"
     ]
   },
   {
@@ -70,10 +70,10 @@
     "href": "02_tarea.html#expresiones-logarítmicas",
     "title": "Tarea 02",
     "section": "",
-    "text": "NotePropiedades de los logaritmos\n\n\n\nAntes de resolver los ejercicios, recordemos las tres reglas operativas básicas:\n1. Regla del Producto El logaritmo de una multiplicación es la suma de los logaritmos. \\[\\log_b(x \\cdot y) = \\log_b(x) + \\log_b(y)\\]\n2. Regla del Cociente El logaritmo de una división es la resta de los logaritmos (numerador menos denominador). \\[\\log_b\\left(\\frac{x}{y}\\right) = \\log_b(x) - \\log_b(y)\\]\n3. Regla de la Potencia El exponente del argumento de un logaritmo puede “bajarse” multiplicando al logaritmo. \\[\\log_b(x^n) = n \\cdot \\log_b(x)\\]",
+    "text": "Propiedades de los logaritmos\n\n\n\nAntes de resolver los ejercicios, recordemos las tres reglas operativas básicas:\n1. Regla del Producto El logaritmo de una multiplicación es la suma de los logaritmos. \\[\\log_b(x \\cdot y) = \\log_b(x) + \\log_b(y)\\]\n2. Regla del Cociente El logaritmo de una división es la resta de los logaritmos (numerador menos denominador). \\[\\log_b\\left(\\frac{x}{y}\\right) = \\log_b(x) - \\log_b(y)\\]\n3. Regla de la Potencia El exponente del argumento de un logaritmo puede “bajarse” multiplicando al logaritmo. \\[\\log_b(x^n) = n \\cdot \\log_b(x)\\]",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 02</span>"
+      "Tareas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 02</span>"
     ]
   },
   {
@@ -94,8 +94,8 @@
     "section": "",
     "text": "1. \\(f(x) = \\frac{x-1}{x^2-4}\\)\nEncuentra el dominio y rango de las siguientes funciones, posteriormente grafica.\n\\[D_f = \\mathbb{R} \\setminus \\{-2, 2\\}\\]\n\\[R_f = \\mathbb{R}\\]",
     "crumbs": [
-      "Función",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tarea 01</span>"
+      "Tareas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -116,8 +116,8 @@
     "section": "",
     "text": "Dominio: El denominador no puede ser cero \\(x^2 - 4 \\neq 0 \\implies (x-2)(x+2) \\neq 0\\), por lo tanto el dominio esta compuesto por todos los reales excepto \\(x = 2\\) y \\(x = -2\\).\n\n\n\nRango: La función toma todos los valores reales.\n\n\n\nGráfica 1. \\(f(x) = \\frac{x-1}{x^2-4}\\)",
     "crumbs": [
-      "Función",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tarea 01</span>"
+      "Tareas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -127,8 +127,8 @@
     "section": "2. \\(g(x) = \\sqrt{x^2-6x+5}\\)",
     "text": "2. \\(g(x) = \\sqrt{x^2-6x+5}\\)\n\nDominio: El argumento de la raíz debe ser mayor o igual a cero: \\(x^2 - 6x + 5 \\ge 0 \\implies (x-1)(x-5) \\ge 0\\). Por lo tanto, el dominio es\n\n\\[D_{g(x)} = (-\\infty, 1] \\cup [5, \\infty)\\]\n\nRango: Al ser una raíz, toma desde su valor mínimo (cero) hasta infinito.\n\n\\[R_g = [0, \\infty)\\]\n\nGráfica 2. \\(g(x) = \\sqrt{x^2-6x+5}\\)",
     "crumbs": [
-      "Función",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tarea 01</span>"
+      "Tareas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -138,8 +138,8 @@
     "section": "3. \\(h(x) = \\frac{1}{\\sqrt{2x-1}}\\)",
     "text": "3. \\(h(x) = \\frac{1}{\\sqrt{2x-1}}\\)\n\nDominio: El argumento de la raíz debe ser estrictamente positivo por estar en el denominador: \\(2x - 1 &gt; 0 \\implies x &gt; 1/2\\). Por lo tanto:\n\n\\[D_h = (1/2, \\infty)\\]\n\nRango: El denominador es positivo y creciente, el numerador es 1 constante. Nunca toca el cero.\n\n\\[R_h = (0, \\infty)\\]\n\nGráfica 3. \\(h(x) = \\frac{1}{\\sqrt{2x-1}}\\)",
     "crumbs": [
-      "Función",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tarea 01</span>"
+      "Tareas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -149,8 +149,8 @@
     "section": "4. \\(i(x) = \\frac{|x|}{x+2}\\)",
     "text": "4. \\(i(x) = \\frac{|x|}{x+2}\\)\n\nDominio: El denominador no puede ser cero. \\(x + 2 \\neq 0 \\implies x \\neq -2\\).Por lo tanto:\n\n\\[D_i = \\mathbb{R} \\setminus \\{-2\\}\\]\n\nRango: Analizando el comportamiento a ambos lados de la asíntota y el valor absoluto, la función salta el intervalo \\([-1, 0)\\).\n\n\\[R_i = (-\\infty, -1) \\cup [0, \\infty)\\]\n\nGráfica 4. \\(i(x) = \\frac{|x|}{x+2}\\)",
     "crumbs": [
-      "Función",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tarea 01</span>"
+      "Tareas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -160,8 +160,8 @@
     "section": "5. \\(j(x) = \\sqrt{\\frac{x-3}{x+1}}\\)",
     "text": "5. \\(j(x) = \\sqrt{\\frac{x-3}{x+1}}\\)\n\nDominio: La fracción debe ser positiva o cero, y el denominador \\(x \\neq -1\\). Evaluando los intervalos de signos, la fracción es no negativa antes del -1 y después del 3.Por lo tanto:\n\n\\[D_j = (-\\infty, -1) \\cup [3, \\infty)\\]\n\nRango: El único valor no permitido es cuando la raíz tendería a 1 (ya que el grado del numerador y denominador es el mismo), y como es raíz principal, solo da positivos.\n\n\\[R_j = [0, 1) \\cup (1, \\infty)\\]\n\nGráfica 5. \\(j(x) = \\sqrt{\\frac{x-3}{x+1}}\\)",
     "crumbs": [
-      "Función",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tarea 01</span>"
+      "Tareas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -169,10 +169,10 @@
     "href": "02_tarea.html#preguntas",
     "title": "Tarea 02",
     "section": "Preguntas",
-    "text": "Preguntas\n\n1. Rango de \\(\\sin(x)\\) y \\(\\cos(x)\\)\n¿Por qué las funciones \\(\\sin(x)\\) y \\(\\cos(x)\\) tienen un rango entre -1 y 1?\nEsto se fundamenta en la definición de estas funciones a partir del círculo unitario (un círculo con radio \\(r = 1\\) centrado en el origen). Para cualquier ángulo \\(x\\), las coordenadas de un punto sobre la circunferencia son \\((\\cos(x), \\sin(x))\\). Como el radio máximo desde el origen en cualquier dirección es 1, los valores en el eje horizontal (coseno) y vertical (seno) nunca pueden exceder 1 ni ser menores a -1.\nA continuación, se muestra la gráfica de las funciones, noten que ambas se encuentran en el rango de \\([-1, 1]\\):\n\n\n\n\n\n\n\n\n2. Función tangente\nExpresa la función \\(\\tan(x)\\) como una función racional.\nUna función racional se expresa como el cociente de dos funciones. Usando las identidades trigonométricas, la tangente es equivalente al cociente del seno entre el coseno: $ (x) = $\n\n\n3. Dominio y rango de identidad pitagórica\nEncuentra el dominio y rango de la siguiente función \\(f(x) = \\sin^2(x) + \\cos^2(x)\\)\nPara resolver esta pregunta, debemos recordar que por identidad trigonométrica, la suma del cuadrado del seno y el coseno para un mismo ángulo siempre es igual a 1.\n\\[ f(x) = \\sin^2(x) + \\cos^2(x) =1 \\] Por lo tanto:\n\nDominio: dado que la función es constante: \\(D_f = \\mathbb{R}\\) o \\((-\\infty, \\infty)\\).\nRango: sin importar el valor que tome \\(x\\), la función siempre da como resultado 1. Por lo tanto, el rango es un único valor: \\(R_f = \\{1\\}\\).\n\n\n\n\n\n\n\nNoteNotación de intervalos\n\n\n\nUn error muy común que hemos identificado en sus tareas es la notación de los intervalos para indicar dominio y rango. Siempre tengan en mente lo siguiente:\nOrden Los intervalos se leen de izquierda a derecha. Cada valor representa un extremo del conjunto de números que estamos indicando, de esta manera el valor de la izquierda indica el número más pequeño y el de la derecha el de mayor tamaño. Por ejemplo, \\([0,10]\\)\nIntervalo abierto \\((\\quad)\\): Este tipo de intervalo NO incluye los valores de los extremos, pero si los valores que estan entre ellos. Para denotarlo se utilizan paréntesis \\(( \\quad )\\), por ejemplo el intervalo \\((0, 10)\\) contiene todos los valores mayores a \\(0\\) y menores a \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)), pero NUNCA \\(0\\) y \\(10\\). Asimismo, por convención cualquier infinito utiliza la notación de intervalo abierto, por ejemplo \\((-\\infty, \\infty)\\), ya que son valores que desconocemos y a los que nos podemos acercar indefinidamente.\nIntervalo cerrado \\([\\quad]\\): Por el contrario, este tipo de intervalo incluye tanto los valores de los extremos y los valores intermedios. Para denotarlo se utilizan corchetes \\([ \\quad ]\\), por ejemplo el intervalo \\([0, 10]\\) contiene todos los valores desde el \\(0\\) al \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)).\nIntervalos abiertos y cerrados: En la práctica, podemos combinar ambos tipos de notaciones pues existen funciones que parten de un valor específico y se extienden al infinito o que estan indeterminadas en algún punto. Por ejemplo la función \\(f(x)=\\sqrt{x}\\) tiene un dominio que va del \\(0\\) al \\(\\infty\\), en notación \\([0,\\infty)\\).",
+    "text": "Preguntas\n\n1. Rango de \\(\\sin(x)\\) y \\(\\cos(x)\\)\n¿Por qué las funciones \\(\\sin(x)\\) y \\(\\cos(x)\\) tienen un rango entre -1 y 1?\nEsto se fundamenta en la definición de estas funciones a partir del círculo unitario (un círculo con radio \\(r = 1\\) centrado en el origen). Para cualquier ángulo \\(x\\), las coordenadas de un punto sobre la circunferencia son \\((\\cos(x), \\sin(x))\\). Como el radio máximo desde el origen en cualquier dirección es 1, los valores en el eje horizontal (coseno) y vertical (seno) nunca pueden exceder 1 ni ser menores a -1.\nA continuación, se muestra la gráfica de las funciones, noten que ambas se encuentran en el rango de \\([-1, 1]\\):\n\n\n\n\n\n\n\n\n2. Función tangente\nExpresa la función \\(\\tan(x)\\) como una función racional.\nUna función racional se expresa como el cociente de dos funciones. Usando las identidades trigonométricas, la tangente es equivalente al cociente del seno entre el coseno: $ (x) = $\n\n\n3. Dominio y rango de identidad pitagórica\nEncuentra el dominio y rango de la siguiente función \\(f(x) = \\sin^2(x) + \\cos^2(x)\\)\nPara resolver esta pregunta, debemos recordar que por identidad trigonométrica, la suma del cuadrado del seno y el coseno para un mismo ángulo siempre es igual a 1.\n\\[ f(x) = \\sin^2(x) + \\cos^2(x) =1 \\] Por lo tanto:\n\nDominio: dado que la función es constante: \\(D_f = \\mathbb{R}\\) o \\((-\\infty, \\infty)\\).\nRango: sin importar el valor que tome \\(x\\), la función siempre da como resultado 1. Por lo tanto, el rango es un único valor: \\(R_f = \\{1\\}\\).\n\n\n\n\n\n\n\nNotación de intervalos\n\n\n\nUn error muy común que hemos identificado en sus tareas es la notación de los intervalos para indicar dominio y rango. Siempre tengan en mente lo siguiente:\nOrden Los intervalos se leen de izquierda a derecha. Cada valor representa un extremo del conjunto de números que estamos indicando, de esta manera el valor de la izquierda indica el número más pequeño y el de la derecha el de mayor tamaño. Por ejemplo, \\([0,10]\\)\nIntervalo abierto \\((\\quad)\\): Este tipo de intervalo NO incluye los valores de los extremos, pero si los valores que estan entre ellos. Para denotarlo se utilizan paréntesis \\(( \\quad )\\), por ejemplo el intervalo \\((0, 10)\\) contiene todos los valores mayores a \\(0\\) y menores a \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)), pero NUNCA \\(0\\) y \\(10\\). Asimismo, por convención cualquier infinito utiliza la notación de intervalo abierto, por ejemplo \\((-\\infty, \\infty)\\), ya que son valores que desconocemos y a los que nos podemos acercar indefinidamente.\nIntervalo cerrado \\([\\quad]\\): Por el contrario, este tipo de intervalo incluye tanto los valores de los extremos y los valores intermedios. Para denotarlo se utilizan corchetes \\([ \\quad ]\\), por ejemplo el intervalo \\([0, 10]\\) contiene todos los valores desde el \\(0\\) al \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)).\nIntervalos abiertos y cerrados: En la práctica, podemos combinar ambos tipos de notaciones pues existen funciones que parten de un valor específico y se extienden al infinito o que estan indeterminadas en algún punto. Por ejemplo la función \\(f(x)=\\sqrt{x}\\) tiene un dominio que va del \\(0\\) al \\(\\infty\\), en notación \\([0,\\infty)\\).",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Tarea 02</span>"
+      "Tareas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 02</span>"
     ]
   },
   {
@@ -180,10 +180,10 @@
     "href": "03_tarea.html",
     "title": "Tarea 03",
     "section": "",
-    "text": "Resolución de Límites\nEn esta sección se resuelven paso a paso los tres límites solicitados en la tarea. Pasa el cursor sobre las gráficas para explorar los valores exactos conforme \\(x\\) se acerca a los puntos de evaluación.",
+    "text": "1. \\(\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x}\\).\nPor lo tanto:\n\\[\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x} = e \\approx 2.71828\\]",
     "crumbs": [
-      "DPENDIENTE",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 03</span>"
+      "Tareas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 03</span>"
     ]
   },
   {
@@ -193,8 +193,8 @@
     "section": "",
     "text": "1. \\(\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x}\\).\n\nAl evaluar el límite cuando \\(x \\to \\infty\\), podemos deducir que el término \\(\\frac{1}{x}\\) tiende a \\(0\\).\nEsto nos deja con la expresión \\((1 + 0)^\\infty=1^\\infty\\), la cual supone una indeterminación.\nSin embargo, la expresión \\(\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x}\\) es una identidad del número de Euler, \\(e\\).\n\nPor lo tanto:\n\\[\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x} = e \\approx 2.71828\\]\n\n\n\n\n\n\n\n\n\n2. \\(\\lim_{x\\to0}(\\sin^{2}x+\\cos^{2}x)\\).\n\nPor identidad trigonométrica, sabemos que \\(\\sin^2 x + \\cos^2 x = 1\\).\nSustituimos esta identidad en nuestro límite original: \\[ \\lim_{x\\to0} (1) \\]\nDado que el límite de una constante es igual a la misma constante:\n\n\\[ \\lim_{x\\to0}(\\sin^{2}x+\\cos^{2}x) = 1 \\]\n\n\n\n\n\n\n\n\n\n3. \\(\\lim_{x\\to0}\\frac{\\sin x}{x}\\).\n\nAl evaluar directamente en \\(x=0\\), obtenemos \\(\\frac{\\sin(0)}{0} = \\frac{0}{0}\\), una forma indeterminada.\nUtilizamos la Regla de L’Hôpital, derivando el numerador y el denominador de manera independiente con respecto a \\(x\\).\n\nDerivada del numerador: \\(\\frac{d}{dx}(\\sin x) = \\cos x\\)\nDerivada del denominador: \\(\\frac{d}{dx}(x) = 1\\)\n\nEvaluamos el nuevo límite:\n\\[ \\lim_{x\\to0} \\frac{\\cos x}{1} = \\cos(0) = 1 \\]\n\n\\[ \\lim_{x\\to0}\\frac{\\sin x}{x} = 1 \\]",
     "crumbs": [
-      "DPENDIENTE",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 03</span>"
+      "Tareas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 03</span>"
     ]
   },
   {
@@ -202,10 +202,10 @@
     "href": "03_tarea.html#propiedades-fundamentales-de-los-límites",
     "title": "Tarea 03",
     "section": "Propiedades fundamentales de los límites",
-    "text": "Propiedades fundamentales de los límites\nAsumiendo que \\(\\lim_{x\\to a} f(x) = L\\) y \\(\\lim_{x\\to a} g(x) = M\\), y que ambos límites existen:\n\n\n\n\n\n\nNotePropiedades de los límites\n\n\n\n\nRegla de la Constante: El límite de una constante es la constante misma. \\[\\lim_{x\\to a} c = c\\]\nSuma y Diferencia: El límite de una suma es la suma de los límites. \\[\\lim_{x\\to a} [f(x) \\pm g(x)] = L \\pm M\\]\nConstante por una función: \\[\\lim_{x\\to a} [c \\cdot f(x)] = c \\cdot L\\]\nProducto y Cociente:\n\n\nProducto: \\(\\lim_{x\\to a} [f(x) \\cdot g(x)] = L \\cdot M\\)\nCociente: \\(\\lim_{x\\to a} \\left[\\frac{f(x)}{g(x)}\\right] = \\frac{L}{M}\\), siempre que el denominador \\(M \\neq 0\\).\n\n\nRegla de la Potencia: \\[\\lim_{x\\to a} [f(x)]^n = L^n\\]",
+    "text": "Propiedades fundamentales de los límites\nAsumiendo que \\(\\lim_{x\\to a} f(x) = L\\) y \\(\\lim_{x\\to a} g(x) = M\\), y que ambos límites existen:\n\n\n\n\n\n\nPropiedades de los límites\n\n\n\n\nRegla de la Constante: El límite de una constante es la constante misma. \\[\\lim_{x\\to a} c = c\\]\nSuma y Diferencia: El límite de una suma es la suma de los límites. \\[\\lim_{x\\to a} [f(x) \\pm g(x)] = L \\pm M\\]\nConstante por una función: \\[\\lim_{x\\to a} [c \\cdot f(x)] = c \\cdot L\\]\nProducto y Cociente:\n\n\nProducto: \\(\\lim_{x\\to a} [f(x) \\cdot g(x)] = L \\cdot M\\)\nCociente: \\(\\lim_{x\\to a} \\left[\\frac{f(x)}{g(x)}\\right] = \\frac{L}{M}\\), siempre que el denominador \\(M \\neq 0\\).\n\n\nRegla de la Potencia: \\[\\lim_{x\\to a} [f(x)]^n = L^n\\]",
     "crumbs": [
-      "DPENDIENTE",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Tarea 03</span>"
+      "Tareas",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 03</span>"
     ]
   },
   {
@@ -213,21 +213,21 @@
     "href": "04_tarea.html",
     "title": "Tarea 04",
     "section": "",
-    "text": "NoteDerivada por definición\n\n\n\nPara resolver esta tarea, utilizaremos la definición formal de la derivada como un límite. Esta fórmula representa la tasa de cambio instantánea de la función:\n\\[f'(x) = \\lim_{h\\to0} \\frac{f(x+h) - f(x)}{h}\\]\n\n\n\n\n1. \\(f(x) = (x - 3)^3\\)\nSustituimos en la definición: \\[f'(x) = \\lim_{h\\to0} \\frac{(x + h - 3)^3 - (x - 3)^3}{h}\\]\nPara facilitar las operaciones, podemos agrupar el término \\((x-3)\\) y desarrollar el binomio al cubo usando la regla \\((A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3\\), donde \\(A = (x-3)\\) y \\(B = h\\):\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} \\frac{[(x - 3) + h]^3 - (x - 3)^3}{h} \\\\\n&= \\lim_{h\\to0} \\frac{(x - 3)^3 + 3(x - 3)^2h + 3(x - 3)h^2 + h^3 - (x - 3)^3}{h}\n\\end{aligned}\n\\]\nEliminamos términos similares \\((x - 3)^3\\) y factorizamos \\(h\\) en el numerador:\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} \\frac{h[3(x - 3)^2 + 3(x - 3)h + h^2]}{h} \\\\\n&= \\lim_{h\\to0} [3(x - 3)^2 + 3(x - 3)h + h^2]\n\\end{aligned}\n\\]\nEvaluamos el límite cuando \\(h \\to 0\\):\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} [3(x - 3)^2 + 3(x - 3)h + h^2] \\\\\n&= [3(x - 3)^2 + 3(x - 3)(0) + (0)^2]\n\\end{aligned}\n\\]\nResultado: \\[f'(x) = 3(x - 3)^2\\]\n\n\n\n2. \\(g(x) = \\ln(x)\\)\nSustituimos en la definición y usamos las propiedades de los logaritmos para operar: \\[\n\\begin{aligned}\ng'(x) &= \\lim_{h\\to0} \\frac{\\ln(x + h) - \\ln(x)}{h} \\\\\n&= \\lim_{h\\to0} \\frac{1}{h} \\ln\\left(\\frac{x + h}{x}\\right) \\\\\n&= \\lim_{h\\to0} \\frac{1}{h} \\ln\\left(1 + \\frac{h}{x}\\right)\n\\end{aligned}\n\\]\nUsamos la propiedad de la potencia del logaritmo (\\(n \\ln A = \\ln A^n\\)): \\[g'(x) = \\lim_{h\\to0} \\ln\\left(1 + \\frac{h}{x}\\right)^{\\frac{1}{h}}\\]\nHacemos un cambio de variable. Sea \\(u = \\frac{x}{h}\\), entonces \\(\\frac{1}{h} = \\frac{u}{x}\\). Cuando \\(h \\to 0\\), \\(u \\to \\infty\\): \\[g'(x) = \\lim_{u\\to\\infty} \\ln\\left(1 + \\frac{1}{u}\\right)^{\\frac{u}{x}} = \\lim_{u\\to\\infty} \\ln\\left[\\left(1 + \\frac{1}{u}\\right)^u\\right]^{\\frac{1}{x}}\\]\nRecordando el límite especial del número \\(e\\) (\\(\\lim_{u\\to\\infty}(1 + \\frac{1}{u})^u = e\\)): \\[g'(x) = \\ln\\left(e^{\\frac{1}{x}}\\right) = \\frac{1}{x} \\ln(e)\\] Resultado: \\[g'(x) = \\frac{1}{x}\\]\n\n\n\n3. \\(h(x) = \\sqrt{x}\\)\nSustituimos en la definición: \\[h'(x) = \\lim_{h\\to0} \\frac{\\sqrt{x + h} - \\sqrt{x}}{h}\\]\nPara resolver la indeterminación (\\(\\frac{0}{0}\\)), racionalizamos multiplicando por \\(1=\\frac{\\sqrt{x + h} + \\sqrt{x}}{\\sqrt{x + h} + \\sqrt{x}}\\): \\[\n\\begin{aligned}\nh'(x) &= \\lim_{h\\to0} \\left[ \\frac{\\sqrt{x + h} - \\sqrt{x}}{h} \\cdot \\frac{\\sqrt{x + h} + \\sqrt{x}}{\\sqrt{x + h} + \\sqrt{x}} \\right] \\\\\n&= \\lim_{h\\to0} \\left[ \\frac{(\\sqrt{x + h})^2+ \\sqrt{x}(\\sqrt{x + h})- \\sqrt{x}(\\sqrt{x + h})-(\\sqrt{x})^2}{h(\\sqrt{x + h} + \\sqrt{x})} \\right] \\\\\n&= \\lim_{h\\to0} \\frac{(\\sqrt{x + h})^2 - (\\sqrt{x})^2}{h(\\sqrt{x + h} + \\sqrt{x})} \\\\\n&= \\lim_{h\\to0} \\frac{x + h - x}{h(\\sqrt{x + h} + \\sqrt{x})} \\\\\n&= \\lim_{h\\to0} \\frac{h}{h(\\sqrt{x + h} + \\sqrt{x})}\n\\end{aligned}\n\\]\nSimplificamos \\(h\\) y evaluamos el límite: \\[h'(x) = \\lim_{h\\to0} \\frac{1}{\\sqrt{x + h} + \\sqrt{x}} = \\frac{1}{\\sqrt{x + 0} + \\sqrt{x}}\\] Resultado: \\[h'(x) = \\frac{1}{2\\sqrt{x}}\\]\n\n\n\n4. \\(i(x) = e^x\\)\nSustituimos en la definición: \\[i'(x) = \\lim_{h\\to0} \\frac{e^{x+h} - e^x}{h}\\]\nPor las leyes de los exponentes (\\(e^{x+h} = e^x \\cdot e^h\\)), podemos factorizar \\(e^x\\): \\[\n\\begin{aligned}\ni'(x) &= \\lim_{h\\to0} \\frac{e^x \\cdot e^h - e^x}{h} \\\\\n&= \\lim_{h\\to0} \\frac{e^x(e^h - 1)}{h}\n\\end{aligned}\n\\]\nComo \\(e^x\\) no depende de \\(h\\), podemos tratarlo como una constante y aplicar propiedades de los límites: \\[i'(x) = e^x \\cdot \\lim_{h\\to0} \\frac{e^h - 1}{h}\\]\nPor definición, \\(e^h\\) se puede expresar como una serie de Taylor de la siguiente manera:\n\\[e^h= 1+h+\\frac{h^2}{2!}+\\frac{h^3}{3!}+\\frac{h^4}{4!}+...++\\frac{h^n}{n!}\\]\nA partir de la expresión anterior podemos llegar a la misma expresión que en nuestro límite usando solamente álgebra:\n\\[e^h-1= h \\left[ 1+\\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right] \\]\n\\[\\frac{e^h-1}{h}= \\left[ \\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right] \\]\nPor lo anterior: \\[i'(x) = e^x \\cdot \\lim_{h\\to0} \\frac{e^h - 1}{h}= e^x \\cdot\\lim_{h\\to0}\\left[1+ \\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right]\\]\nAl evaluar el límite, tenemos que:\n$$ i’(x) = e^x _{h}\\ i’(x) = e^x =e^x\n$$\nResultado: \\[i'(x) = e^x\\]\n\n\n\n5. \\(j(x) = |x|\\)\nSustituimos en la definición: \\[j'(x) = \\lim_{h\\to0} \\frac{|x + h| - |x|}{h}\\]\nDebemos analizar la derivada por casos, ya que el valor absoluto cambia su comportamiento dependiendo del signo de \\(x\\):\n\nCaso 1: \\(x &gt; 0\\) Para valores de \\(h\\) suficientemente pequeños, \\(x + h &gt; 0\\). Entonces \\(|x+h| = x+h\\) y \\(|x| = x\\).\n\\[j'(x) = \\lim_{h\\to0} \\frac{(x + h) - x}{h} = \\lim_{h\\to0} \\frac{h}{h} = 1\\]\nCaso 2: \\(x &lt; 0\\) Para valores de \\(h\\) suficientemente pequeños, \\(x + h &lt; 0\\). Entonces \\(|x+h| = -(x+h)\\) y \\(|x| = -x\\).\n\\[j'(x) = \\lim_{h\\to0} \\frac{-(x + h) - (-x)}{h} = \\lim_{h\\to0} \\frac{-x - h + x}{h} = \\lim_{h\\to0} \\frac{-h}{h} = -1\\]\nCaso 3: \\(x = 0\\)\n\\[j'(0) = \\lim_{h\\to0} \\frac{|0 + h| - |0|}{h} = \\lim_{h\\to0} \\frac{|h|}{h}\\]\nEste límite no existe porque los límites laterales son diferentes (+1 por la derecha, -1 por la izquierda).\n\nResultado: \\[j'(x) = \\begin{cases} 1 & \\text{si } x &gt; 0 \\\\ -1 & \\text{si } x &lt; 0 \\\\ \\text{No existe} & \\text{si } x = 0 \\end{cases}\\] (También se puede expresar como \\(j'(x) = \\frac{x}{|x|}\\) para \\(x \\neq 0\\)).\n\n\n\n6. \\(k(x) = \\sin(x)\\)\nSustituimos en la definición: \\[k'(x) = \\lim_{h\\to0} \\frac{\\sin(x + h) - \\sin(x)}{h}\\]\nUtilizamos la identidad trigonométrica para la suma de ángulos: \\(\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B\\). \\[\n\\begin{aligned}\nk'(x) &= \\lim_{h\\to0} \\frac{\\sin(x)\\cos(h) + \\cos(x)\\sin(h) - \\sin(x)}{h}\n\\end{aligned}\n\\]\nAgrupamos los términos que contienen \\(\\sin(x)\\) y factorizamos: \\[\n\\begin{aligned}\nk'(x) &= \\lim_{h\\to0} \\frac{\\sin(x)[\\cos(h) - 1] + \\cos(x)\\sin(h)}{h} \\\\\n&= \\lim_{h\\to0} \\left[ \\sin(x)\\left(\\frac{\\cos(h) - 1}{h}\\right) + \\cos(x)\\left(\\frac{\\sin(h)}{h}\\right) \\right]\n\\end{aligned}\n\\]\nAplicamos las propiedades del límite de una suma y evaluamos usando los límites trigonométricos especiales \\(\\lim_{h\\to0} \\frac{\\cos(h) - 1}{h} = 0\\) y \\(\\lim_{h\\to0} \\frac{\\sin(h)}{h} = 1\\): \\[\n\\begin{aligned}\nk'(x) &= \\sin(x) \\cdot (0) + \\cos(x) \\cdot (1)\n\\end{aligned}\n\\] Resultado: \\[k'(x) = \\cos(x)\\]",
+    "text": "Derivada por definición\n\n\n\nPara resolver esta tarea, utilizaremos la definición formal de la derivada como un límite. Esta fórmula representa la tasa de cambio instantánea de la función:\n\\[f'(x) = \\lim_{h\\to0} \\frac{f(x+h) - f(x)}{h}\\]\n\n\n\n\n1. \\(f(x) = (x - 3)^3\\)\nSustituimos en la definición: \\[f'(x) = \\lim_{h\\to0} \\frac{(x + h - 3)^3 - (x - 3)^3}{h}\\]\nPara facilitar las operaciones, podemos agrupar el término \\((x-3)\\) y desarrollar el binomio al cubo usando la regla \\((A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3\\), donde \\(A = (x-3)\\) y \\(B = h\\):\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} \\frac{[(x - 3) + h]^3 - (x - 3)^3}{h} \\\\\n&= \\lim_{h\\to0} \\frac{(x - 3)^3 + 3(x - 3)^2h + 3(x - 3)h^2 + h^3 - (x - 3)^3}{h}\n\\end{aligned}\n\\]\nEliminamos términos similares \\((x - 3)^3\\) y factorizamos \\(h\\) en el numerador:\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} \\frac{h[3(x - 3)^2 + 3(x - 3)h + h^2]}{h} \\\\\n&= \\lim_{h\\to0} [3(x - 3)^2 + 3(x - 3)h + h^2]\n\\end{aligned}\n\\]\nEvaluamos el límite cuando \\(h \\to 0\\):\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} [3(x - 3)^2 + 3(x - 3)h + h^2] \\\\\n&= [3(x - 3)^2 + 3(x - 3)(0) + (0)^2]\n\\end{aligned}\n\\]\nResultado: \\[f'(x) = 3(x - 3)^2\\]\n\n\n\n2. \\(g(x) = \\ln(x)\\)\nSustituimos en la definición y usamos las propiedades de los logaritmos para operar: \\[\n\\begin{aligned}\ng'(x) &= \\lim_{h\\to0} \\frac{\\ln(x + h) - \\ln(x)}{h} \\\\\n&= \\lim_{h\\to0} \\frac{1}{h} \\ln\\left(\\frac{x + h}{x}\\right) \\\\\n&= \\lim_{h\\to0} \\frac{1}{h} \\ln\\left(1 + \\frac{h}{x}\\right)\n\\end{aligned}\n\\]\nUsamos la propiedad de la potencia del logaritmo (\\(n \\ln A = \\ln A^n\\)): \\[g'(x) = \\lim_{h\\to0} \\ln\\left(1 + \\frac{h}{x}\\right)^{\\frac{1}{h}}\\]\nHacemos un cambio de variable. Sea \\(u = \\frac{x}{h}\\), entonces \\(\\frac{1}{h} = \\frac{u}{x}\\). Cuando \\(h \\to 0\\), \\(u \\to \\infty\\): \\[g'(x) = \\lim_{u\\to\\infty} \\ln\\left(1 + \\frac{1}{u}\\right)^{\\frac{u}{x}} = \\lim_{u\\to\\infty} \\ln\\left[\\left(1 + \\frac{1}{u}\\right)^u\\right]^{\\frac{1}{x}}\\]\nRecordando el límite especial del número \\(e\\) (\\(\\lim_{u\\to\\infty}(1 + \\frac{1}{u})^u = e\\)): \\[g'(x) = \\ln\\left(e^{\\frac{1}{x}}\\right) = \\frac{1}{x} \\ln(e)\\] Resultado: \\[g'(x) = \\frac{1}{x}\\]\n\n\n\n3. \\(h(x) = \\sqrt{x}\\)\nSustituimos en la definición: \\[h'(x) = \\lim_{h\\to0} \\frac{\\sqrt{x + h} - \\sqrt{x}}{h}\\]\nPara resolver la indeterminación (\\(\\frac{0}{0}\\)), racionalizamos multiplicando por \\(1=\\frac{\\sqrt{x + h} + \\sqrt{x}}{\\sqrt{x + h} + \\sqrt{x}}\\): \\[\n\\begin{aligned}\nh'(x) &= \\lim_{h\\to0} \\left[ \\frac{\\sqrt{x + h} - \\sqrt{x}}{h} \\cdot \\frac{\\sqrt{x + h} + \\sqrt{x}}{\\sqrt{x + h} + \\sqrt{x}} \\right] \\\\\n&= \\lim_{h\\to0} \\left[ \\frac{(\\sqrt{x + h})^2+ \\sqrt{x}(\\sqrt{x + h})- \\sqrt{x}(\\sqrt{x + h})-(\\sqrt{x})^2}{h(\\sqrt{x + h} + \\sqrt{x})} \\right] \\\\\n&= \\lim_{h\\to0} \\frac{(\\sqrt{x + h})^2 - (\\sqrt{x})^2}{h(\\sqrt{x + h} + \\sqrt{x})} \\\\\n&= \\lim_{h\\to0} \\frac{x + h - x}{h(\\sqrt{x + h} + \\sqrt{x})} \\\\\n&= \\lim_{h\\to0} \\frac{h}{h(\\sqrt{x + h} + \\sqrt{x})}\n\\end{aligned}\n\\]\nSimplificamos \\(h\\) y evaluamos el límite: \\[h'(x) = \\lim_{h\\to0} \\frac{1}{\\sqrt{x + h} + \\sqrt{x}} = \\frac{1}{\\sqrt{x + 0} + \\sqrt{x}}\\] Resultado: \\[h'(x) = \\frac{1}{2\\sqrt{x}}\\]\n\n\n\n4. \\(i(x) = e^x\\)\nSustituimos en la definición: \\[i'(x) = \\lim_{h\\to0} \\frac{e^{x+h} - e^x}{h}\\]\nPor las leyes de los exponentes (\\(e^{x+h} = e^x \\cdot e^h\\)), podemos factorizar \\(e^x\\): \\[\n\\begin{aligned}\ni'(x) &= \\lim_{h\\to0} \\frac{e^x \\cdot e^h - e^x}{h} \\\\\n&= \\lim_{h\\to0} \\frac{e^x(e^h - 1)}{h}\n\\end{aligned}\n\\]\nComo \\(e^x\\) no depende de \\(h\\), podemos tratarlo como una constante y aplicar propiedades de los límites: \\[i'(x) = e^x \\cdot \\lim_{h\\to0} \\frac{e^h - 1}{h}\\]\nPor definición, \\(e^h\\) se puede expresar como una serie de Taylor de la siguiente manera:\n\\[e^h= 1+h+\\frac{h^2}{2!}+\\frac{h^3}{3!}+\\frac{h^4}{4!}+...++\\frac{h^n}{n!}\\]\nA partir de la expresión anterior podemos llegar a la misma expresión que en nuestro límite usando solamente álgebra:\n\\[e^h-1= h \\left[ 1+\\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right] \\]\n\\[\\frac{e^h-1}{h}= \\left[ \\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right] \\]\nPor lo anterior: \\[i'(x) = e^x \\cdot \\lim_{h\\to0} \\frac{e^h - 1}{h}= e^x \\cdot\\lim_{h\\to0}\\left[1+ \\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right]\\]\nAl evaluar el límite, tenemos que:\n$$ i’(x) = e^x _{h}\\ i’(x) = e^x =e^x\n$$\nResultado: \\[i'(x) = e^x\\]\n\n\n\n5. \\(j(x) = |x|\\)\nSustituimos en la definición: \\[j'(x) = \\lim_{h\\to0} \\frac{|x + h| - |x|}{h}\\]\nDebemos analizar la derivada por casos, ya que el valor absoluto cambia su comportamiento dependiendo del signo de \\(x\\):\n\nCaso 1: \\(x &gt; 0\\) Para valores de \\(h\\) suficientemente pequeños, \\(x + h &gt; 0\\). Entonces \\(|x+h| = x+h\\) y \\(|x| = x\\).\n\\[j'(x) = \\lim_{h\\to0} \\frac{(x + h) - x}{h} = \\lim_{h\\to0} \\frac{h}{h} = 1\\]\nCaso 2: \\(x &lt; 0\\) Para valores de \\(h\\) suficientemente pequeños, \\(x + h &lt; 0\\). Entonces \\(|x+h| = -(x+h)\\) y \\(|x| = -x\\).\n\\[j'(x) = \\lim_{h\\to0} \\frac{-(x + h) - (-x)}{h} = \\lim_{h\\to0} \\frac{-x - h + x}{h} = \\lim_{h\\to0} \\frac{-h}{h} = -1\\]\nCaso 3: \\(x = 0\\)\n\\[j'(0) = \\lim_{h\\to0} \\frac{|0 + h| - |0|}{h} = \\lim_{h\\to0} \\frac{|h|}{h}\\]\nEste límite no existe porque los límites laterales son diferentes (+1 por la derecha, -1 por la izquierda).\n\nResultado: \\[j'(x) = \\begin{cases} 1 & \\text{si } x &gt; 0 \\\\ -1 & \\text{si } x &lt; 0 \\\\ \\text{No existe} & \\text{si } x = 0 \\end{cases}\\] (También se puede expresar como \\(j'(x) = \\frac{x}{|x|}\\) para \\(x \\neq 0\\)).\n\n\n\n6. \\(k(x) = \\sin(x)\\)\nSustituimos en la definición: \\[k'(x) = \\lim_{h\\to0} \\frac{\\sin(x + h) - \\sin(x)}{h}\\]\nUtilizamos la identidad trigonométrica para la suma de ángulos: \\(\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B\\). \\[\n\\begin{aligned}\nk'(x) &= \\lim_{h\\to0} \\frac{\\sin(x)\\cos(h) + \\cos(x)\\sin(h) - \\sin(x)}{h}\n\\end{aligned}\n\\]\nAgrupamos los términos que contienen \\(\\sin(x)\\) y factorizamos: \\[\n\\begin{aligned}\nk'(x) &= \\lim_{h\\to0} \\frac{\\sin(x)[\\cos(h) - 1] + \\cos(x)\\sin(h)}{h} \\\\\n&= \\lim_{h\\to0} \\left[ \\sin(x)\\left(\\frac{\\cos(h) - 1}{h}\\right) + \\cos(x)\\left(\\frac{\\sin(h)}{h}\\right) \\right]\n\\end{aligned}\n\\]\nAplicamos las propiedades del límite de una suma y evaluamos usando los límites trigonométricos especiales \\(\\lim_{h\\to0} \\frac{\\cos(h) - 1}{h} = 0\\) y \\(\\lim_{h\\to0} \\frac{\\sin(h)}{h} = 1\\): \\[\n\\begin{aligned}\nk'(x) &= \\sin(x) \\cdot (0) + \\cos(x) \\cdot (1)\n\\end{aligned}\n\\] Resultado: \\[k'(x) = \\cos(x)\\]",
     "crumbs": [
-      "PENDIENTE",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 04</span>"
+      "Tareas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 04</span>"
     ]
   },
   {
     "objectID": "02_clase.html",
     "href": "02_clase.html",
-    "title": "Clase 02",
+    "title": "Clase 02: tipos de funciones",
     "section": "",
     "text": "Tipos de Funciones\nUna función \\(f(x)\\) mapea elementos de un conjunto de entrada hacia un conjunto de salida.\nPor ejemplo, si tenemos \\(f(x) = x + 4\\), al evaluar \\(a\\), obtenemos \\(f(a) = a + 4\\).\nTodas las funciones se pueden graficar.\nLas funciones se dividen en dos grandes familias: algebraicas y trascendentes.",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 02</span>"
+      "Clases",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
     ]
   },
   {
@@ -244,34 +244,177 @@
   {
     "objectID": "02_clase.html#tipos-de-funciones",
     "href": "02_clase.html#tipos-de-funciones",
-    "title": "Clase 02",
+    "title": "Clase 02: tipos de funciones",
     "section": "",
-    "text": "Funciones Algebraicas\n\nConstanteLinealCuadráticaPolinómicaRacionalRadical\n\n\n\\(f(x) = k\\)\nEjemplo graficado: \\(f(x) = 3\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = mx + b\\)\nEjemplo graficado: \\(f(x) = 2x + 1\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = ax^2 + bx + c\\)\nEjemplo graficado: \\(f(x) = x^2 - 4\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = a_n x^n + \\dots + a_0\\)\nEjemplo graficado: \\(f(x) = x^3 - 4x\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\frac{P(x)}{Q(x)}\\)\nEjemplo graficado: \\(f(x) = \\frac{1}{x}\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\sqrt[n]{P(x)}\\)\nEjemplo graficado: \\(f(x) = \\sqrt{x}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones Trascendentes\n\nExponencialLogarítmicaTrigonométricas\n\n\n\\(f(x) = a^x\\)\nEjemplo graficado: \\(f(x) = e^x\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\log_a(x)\\)\nEjemplo graficado: \\(f(x) = \\ln(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\sin(x), \\cos(x), \\tan(x)\\)\nEjemplo graficado: \\(f(x) = \\sin(x)\\)",
+    "text": "Funciones Algebraicas\n\nConstanteLinealCuadráticaPolinómicaRacionalRadical\n\n\n\\(f(x) = k\\)\nEjemplo: \\(f(x) = 3\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = mx + b\\)\nEjemplo: \\(f(x) = 2x + 1\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = ax^2 + bx + c\\)\nEjemplo: \\(f(x) = x^2 - 4\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = a_n x^n + \\dots + a_0\\)\nEjemplo: \\(f(x) = x^3 - 4x\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\frac{P(x)}{Q(x)}\\)\nEjemplo: \\(f(x) = \\frac{1}{x}\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\sqrt[n]{P(x)}\\)\nEjemplo: \\(f(x) = \\sqrt{x}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones Trascendentes\n\nExponencialLogarítmicaTrigonométricas\n\n\n\\(f(x) = a^x\\)\nEjemplo: \\(f(x) = e^x\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\log_a(x)\\)\nEjemplo: \\(f(x) = \\ln(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\sin(x), \\cos(x), \\tan(x)\\)\nEjemplo: \\(f(x) = \\sin(x)\\)",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 02</span>"
+      "Clases",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
     ]
   },
   {
     "objectID": "02_clase.html#propiedades-de-las-funciones",
     "href": "02_clase.html#propiedades-de-las-funciones",
-    "title": "Clase 02",
+    "title": "Clase 02: tipos de funciones",
     "section": "Propiedades de las Funciones",
     "text": "Propiedades de las Funciones\nAl analizar la gráfica de una función, podemos identificar las siguientes propiedades:\n\nConcavidad\nAcotación\nPeriodicidad\nAsíntotas",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 02</span>"
+      "Clases",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
     ]
   },
   {
     "objectID": "02_clase.html#ejemplos-de-funciones",
     "href": "02_clase.html#ejemplos-de-funciones",
-    "title": "Clase 02",
+    "title": "Clase 02: tipos de funciones",
     "section": "Ejemplos de funciones",
     "text": "Ejemplos de funciones\n\n1. \\(f(x) = x^2 - 4\\)\n\nDominio: \\(x \\in \\mathbb{R}\\) o \\((-\\infty, \\infty)\\)\nRango: \\(\\{y \\in \\mathbb{R} \\mid y \\ge -4\\}\\) o \\([-4, \\infty)\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-3\n5\n\n\n-2\n0\n\n\n-1\n-3\n\n\n0\n-4\n\n\n1\n-3\n\n\n2\n0\n\n\n3\n5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. \\(f(x) = \\frac{1}{x+3}\\)\n\nDominio: \\(\\{x \\in \\mathbb{R} \\mid x \\neq -3\\}\\) o \\((-\\infty, -3) \\cup (-3, \\infty)\\)\nRango: \\(\\{y \\in \\mathbb{R} \\mid y \\neq 0\\}\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-6\n-0.33\n\n\n-5\n-0.5\n\n\n-4\n-1\n\n\n-3\nIndefinido\n\n\n-2\n1\n\n\n-1\n0.5\n\n\n0\n0.33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. \\(f(x) = \\sqrt{9-x^2}\\)\n\nDominio: \\(9-x^2 \\ge 0 \\implies (3-x)(3+x) \\ge 0 \\implies -3 \\le x \\le 3\\). Dominio: \\([-3, 3]\\)\nRango: \\([0, 3]\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-4\nNo Real\n\n\n-3\n0\n\n\n-2\n2.24\n\n\n-1\n2.83\n\n\n0\n3\n\n\n1\n2.83\n\n\n2\n2.24\n\n\n3\n0\n\n\n4\nNo Real\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4. \\(f(x) = |x-2|\\)\n\nDominio: \\(x \\in \\mathbb{R}\\)\nRango: \\(\\{y \\in \\mathbb{R} \\mid y \\ge 0\\}\\) o \\([0, \\infty)\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-1\n3\n\n\n0\n2\n\n\n1\n1\n\n\n2\n0\n\n\n3\n1\n\n\n4\n2\n\n\n5\n3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5. \\(f(x) = \\sqrt{5-x}\\)\n\nDominio: \\(5-x \\ge 0 \\implies x \\le 5\\). Dominio: \\((-\\infty, 5]\\)\nRango: \\([0, \\infty)\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n1\n2\n\n\n2\n1.73\n\n\n3\n1.41\n\n\n4\n1\n\n\n5\n0\n\n\n6\nNo Real\n\n\n7\nNo Real\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6. \\(f(x) = \\frac{x}{|x|}\\)\n\nDominio: \\(x \\in \\mathbb{R} \\mid x \\neq 0\\)\nRango: \\(\\{-1, 1\\}\\) (Es 1 si \\(x &gt; 0\\), y -1 si \\(x &lt; 0\\))\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-3\n-1\n\n\n-2\n-1\n\n\n-1\n-1\n\n\n0\nIndefinido\n\n\n1\n1\n\n\n2\n1\n\n\n3\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7. \\(f(x) = \\frac{2x}{x^2 - 9}\\)\n\nDominio: El denominador se hace cero cuando \\(x^2 - 9 = 0\\), es decir, en \\(x = 3\\) y \\(x = -3\\).\n\n\\(D_f = \\mathbb{R} \\setminus \\{-3, 3\\}\\) o \\((-\\infty, -3) \\cup (-3, 3) \\cup (3, \\infty)\\)\n\nRango: La función cruza el eje horizontal y cubre todos los valores reales.\n\n\\(R_f = \\mathbb{R}\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-5\n-0.62\n\n\n-4\n-1.14\n\n\n-3\nIndefinido\n\n\n-2\n0.8\n\n\n-1\n0.25\n\n\n0\n0\n\n\n1\n-0.25\n\n\n2\n-0.8\n\n\n3\nIndefinido\n\n\n4\n1.14\n\n\n5\n0.62\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8. \\(f(x) = \\sqrt{x^2 - 4}\\)\n\nDominio: \\(x^2 - 4 \\ge 0 \\implies (x-2)(x+2) \\ge 0\\). Esto ocurre en los extremos exteriores de las raíces.\n\n\\(D_f = (-\\infty, -2] \\cup [2, \\infty)\\)\n\nRango: Como es una raíz principal par, sus valores son no negativos.\n\n\\(R_f = [0, \\infty)\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-4\n3.46\n\n\n-3\n2.24\n\n\n-2\n0\n\n\n-1\nNo Real\n\n\n0\nNo Real\n\n\n1\nNo Real\n\n\n2\n0\n\n\n3\n2.24\n\n\n4\n3.46\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9. \\(f(x) = \\frac{1}{\\sqrt{x}}\\)\n\nDominio: El argumento de la raíz debe ser positivo y, al estar en el denominador, no puede ser cero.\n\n\\(D_f = (0, \\infty)\\)\n\nRango: El numerador es una constante positiva y la raíz siempre da valores positivos, por lo que nunca toca el cero ni los negativos.\n\n\\(R_f = (0, \\infty)\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n0\nAsíntota\n\n\n1\n1\n\n\n2\n0.71\n\n\n3\n0.58\n\n\n4\n0.5\n\n\n5\n0.45\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10. \\(f(x) = \\frac{1}{x+3}\\)\n\nDominio: El denominador no puede ser cero.\n\n\\(D_f = \\mathbb{R} \\setminus \\{-3\\}\\) o \\((-\\infty, -3) \\cup (-3, \\infty)\\)\n\nRango: Como el numerador nunca es cero, \\(f(x)\\) nunca vale cero.\n\n\\(R_f = \\mathbb{R} \\setminus \\{0\\}\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-6\n-0.33\n\n\n-5\n-0.5\n\n\n-4\n-1\n\n\n-3\nIndefinido\n\n\n-2\n1\n\n\n-1\n0.5\n\n\n0\n0.33",
     "crumbs": [
-      "Tipos de funciones",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 02</span>"
+      "Clases",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html",
+    "href": "03_clase.html",
+    "title": "Clase 03: Álgebra de funciones",
+    "section": "",
+    "text": "Las funciones logarítmica y exponencial\nAntes de entrar a las operaciones con funciones, consideremos algunas propiedades de la función logarítmica, la cual es la inversa de la función exponencial.",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Álgebra de funciones</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#concepto-intuitivo-de-límite",
+    "href": "03_clase.html#concepto-intuitivo-de-límite",
+    "title": "Clase 03: Introducción a los Límites",
+    "section": "",
+    "text": "Aproximación Tabular y Gráfica\nPara entender esto, analicemos el ejemplo \\(\\lim_{x\\to 2} x^2\\). ¿Qué pasa con el valor de la función cuando nos acercamos a \\(x = 2\\) tanto por la izquierda (valores menores) como por la derecha (valores mayores)?\n\n\n\n\n\n\nTable 4.1: Aproximación a x = 2\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n1.900\n3.610000\n\n\n1.990\n3.960100\n\n\n1.999\n3.996001\n\n\n2.000\n4.000000\n\n\n2.001\n4.004001\n\n\n2.010\n4.040100\n\n\n2.100\n4.410000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4.1\n\n\n\n\n\n\nComo podemos observar, sin importar por qué lado nos acerquemos a \\(x=2\\), el valor de \\(f(x)\\) se aproxima a \\(4\\).",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Introducción a los Límites</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#límites-laterales-y-existencia",
+    "href": "03_clase.html#límites-laterales-y-existencia",
+    "title": "Clase 03: Introducción a los Límites",
+    "section": "Límites Laterales y Existencia",
+    "text": "Límites Laterales y Existencia\nPara que un límite exista formalmente en un punto \\(a\\), el valor al que se aproxima la función debe ser el mismo tanto por la izquierda como por la derecha.\n\nLímite por la izquierda: \\(\\lim_{x\\to a^-} f(x) = L\\)\nLímite por la derecha: \\(\\lim_{x\\to a^+} f(x) = L\\)\n\nTeorema de Existencia: El límite existe si y solo si los límites laterales son iguales. \\[\\lim_{x\\to a^-} f(x) = \\lim_{x\\to a^+} f(x) = L\\]",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Introducción a los Límites</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#evaluación-de-límites-por-sustitución-directa",
+    "href": "03_clase.html#evaluación-de-límites-por-sustitución-directa",
+    "title": "Clase 03: Introducción a los Límites",
+    "section": "Evaluación de Límites por Sustitución Directa",
+    "text": "Evaluación de Límites por Sustitución Directa\nSi una función \\(f(x)\\) es continua en el punto \\(a\\) (es decir, \\(a\\) pertenece al dominio de \\(f\\) y no hay saltos ni huecos), el límite se puede calcular simplemente evaluando la función en ese punto.\n\\[\\lim_{x\\to a} f(x) = f(a)\\]\nEjemplo: \\[\\lim_{x\\to 3} (2x + 1) = 2(3) + 1 = 7\\]\n\nPropiedades de los Límites\nAl evaluar límites algebraicamente, podemos utilizar las siguientes propiedades (asumiendo que los límites individuales existen):\n\nSuma/Resta: \\(\\lim_{x\\to a} [f(x) \\pm g(x)] = \\lim_{x\\to a} f(x) \\pm \\lim_{x\\to a} g(x)\\)\nMúltiplo constante: \\(\\lim_{x\\to a} [c \\cdot f(x)] = c \\cdot \\lim_{x\\to a} f(x)\\)\nProducto: \\(\\lim_{x\\to a} [f(x) \\cdot g(x)] = \\lim_{x\\to a} f(x) \\cdot \\lim_{x\\to a} g(x)\\)\nCociente: \\(\\lim_{x\\to a} \\frac{f(x)}{g(x)} = \\frac{\\lim_{x\\to a} f(x)}{\\lim_{x\\to a} g(x)}\\), siempre que \\(\\lim_{x\\to a} g(x) \\neq 0\\).",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Introducción a los Límites</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#cuándo-no-existe-un-límite",
+    "href": "03_clase.html#cuándo-no-existe-un-límite",
+    "title": "Clase 03: Introducción a los Límites",
+    "section": "¿Cuándo NO existe un límite?",
+    "text": "¿Cuándo NO existe un límite?\nExisten casos donde la aproximación tabular falla porque la función tiene comportamientos erráticos o divergentes cerca del punto \\(a\\).\n\n1. Comportamiento Asintótico (Límites Infinitos)2. Comportamiento Oscilatorio\n\n\nOcurre cuando la función crece o decrece sin límite (hacia \\(\\infty\\) o \\(-\\infty\\)) a medida que \\(x\\) se acerca a \\(a\\). Un ejemplo clásico es \\(\\lim_{x\\to 2} \\frac{1}{x-2}\\). Por la derecha tiende a infinito positivo, y por la izquierda a infinito negativo.\n\n\n\n\n\n\n\n\nFigure 4.2\n\n\n\n\n\n\nOcurre cuando la función fluctúa rápidamente entre dos valores a medida que \\(x\\) se acerca a \\(a\\), sin estabilizarse en ningún número concreto. El ejemplo por excelencia es \\(\\lim_{x\\to 0} \\sin\\left(\\frac{1}{x}\\right)\\).\n\n\n\n\n\n\n\n\nFigure 4.3",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Introducción a los Límites</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#repaso-la-función-logarítmica",
+    "href": "03_clase.html#repaso-la-función-logarítmica",
+    "title": "Clase 03: Introducción a los Límites",
+    "section": "",
+    "text": "Característica principal: Transforma crecimientos exponenciales en relaciones lineales, lo que facilita el cálculo de tasas de crecimiento o elasticidades.\n\n\nPropiedades de los logaritmos\nAntes de resolver los ejercicios, recordemos las tres reglas operativas básicas:\n\n\\(\\log_a(1)=0\\)\n\\(\\log_a(a)=1\\)\n\\(a^{\\log_a(x)=x}\\)\n\n1. Regla del Producto El logaritmo de una multiplicación es la suma de los logaritmos. \\[\\log_b(x \\cdot y) = \\log_b(x) + \\log_b(y)\\]\n2. Regla del Cociente El logaritmo de una división es la resta de los logaritmos (numerador menos denominador). \\[\\log_b\\left(\\frac{x}{y}\\right) = \\log_b(x) - \\log_b(y)\\]\n3. Regla de la Potencia El exponente del argumento de un logaritmo puede “bajarse” multiplicando al logaritmo. \\[\\log_b(x^n) = n \\cdot \\log_b(x)\\]",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Introducción a los Límites</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#álgebra-de-funciones",
+    "href": "03_clase.html#álgebra-de-funciones",
+    "title": "Clase 03: Álgebra de funciones",
+    "section": "Álgebra de Funciones",
+    "text": "Álgebra de Funciones\nAsí como podemos sumar, restar, multiplicar y dividir números reales, podemos realizar estas mismas operaciones con funciones para crear nuevas funciones.\nDadas dos funciones \\(f\\) y \\(g\\), definimos las siguientes operaciones:\n\nSuma: \\[(f + g)(x) = f(x) + g(x)\\]\nDiferencia (Resta): \\[(f - g)(x) = f(x) - g(x)\\]\nProducto (Multiplicación): \\[(f \\cdot g)(x) = f(x) \\cdot g(x)\\]\nCociente (División): \\[\\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)}, \\quad \\text{con } g(x) \\neq 0\\]\n\n\nEjemplos\n\nEjercicio 1\nDadas las funciones:\n\n\\(f(x) = \\frac{1}{x-2}\\) cuyo dominio es \\(D_f = \\mathbb{R} \\setminus \\{2\\}\\) o \\((-\\infty, 2) \\cup (2, \\infty)\\)\n\\(g(x) = \\sqrt{x}\\) cuyo dominio es \\(D_g = [0, \\infty)\\)\n\nEncuentra la función resultante de la suma, resta, multiplicación y división de \\(f(x)\\) y \\(g(x)\\), así como el dominio de cada una de ellas\nPara encontrar el dominio de las nuevas funciones creadas, debemos encontrar la intersección de los dominios originales (\\(D_f \\cap D_g\\)). Esto significa que \\(x\\) debe cumplir con las restricciones de ambas funciones a la vez: debe ser mayor o igual a \\(0\\), pero no puede ser \\(2\\).\n\nDominio de intersección base: \\([0, 2) \\cup (2, \\infty)\\)\n\nPor lo anterior:\n\n\n1. Suma \\((f+g)(x)\\)\n\\[(f+g)(x) = \\frac{1}{x-2} + \\sqrt{x}\\]\n\nDominio: \\([0, 2) \\cup (2, \\infty)\\)\n\n\n\n2. Resta \\((f-g)(x)\\)\n\\[(f-g)(x) = \\frac{1}{x-2} - \\sqrt{x}\\]\n\nDominio: \\([0, 2) \\cup (2, \\infty)\\)\n\n\n\n3. Multiplicación \\((f \\cdot g)(x)\\)\n\\[(f \\cdot g)(x) = \\left(\\frac{1}{x-2}\\right)(\\sqrt{x}) = \\frac{\\sqrt{x}}{x-2}\\]\n\nDominio: \\([0, 2) \\cup (2, \\infty)\\)\n\n\n\n4. División \\((f/g)(x)\\)\n\\[\\left(\\frac{f}{g}\\right)(x) = \\frac{\\frac{1}{x-2}}{\\sqrt{x}} = \\frac{1}{\\sqrt{x}(x-2)}\\]\n\n\n\n\n\n\n¡Atención con el dominio de la división!\n\n\n\nPara el cociente de funciones, el dominio es la intersección de los dominios originales excluyendo los valores donde la función del denominador se hace cero (\\(g(x) = 0\\)).\nDado que \\(g(0) = \\sqrt{0} = 0\\), debemos sacar al cero de nuestro dominio base. El corchete en el cero se convierte en un paréntesis.\n\n\n\nDominio de la división: \\((0, 2) \\cup (2, \\infty)\\)\n\n\n\nEjercicio 2\n\n\n\nEjercicio Práctico 2: Álgebra de Funciones y Leyes de Exponentes\nDadas las funciones:\n\n\\(f(x) = x^2\\) cuyo dominio es \\(D_f = \\mathbb{R}\\) o \\((-\\infty, \\infty)\\)\n\\(g(x) = \\frac{1}{\\sqrt{x}}\\) cuyo dominio es \\(D_g = (0, \\infty)\\) (el argumento de la raíz debe ser positivo y, al estar en el denominador, no puede ser cero).\n\nPara encontrar el dominio de las nuevas funciones creadas mediante suma, resta y multiplicación, debemos encontrar la intersección de los dominios originales (\\(D_f \\cap D_g\\)). Esto significa que \\(x\\) debe cumplir con las restricciones de ambas funciones a la vez.\n\nDominio de intersección base: \\((0, \\infty)\\)\n\nA continuación, realizamos las operaciones algebraicas, simplificando los resultados mediante las leyes de los exponentes (\\(x^n \\cdot x^m = x^{n+m}\\) y \\(\\frac{x^n}{x^m} = x^{n-m}\\)):\n\n1. Suma \\((f+g)(x)\\)\n\\[(f+g)(x) = x^2 + \\frac{1}{\\sqrt{x}}\\]\n\nDominio: \\((0, \\infty)\\)\n\n\n\n2. Resta \\((f-g)(x)\\)\n\\[(f-g)(x) = x^2 - \\frac{1}{\\sqrt{x}}\\]\n\nDominio: \\((0, \\infty)\\)\n\n\n\n3. Multiplicación \\((f \\cdot g)(x)\\)\n\\[(f \\cdot g)(x) = (x^2)\\left(\\frac{1}{\\sqrt{x}}\\right) = \\frac{x^2}{x^{1/2}} = x^{2 - 1/2} = x^{3/2} = \\sqrt{x^3} = x\\sqrt{x}\\]\n\nDominio: \\((0, \\infty)\\)\n\n\n\n4. División \\((f/g)(x)\\)\nAplicamos la ley del sándwich (o extremos por extremos y medios por medios) para simplificar la fracción compleja: \\[\\left(\\frac{f}{g}\\right)(x) = \\frac{x^2}{\\frac{1}{\\sqrt{x}}} = \\frac{\\frac{x^2}{1}}{\\frac{1}{x^{1/2}}} = x^2 \\cdot x^{1/2} = x^{2 + 1/2} = x^{5/2} = \\sqrt{x^5} = x^2\\sqrt{x}\\]\n\n\n\n\n\n\nAnálisis del dominio en esta división\n\n\n\nRecordemos que para el cociente de funciones, la regla general dice que el dominio es la intersección de los dominios originales excluyendo los valores donde la función del denominador se hace cero (\\(g(x) = 0\\)).\nSin embargo, en este caso particular, la función \\(g(x) = \\frac{1}{\\sqrt{x}}\\) nunca es igual a cero para ningún valor real de \\(x\\) (ya que el numerador es una constante \\(1\\)). Por lo tanto, no tenemos que excluir ningún valor adicional de nuestra intersección original.\n\n\n\nDominio de la división: \\((0, \\infty)\\)",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Álgebra de funciones</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#composición-de-funciones",
+    "href": "03_clase.html#composición-de-funciones",
+    "title": "Clase 03: Álgebra de funciones",
+    "section": "Composición de Funciones",
+    "text": "Composición de Funciones\nLa composición es una operación donde aplicamos una función sobre el resultado de otra. En lugar de evaluar la función en un número \\(x\\), la evaluamos en otra función \\(g(x)\\).\nDefinición: Dadas dos funciones \\(f\\) y \\(g\\), la función compuesta \\(f \\circ g\\) (se lee “\\(f\\) composición \\(g\\)”) está definida por: \\[(f \\circ g)(x) = f(g(x))\\]\n\nEjemplos\n\nEjercicio 1\nDadas las funciones:\n\n\\(f(x) = \\sqrt{x}\\)\n\\(g(x) = x^2 + 1\\)\n\nEncuentra \\((f \\circ g)(x)\\) y \\((g \\circ f)(x)\\).\n\n\n1. \\((f \\circ g)(x)\\) $\nSustituimos la función \\(g(x)\\) dentro de \\(f(x)\\): \\[\n\\begin{aligned}\n(f \\circ g)(x) &= f(x^2 + 1) \\\\\n&= \\sqrt{x^2 + 1}\n\\end{aligned}\n\\]\n\n\n2. \\((g \\circ f)(x)\\)\nSustituimos la función \\(f(x)\\) dentro de \\(g(x)\\): \\[\n\\begin{aligned}\n(g \\circ f)(x) &= g(\\sqrt{x}) \\\\\n&= (\\sqrt{x})^2 + 1 \\\\\n&= x + 1\n\\end{aligned}\n\\]\n\n\nEjercicio 2\nDadas las funciones:\n\n\\(f(x) = x^2\\)\n\\(g(x) = x - 3\\)\n\nEncuentra \\((f \\circ g)(x)\\) y \\((g \\circ f)(x)\\).\n\n\n1. \\((f \\circ g)(x)\\):\nTomamos la función \\(f\\) y sustituimos cada ‘\\(x\\)’ por la función \\(g(x)\\) completa. \\[\n\\begin{aligned}\n(f \\circ g)(x) &= f(g(x)) \\\\\n&= f(x - 3) \\\\\n&= (x - 3)^2\n\\end{aligned}\n\\] (Desarrollando el binomio, esto es igual a \\(x^2 - 6x + 9\\)).\n\n\n2. \\((g \\circ f)(x)\\):\nTomamos la función \\(g\\) y sustituimos cada ‘\\(x\\)’ por la función \\(f(x)\\). \\[\n\\begin{aligned}\n(g \\circ f)(x) &= g(f(x)) \\\\\n&= g(x^2) \\\\\n&= x^2 - 3\n\\end{aligned}\n\\]\nObserven que \\((x - 3)^2 \\neq x^2 - 3\\). Esto demuestra que la composición de funciones no es conmutativa; el orden en que se aplican las funciones altera por completo el resultado final.\n\n\nEjercicio 3\nDadas las funciones:\n\n\\(f(x) = \\frac{x}{x+1}\\)\n\\(g(x) = x^2\\)\n\\(h(x) = x+3\\)\n\nEncuentra la composición \\((f \\circ g \\circ h)(x)\\), que también se escribe como \\(f(g(h(x)))\\). Para resolver este tipo de composiciones sin confundirnos con el álgebra, el truco está en trabajar siempre “desde adentro hacia afuera”.\n1. La función más interna Partimos de una “función base” o la función más interna, en este caso es \\(h(x)\\): \\[h(x) = x + 3\\]\n2. Primera composición \\(g(h(x))\\) Tomamos la función intermedia \\(g(x)\\) y sustituimos la variable \\(x\\) por toda la expresión de \\(h(x)\\): \\[\n\\begin{aligned}\ng(h(x)) &= g(x+3) \\\\\n&= (x+3)^2\n\\end{aligned}\n\\] Si desarrollamos el binomio al cuadrado, obtenemos la expresión equivalente: \\(x^2 + 6x + 9\\).\n3. Composición final \\(f(g(h(x)))\\) Finalmente, tomamos la función externa \\(f(x)\\) y sustituimos cada ‘\\(x\\)’ en su fórmula por el resultado completo que obtuvimos en el paso anterior: \\[\n\\begin{aligned}\nf(g(h(x))) &= f((x+3)^2) \\\\\n&= \\frac{(x+3)^2}{(x+3)^2 + 1}\n\\end{aligned}\n\\]\nPara presentar el resultado de una forma más limpia, utilizamos la forma desarrollada del binomio y sumamos los términos semejantes en el denominador: \\[\n\\begin{aligned}\nf(g(h(x))) &= \\frac{x^2 + 6x + 9}{(x^2 + 6x + 9) + 1} \\\\\n&= \\frac{x^2 + 6x + 9}{x^2 + 6x + 10}\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Álgebra de funciones</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#la-función-logarítmica",
+    "href": "03_clase.html#la-función-logarítmica",
+    "title": "Clase 03: Álgebra de funciones",
+    "section": "",
+    "text": "Función LogarítmicaFunción Exponencial\n\n\nForma general: \\(f(x) = \\log_a(x)\\) con \\(a&gt;0\\) y \\(a \\neq 1\\)\nEsta función representa el exponente al que hay que elevar una base \\(a\\) para obtener \\(x\\). Como no existe ningún exponente real que haga que una base positiva dé como resultado un número negativo o cero, la función no está definida para valores menores o iguales a cero.\n\nDominio: \\((0, \\infty)\\) o \\(\\{x \\in \\mathbb{R} \\mid x &gt; 0\\}\\)\nRango: \\((-\\infty, \\infty)\\) o \\(\\mathbb{R}\\)\n\nEjemplo: \\(f(x) = \\ln(x)\\)\n\n\n\n\n\n\n\n\n\n\n\nForma general: \\(f(x) = a^x\\) con \\(a&gt;0\\) y \\(a \\neq 1\\)\nA diferencia del logaritmo, podemos elevar una base a cualquier número real (positivo, negativo o cero). Sin embargo, el resultado de elevar una base positiva a cualquier potencia siempre será estrictamente mayor a cero.\n\nDominio: \\((-\\infty, \\infty)\\) o \\(\\mathbb{R}\\)\nRango: \\((0, \\infty)\\) o \\(\\{y \\in \\mathbb{R} \\mid y &gt; 0\\}\\)\n\nEjemplo: \\(f(x) = e^x\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPropiedades de los logaritmos\n\n\\(\\log_a(1)=0\\)\n\\(\\log_a(a)=1\\)\n\\(a^{\\log_a(x)}=x\\)\n\\(\\log_a(x \\cdot y) = \\log_a(x) + \\log_a(y)\\)\n\\(\\log_a\\left(\\frac{x}{y}\\right) = \\log_a(x) - \\log_a(y)\\)\n\\(\\log_a(x^k) = k \\cdot \\log_a(x)\\)",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Álgebra de funciones</span>"
+    ]
+  },
+  {
+    "objectID": "03_clase.html#las-funciones-logarítmica-y-exponencial",
+    "href": "03_clase.html#las-funciones-logarítmica-y-exponencial",
+    "title": "Clase 03: Álgebra de funciones",
+    "section": "",
+    "text": "Función LogarítmicaFunción Exponencial\n\n\nForma general: \\(f(x) = \\log_a(x)\\) con \\(a&gt;0\\) y \\(a \\neq 1\\)\nEsta función representa el exponente al que hay que elevar una base \\(a\\) para obtener \\(x\\). Como no existe ningún exponente real que haga que una base positiva dé como resultado un número negativo o cero, la función no está definida para valores menores o iguales a cero.\n\nDominio: \\((0, \\infty)\\) o \\(\\{x \\in \\mathbb{R} \\mid x &gt; 0\\}\\)\nRango: \\((-\\infty, \\infty)\\) o \\(\\mathbb{R}\\)\n\nEjemplo: \\(f(x) = \\ln(x)\\)\n\n\n\n\n\n\n\n\n\n\n\nForma general: \\(f(x) = a^x\\) con \\(a&gt;0\\) y \\(a \\neq 1\\)\nA diferencia del logaritmo, podemos elevar una base a cualquier número real (positivo, negativo o cero). Sin embargo, el resultado de elevar una base positiva a cualquier potencia siempre será estrictamente mayor a cero.\n\nDominio: \\((-\\infty, \\infty)\\) o \\(\\mathbb{R}\\)\nRango: \\((0, \\infty)\\) o \\(\\{y \\in \\mathbb{R} \\mid y &gt; 0\\}\\)\n\nEjemplo: \\(f(x) = e^x\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPropiedades de los logaritmos\n\n\\(\\log_a(1)=0\\)\n\\(\\log_a(a)=1\\)\n\\(a^{\\log_a(x)}=x\\)\n\\(\\log_a(x \\cdot y) = \\log_a(x) + \\log_a(y)\\)\n\\(\\log_a\\left(\\frac{x}{y}\\right) = \\log_a(x) - \\log_a(y)\\)\n\\(\\log_a(x^k) = k \\cdot \\log_a(x)\\)",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Clase 03: Álgebra de funciones</span>"
+    ]
+  },
+  {
+    "objectID": "04_clase.html",
+    "href": "04_clase.html",
+    "title": "Clase 04: El Concepto de Límite",
+    "section": "",
+    "text": "Funciones con restricciones\n¿Qué ocurre a \\(f(x)\\) cuando la variable \\(x\\) se aproxima al número “\\(a\\)”?\nPara entender la base del cálculo, nos interesa saber cómo está definida una función \\(f(x)\\) cercana a un valor específico “\\(a\\)”.\nTomemos como ejemplo la función \\(f(x) = x^2 + 2\\).\nSi evaluamos directamente en \\(a\\), tenemos que \\(f(a) = a^2 + 2\\).\nLa notación formal para analizar esta aproximación es la siguiente: \\[\\lim_{x\\to a} (x^2 + 2) = a^2 + 2\\]\nPor ejemplo, si \\(a = 2\\): \\[\\lim_{x\\to 2} (x^2 + 2) = 4\\]\nDe manera general, llegamos a la siguiente estructura: \\[\\lim_{x\\to a} f(x) = L\\] Se lee como “el límite de \\(f(x)\\), cuando \\(x\\) se aproxima a ‘\\(a\\)’, es igual a ‘\\(L\\)’”).\n¿Qué le pasa a la función cuando nos acercamos a un punto conflictivo, como un punto indeterminado? Analicemos el siguiente límite:\n\\[\\lim_{x\\to 1} \\frac{x-1}{x^2-1}\\]\nSi observamos la función original \\(f(x) = \\frac{x-1}{x^2-1}\\), notaremos que no está definida en \\(x=1\\) ya que el denominador se haría cero, resultando en la forma indeterminada \\(0/0\\).\n¿La función está definida en ese punto? No. Sin embargo, la definición del límite \\(\\lim_{x\\to a}\\) nos dice que debemos considerar valores de \\(x\\) cercanos, pero no iguales a “\\(a\\)”. Nos interesa saber a qué tiende la función, es decir, hacia dónde se acerca.",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: El Concepto de Límite</span>"
+    ]
+  },
+  {
+    "objectID": "04_clase.html#funciones-con-restricciones",
+    "href": "04_clase.html#funciones-con-restricciones",
+    "title": "Clase 04: El Concepto de Límite",
+    "section": "",
+    "text": "1. Aproximación tabular\nPara descubrir hacia dónde tiende la función, evaluamos valores que se acerquen a \\(1\\) por la izquierda (valores menores que 1) y por la derecha (valores mayores que 1).\n\n\n\n\n\n\n\nPor la izquierda (x &lt; 1)\nf(x)\n\n\n\n\n0.9000\n0.526000\n\n\n0.9900\n0.502000\n\n\n0.9990\n0.500250\n\n\n0.9999\n0.500025\n\n\n\n\n\n\n\n\n\n\nPor la derecha (x &gt; 1)\nf(x)\n\n\n\n\n1.1000\n0.47600\n\n\n1.0100\n0.49700\n\n\n1.0010\n0.49970\n\n\n1.0001\n0.49997\n\n\n\n\n\n\n\n¿A dónde tiende? Como podemos observar en ambas tablas, conforme \\(x\\) se acera a \\(1\\), el valor de \\(f(x)\\) se aproxima a 0.5.\n\n\n2. Comportamiento gráfico\nSi graficamos la función, notaremos que tiene una asíntota vertical en \\(x = -1\\) y un “hueco” exactamente en la coordenada \\((1, 0.5)\\), corroborando que la función sí tiende a un valor concreto, aunque no esté definida allí.\n\n\n\n\n\n\n\n\nFigure 5.1\n\n\n\n\n\n\n3. Solución algebraica\nPara evitar hacer tablas o gráficas cada vez que evaluamos un límite indeterminado, podemos recurrir al álgebra. Si factorizamos el denominador utilizando la diferencia de cuadrados \\(x^2 - 1 = (x+1)(x-1)\\), podemos simplificar la expresión:\n\\[\n\\begin{aligned}\n\\lim_{x\\to 1} \\frac{x-1}{x^2-1} &= \\lim_{x\\to 1} \\frac{x-1}{(x+1)(x-1)} \\\\\n\\end{aligned}\n\\]\nSimplificamos el término común \\((x-1)\\) tanto en el numerador como en el denominador:\n\\[\n\\begin{aligned}\n&= \\lim_{x\\to 1} \\frac{1}{x+1}\n\\end{aligned}\n\\]\nAhora que hemos eliminado la indeterminación, evaluamos el límite sustituyendo directamente \\(x = 1\\):\n\\[\n\\begin{aligned}\n&= \\frac{1}{1+1} \\\\\n&= \\frac{1}{2} = 0.5\n\\end{aligned}\n\\]\nEn el ejemplo anterior, el límite existe porque llegamos al mismo lugar por la izquierda y por la derecha. Sin embargo, existe la posibilidad de que un límite no exista, por ejemplo evaluemos el mismo límite ahora en \\(x \\to -1\\):\n\\[ \\lim_{x\\to -1} \\frac{x-1}{x^2-1} = \\lim_{x\\to -1} \\frac{x-1}{(x+1)(x-1)} = \\lim_{x\\to -1} \\frac{1}{x+1} \\]\nSi intentamos hacer sustitución directa obtenemos \\(\\frac{1}{0}\\), lo cual no está definido.\n¿A dónde llega la función por la derecha y por la izquierda? * Por la izquierda (\\(x \\to -1^-\\)): \\(\\lim \\frac{1}{x+1} = -\\infty\\) (un número negativo muy grande) * Por la derecha (\\(x \\to -1^+\\)): \\(\\lim \\frac{1}{x+1} = +\\infty\\) (un número positivo muy grande)\nComo los límites laterales se disparan a direcciones opuestas, concluimos que el límite no existe.\n\n\n\n\n\n\n\n\nFigure 5.2",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: El Concepto de Límite</span>"
+    ]
+  },
+  {
+    "objectID": "04_clase.html#ejercicios",
+    "href": "04_clase.html#ejercicios",
+    "title": "Clase 04: El Concepto de Límite",
+    "section": "Ejercicios",
+    "text": "Ejercicios\nPara resolver límites, utilizamos tres técnicas algebraicas principales: sustitución directa, factorización y racionalización. A continuación se resuelven los ejercicios vistos en clase.\n\nSustitución Directa\nSi la función es continua en el punto a evaluar, basta con sustituir el valor de \\(x\\).\n1. \\(\\lim_{x\\to 3} (2x+5)\\)  \\[ \\lim_{x\\to 3} (2x+5) = 2(3) + 5 = 6 + 5 = \\mathbf{11} \\]\n2. \\(\\lim_{x\\to -2} (x^2-4x+1)\\) \\[ \\lim_{x\\to -2} (x^2-4x+1) = (-2)^2 - 4(-2) + 1 = 4 + 8 + 1 = \\mathbf{13} \\]\n3. \\(\\lim_{x\\to 5} \\sqrt{x+4}\\) \\[ \\lim_{x\\to 5} \\sqrt{x+4} = \\sqrt{5+4} = \\sqrt{9} = \\mathbf{3} \\]\n\n\n\nFactorización y expansión\nCuando obtenemos la forma indeterminada \\(0/0\\), factorizamos polinomios para simplificar los términos problemáticos.\n4. \\(\\lim_{x\\to 2} \\frac{x^2-1}{x-2}\\) Al evaluar directamente obtenemos \\(\\frac{3}{0}\\). Dado que el numerador no se hace cero pero el denominador sí, tenemos una asíntota vertical. Resultado: \\(\\mathbf{\\nexists}\\) (El límite no existe)\n5. \\(\\lim_{x\\to 3} \\frac{x-3}{x^2-9}\\) \\[ \\lim_{x\\to 3} \\frac{x-3}{(x-3)(x+3)} = \\lim_{x\\to 3} \\frac{1}{x+3} = \\frac{1}{3+3} = \\mathbf{\\frac{1}{6}} \\]\n6. \\(\\lim_{x\\to 0} \\frac{x^2-2x}{x}\\) \\[ \\lim_{x\\to 0} \\frac{x(x-2)}{x} = \\lim_{x\\to 0} (x-2) = 0 - 2 = \\mathbf{-2} \\]\n9. \\(\\lim_{x\\to 0} \\frac{(3+x)^2 - 9}{x}\\)\nPrimero desarrollamos el binomio al cuadrado: \\[ \\lim_{x\\to 0} \\frac{(9 + 6x + x^2) - 9}{x} = \\lim_{x\\to 0} \\frac{6x + x^2}{x} = \\lim_{x\\to 0} \\frac{x(6 + x)}{x} = \\lim_{x\\to 0} (6 + x) = \\mathbf{6} \\]\n\n\n\nRacionalización\nSe utiliza principalmente cuando hay raíces cuadradas involucradas y obtenemos \\(0/0\\). Consiste en multiplicar numerador y denominador por el conjugado.\n10. \\(\\lim_{x\\to 0} \\frac{\\sqrt{x^2+9} - 3}{x^2}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x^2+9} + 3\\): \\[\n\\begin{aligned}\n&= \\lim_{x\\to 0} \\frac{\\sqrt{x^2+9} - 3}{x^2} \\cdot \\left( \\frac{\\sqrt{x^2+9} + 3}{\\sqrt{x^2+9} + 3} \\right) \\\\\n&= \\lim_{x\\to 0} \\frac{(\\sqrt{x^2+9})^2 - (3)^2}{x^2(\\sqrt{x^2+9} + 3)} \\\\\n&= \\lim_{x\\to 0} \\frac{x^2 + 9 - 9}{x^2(\\sqrt{x^2+9} + 3)} \\\\\n&= \\lim_{x\\to 0} \\frac{x^2}{x^2(\\sqrt{x^2+9} + 3)} \\\\\n&= \\lim_{x\\to 0} \\frac{1}{\\sqrt{x^2+9} + 3} = \\frac{1}{\\sqrt{9} + 3} = \\mathbf{\\frac{1}{6}}\n\\end{aligned}\n\\]\n13. \\(\\lim_{x\\to 4} \\frac{\\sqrt{x}-2}{x-4}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x} + 2\\): \\[ \\lim_{x\\to 4} \\frac{\\sqrt{x}-2}{x-4} \\cdot \\frac{\\sqrt{x}+2}{\\sqrt{x}+2} = \\lim_{x\\to 4} \\frac{x-4}{(x-4)(\\sqrt{x}+2)} = \\lim_{x\\to 4} \\frac{1}{\\sqrt{x}+2} = \\frac{1}{2+2} = \\mathbf{\\frac{1}{4}} \\]\n14. \\(\\lim_{x\\to 9} \\frac{x-9}{\\sqrt{x}-3}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x} + 3\\): \\[ \\lim_{x\\to 9} \\frac{x-9}{\\sqrt{x}-3} \\cdot \\frac{\\sqrt{x}+3}{\\sqrt{x}+3} = \\lim_{x\\to 9} \\frac{(x-9)(\\sqrt{x}+3)}{x-9} = \\lim_{x\\to 9} (\\sqrt{x}+3) = \\sqrt{9} + 3 = \\mathbf{6} \\]\n15. \\(\\lim_{x\\to 0} \\frac{\\sqrt{x+1}-1}{x}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x+1} + 1\\): \\[ \\lim_{x\\to 0} \\frac{\\sqrt{x+1}-1}{x} \\cdot \\frac{\\sqrt{x+1}+1}{\\sqrt{x+1}+1} = \\lim_{x\\to 0} \\frac{(x+1)-1}{x(\\sqrt{x+1}+1)} = \\lim_{x\\to 0} \\frac{x}{x(\\sqrt{x+1}+1)} = \\lim_{x\\to 0} \\frac{1}{\\sqrt{x+1}+1} = \\frac{1}{\\sqrt{1}+1} = \\mathbf{\\frac{1}{2}} \\]\n\n\n\nCasos Especiales (Límites Inexistentes o Infinitos)\n7. \\(\\lim_{x\\to 0} \\frac{|x|}{x}\\)\nEl valor absoluto se comporta distinto dependiendo del lado: por la derecha el límite es \\(1\\), por la izquierda es \\(-1\\). Resultado: \\(\\mathbf{\\nexists}\\) (No existe)\n8. \\(\\lim_{x\\to 0} \\frac{1}{x}\\)\nPor la derecha tiende a \\(\\infty\\), por la izquierda a \\(-\\infty\\). Resultado: \\(\\mathbf{\\nexists}\\) (No existe)\n11. \\(\\lim_{x\\to 0} \\sin\\left(\\frac{\\pi}{x}\\right)\\)\nConforme \\(x\\) se acerca a cero, la función oscila infinitamente entre \\(1\\) y \\(-1\\) sin estabilizarse. Resultado: \\(\\mathbf{\\nexists}\\) (No existe)\n12. \\(\\lim_{x\\to 0} \\frac{1}{x^2}\\)\nDado que cualquier número (positivo o negativo) elevado al cuadrado es positivo, tanto por la izquierda como por la derecha el denominador se acerca a \\(+0\\). Resultado: \\(\\mathbf{\\infty}\\) (Tiende a infinito positivo)",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: El Concepto de Límite</span>"
     ]
   }
 ]
