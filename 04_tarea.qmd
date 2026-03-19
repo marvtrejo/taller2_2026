@@ -1,0 +1,192 @@
+---
+title: "Tarea 04"
+subtitle: "Taller de Economía Cuantitativa II"
+date: "Fecha de entrega: 13 de marzo de 2026"
+---
+
+::: {.callout-note icon=false}
+## Derivada por definición
+
+Para resolver esta tarea, utilizaremos la definición formal de la derivada como un límite. Esta fórmula representa la tasa de cambio instantánea de la función:
+
+$$f'(x) = \lim_{h\to0} \frac{f(x+h) - f(x)}{h}$$
+:::
+---
+
+### 1. $f(x) = (x - 3)^3$
+
+Sustituimos en la definición:
+$$f'(x) = \lim_{h\to0} \frac{(x + h - 3)^3 - (x - 3)^3}{h}$$
+
+Para facilitar las operaciones, podemos agrupar el término $(x-3)$ y desarrollar el binomio al cubo usando la regla $(A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$, donde $A = (x-3)$ y $B = h$:
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h\to0} \frac{[(x - 3) + h]^3 - (x - 3)^3}{h} \\
+&= \lim_{h\to0} \frac{(x - 3)^3 + 3(x - 3)^2h + 3(x - 3)h^2 + h^3 - (x - 3)^3}{h}
+\end{aligned}
+$$
+
+Eliminamos términos similares $(x - 3)^3$ y factorizamos $h$ en el numerador:
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h\to0} \frac{h[3(x - 3)^2 + 3(x - 3)h + h^2]}{h} \\
+&= \lim_{h\to0} [3(x - 3)^2 + 3(x - 3)h + h^2]
+\end{aligned}
+$$
+
+Evaluamos el límite cuando $h \to 0$:
+
+$$
+\begin{aligned}
+f'(x) &= \lim_{h\to0} [3(x - 3)^2 + 3(x - 3)h + h^2] \\
+&= [3(x - 3)^2 + 3(x - 3)(0) + (0)^2]
+\end{aligned}
+$$
+
+
+**Resultado:** $$f'(x) = 3(x - 3)^2$$
+
+---
+
+### 2. $g(x) = \ln(x)$
+
+Sustituimos en la definición y usamos las propiedades de los logaritmos para operar:
+$$
+\begin{aligned}
+g'(x) &= \lim_{h\to0} \frac{\ln(x + h) - \ln(x)}{h} \\
+&= \lim_{h\to0} \frac{1}{h} \ln\left(\frac{x + h}{x}\right) \\
+&= \lim_{h\to0} \frac{1}{h} \ln\left(1 + \frac{h}{x}\right)
+\end{aligned}
+$$
+
+Usamos la propiedad de la potencia del logaritmo ($n \ln A = \ln A^n$):
+$$g'(x) = \lim_{h\to0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}$$
+
+Hacemos un cambio de variable. Sea $u = \frac{x}{h}$, entonces $\frac{1}{h} = \frac{u}{x}$. Cuando $h \to 0$, $u \to \infty$:
+$$g'(x) = \lim_{u\to\infty} \ln\left(1 + \frac{1}{u}\right)^{\frac{u}{x}} = \lim_{u\to\infty} \ln\left[\left(1 + \frac{1}{u}\right)^u\right]^{\frac{1}{x}}$$
+
+Recordando el límite especial del número $e$ ($\lim_{u\to\infty}(1 + \frac{1}{u})^u = e$):
+$$g'(x) = \ln\left(e^{\frac{1}{x}}\right) = \frac{1}{x} \ln(e)$$
+**Resultado:** $$g'(x) = \frac{1}{x}$$
+
+---
+
+### 3. $h(x) = \sqrt{x}$
+
+Sustituimos en la definición:
+$$h'(x) = \lim_{h\to0} \frac{\sqrt{x + h} - \sqrt{x}}{h}$$
+
+Para resolver la indeterminación ($\frac{0}{0}$), racionalizamos multiplicando por $1=\frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}}$:
+$$
+\begin{aligned}
+h'(x) &= \lim_{h\to0} \left[ \frac{\sqrt{x + h} - \sqrt{x}}{h} \cdot \frac{\sqrt{x + h} + \sqrt{x}}{\sqrt{x + h} + \sqrt{x}} \right] \\
+&= \lim_{h\to0} \left[ \frac{(\sqrt{x + h})^2+ \sqrt{x}(\sqrt{x + h})- \sqrt{x}(\sqrt{x + h})-(\sqrt{x})^2}{h(\sqrt{x + h} + \sqrt{x})} \right] \\
+&= \lim_{h\to0} \frac{(\sqrt{x + h})^2 - (\sqrt{x})^2}{h(\sqrt{x + h} + \sqrt{x})} \\
+&= \lim_{h\to0} \frac{x + h - x}{h(\sqrt{x + h} + \sqrt{x})} \\
+&= \lim_{h\to0} \frac{h}{h(\sqrt{x + h} + \sqrt{x})}
+\end{aligned}
+$$
+
+Simplificamos $h$ y evaluamos el límite:
+$$h'(x) = \lim_{h\to0} \frac{1}{\sqrt{x + h} + \sqrt{x}} = \frac{1}{\sqrt{x + 0} + \sqrt{x}}$$
+**Resultado:** $$h'(x) = \frac{1}{2\sqrt{x}}$$
+
+---
+
+### 4. $i(x) = e^x$
+
+Sustituimos en la definición:
+$$i'(x) = \lim_{h\to0} \frac{e^{x+h} - e^x}{h}$$
+
+Por las leyes de los exponentes ($e^{x+h} = e^x \cdot e^h$), podemos factorizar $e^x$:
+$$
+\begin{aligned}
+i'(x) &= \lim_{h\to0} \frac{e^x \cdot e^h - e^x}{h} \\
+&= \lim_{h\to0} \frac{e^x(e^h - 1)}{h}
+\end{aligned}
+$$
+
+Como $e^x$ no depende de $h$, podemos tratarlo como una constante y aplicar propiedades de los límites:
+$$i'(x) = e^x \cdot \lim_{h\to0} \frac{e^h - 1}{h}$$
+
+Por definición, $e^h$ se puede expresar como una serie de Taylor de la siguiente manera:
+
+$$e^h= 1+h+\frac{h^2}{2!}+\frac{h^3}{3!}+\frac{h^4}{4!}+...++\frac{h^n}{n!}$$
+
+A partir de la expresión anterior podemos llegar a la misma expresión que en nuestro límite usando solamente álgebra:
+
+$$e^h-1= h \left[ 1+\frac{h}{2!}+\frac{h^2}{3!}+\frac{h^3}{4!}+...++\frac{h^{n-1}}{n!} \right] $$
+
+$$\frac{e^h-1}{h}= \left[ \frac{h}{2!}+\frac{h^2}{3!}+\frac{h^3}{4!}+...++\frac{h^{n-1}}{n!} \right] $$
+
+Por lo anterior:
+$$i'(x) = e^x \cdot \lim_{h\to0} \frac{e^h - 1}{h}= e^x \cdot\lim_{h\to0}\left[1+ \frac{h}{2!}+\frac{h^2}{3!}+\frac{h^3}{4!}+...++\frac{h^{n-1}}{n!} \right]$$
+
+Al evaluar el límite, tenemos que:
+
+$$
+i'(x) = e^x \cdot\lim_{h\to0}\left[1+ \frac{0}{2!}+\frac{0^2}{3!}+\frac{0^3}{4!}+...++\frac{0^{n-1}}{n!} \right] \\
+i'(x) = e^x \cdot 1=e^x
+
+$$
+
+**Resultado:** $$i'(x) = e^x$$
+
+---
+
+### 5. $j(x) = |x|$
+
+Sustituimos en la definición:
+$$j'(x) = \lim_{h\to0} \frac{|x + h| - |x|}{h}$$
+
+Debemos analizar la derivada por casos, ya que el valor absoluto cambia su comportamiento dependiendo del signo de $x$:
+
+* **Caso 1: $x > 0$**
+    Para valores de $h$ suficientemente pequeños, $x + h > 0$. Entonces $|x+h| = x+h$ y $|x| = x$.
+    
+    $$j'(x) = \lim_{h\to0} \frac{(x + h) - x}{h} = \lim_{h\to0} \frac{h}{h} = 1$$
+    
+* **Caso 2: $x < 0$**
+    Para valores de $h$ suficientemente pequeños, $x + h < 0$. Entonces $|x+h| = -(x+h)$ y $|x| = -x$.
+    
+    $$j'(x) = \lim_{h\to0} \frac{-(x + h) - (-x)}{h} = \lim_{h\to0} \frac{-x - h + x}{h} = \lim_{h\to0} \frac{-h}{h} = -1$$
+    
+* **Caso 3: $x = 0$**
+
+    $$j'(0) = \lim_{h\to0} \frac{|0 + h| - |0|}{h} = \lim_{h\to0} \frac{|h|}{h}$$
+    
+    Este límite no existe porque los límites laterales son diferentes (+1 por la derecha, -1 por la izquierda).
+
+**Resultado:** $$j'(x) = \begin{cases} 1 & \text{si } x > 0 \\ -1 & \text{si } x < 0 \\ \text{No existe} & \text{si } x = 0 \end{cases}$$ *(También se puede expresar como $j'(x) = \frac{x}{|x|}$ para $x \neq 0$)*.
+
+---
+
+### 6. $k(x) = \sin(x)$
+
+Sustituimos en la definición:
+$$k'(x) = \lim_{h\to0} \frac{\sin(x + h) - \sin(x)}{h}$$
+
+Utilizamos la identidad trigonométrica para la suma de ángulos: $\sin(A+B) = \sin A \cos B + \cos A \sin B$.
+$$
+\begin{aligned}
+k'(x) &= \lim_{h\to0} \frac{\sin(x)\cos(h) + \cos(x)\sin(h) - \sin(x)}{h}
+\end{aligned}
+$$
+
+Agrupamos los términos que contienen $\sin(x)$ y factorizamos:
+$$
+\begin{aligned}
+k'(x) &= \lim_{h\to0} \frac{\sin(x)[\cos(h) - 1] + \cos(x)\sin(h)}{h} \\
+&= \lim_{h\to0} \left[ \sin(x)\left(\frac{\cos(h) - 1}{h}\right) + \cos(x)\left(\frac{\sin(h)}{h}\right) \right]
+\end{aligned}
+$$
+
+Aplicamos las propiedades del límite de una suma y evaluamos usando los límites trigonométricos especiales $\lim_{h\to0} \frac{\cos(h) - 1}{h} = 0$ y $\lim_{h\to0} \frac{\sin(h)}{h} = 1$:
+$$
+\begin{aligned}
+k'(x) &= \sin(x) \cdot (0) + \cos(x) \cdot (1)
+\end{aligned}
+$$
+**Resultado:** $$k'(x) = \cos(x)$$

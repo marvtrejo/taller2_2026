@@ -1,0 +1,179 @@
+---
+title: "Presentación del curso"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Bienvenida
+
+Bienvenidas y bienvenidos a las notas de clase y ejercicios del **Taller
+de Economía Cuantitativa II** A lo largo del curso las y los estudiantes
+comprenderán los fundamentos del cálculo diferencial e integral, así
+como sus aplicaciones en problemas de la economía y otras disciplinas.
+Se estudiarán conceptos clave como funciones, límites, derivadas e
+integrales, con el fin de analizar y resolver problemas que involucren
+tasas de cambio, optimización y áreas bajo curvas. El curso
+proporcionará las herramientas matemáticas necesarias para analizar
+fenómenos económicos y sociales desde una perspectiva cuantitativa.
+
+Este curso está diseñado para estudiantes de la **Licenciatura en
+Economía** de la **Facultad de Economía** de la UNAM. En este sitio
+encontrarás:
+
+-   Apuntes de clase
+-   Tareas y ejercicios
+-   Recursos adicionales
+
+```{r, include = FALSE}
+
+library(qrcode)
+library(bslib)
+library(shiny)
+```
+
+# Profesores
+
+```{r, echo=FALSE}
+tags$div(
+  style = "display: flex; gap: 20px; flex-wrap: wrap;",
+  tags$div(class = "card",
+    style = "flex: 1 1 300px;",  
+    tags$h3("Eduardo Castro Rabadán"),
+    tags$p("Profesor titular"),
+    tags$p("eduardo.castro@comunidad.unam.mx"),
+    tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en monitoreo y evaluación de indicadores en política pública. Mis principales líneas de investigación son el mercado laboral, las políticas públicas sobre violencia, salud mental y adicciones. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Apoyo Estratégico en la Dirección General de Integración, Análisis e Investigación.")
+  ),
+  tags$div(class = "card",
+    style = "flex: 1 1 300px;",
+    tags$h3("Marvin Ivan Trejo Mendez"),
+    tags$p("Profesor adjunto"),
+    tags$p("marvtrejo@comunidad.unam.mx"),
+    tags$div(style = "border-top: 4px solid #BFBFBF; margin-top: 0; margin-bottom: 1rem;"),
+    tags$p("Maestro en Economía por la Facultad de Economía – UNAM, con experiencia en análisis de Política Pública. Mis principales líneas de investigación son la política social, monitoreo y evaluación, pobreza y desarrollo económico. He sido profesor en las materias de Desarrollo Económico, Álgebra Lineal y Teoría Microeconómica. Actualmente, trabajo en el INEGI como Jefe de la Oficina de Análisis y Seguimiento de la Política de Desarrollo Social en la Dirección General de Evaluación y Medición de la Pobreza.")
+  )
+)
+```
+
+# Metodología del curso
+
+El curso consta de 15 sesiones los viernes a lo largo del semestre,
+comenzando el 06 de febrero de 2026 y concluyendo el 29 de mayo de 2026.
+Las clases se realizarán de manera presencial en la Facultad de
+Economía, en un horario de 7:00 a 9:00 a.m. Las y los estudiantes
+deberán presentarse con los temas previamente estudiados de acuerdo con
+lo acordado en las clases.
+
+# Reglamento interno
+
+-   Es requisito indispensable que las y los alumnos se conduzcan con
+    absoluto respeto con sus compañeras y compañeros, así como con los
+    profesores.
+
+-   Toda persona que se presente al curso será calificada. Sólo la que
+    se presente a 3 o menos clases y no presente ningún trabajo será
+    calificada con NP.
+
+-   Ambos profesores estamos para ayudarles, no duden en preguntar.
+
+-   Entregar en tiempo y forma las actividades. No hay entrega
+    extemporánea de actividades.
+
+-   Por planeación de la materia y por respeto a las personas asistentes
+    a la clase, no hay espacio para temas ajenos a la materia.
+
+-   En caso de detectar plagio en alguna tarea y/o trabajo, perderá la
+    posibilidad de acreditar el curso.
+
+# Criterios de evaluación
+
+Habrá **DOS** exámenes parciales con igual ponderación que se
+presentarán de manera individual.
+
+Aquellas personas que no aprueben y/o no entreguen alguno de los DOS
+exámenes parciales, deberán presentar un examen final a partir de los
+conceptos revisados en clase. **Para aprobar el curso es indispensable
+presentar y aprobar los exámenes parciales y/o el examen final.**
+
+La participación en clase enriquecerá las sesiones, hará más dinámico el
+desarrollo de éstas y se tomará en cuenta para la evaluación final (se
+incluyen ejercicios y aportaciones).
+
+## Ponderación
+
+-   Exámenes parciales/final: 75%
+-   Participación en clase/tareas: 25%
+
+Para la calificación final, solamente se redondeará hacia arriba a
+partir del 0.6. Por ejemplo, 8.5 se asienta en actas como 8, mientras
+que 8.6 (o mayor) se asienta como 9. **Una vez asentada la calificación
+final en plataforma, no habrá cambios.**
+
+# Contenido temático
+
+1.  Definición de función
+
+    1.  Dominio y rango
+
+    2.  Tipos de función
+
+        -   Algebráica: constante, polinominales y racionales
+        -   Trascendentes: exponenciales y logarítmicas
+        -   Por partes
+
+    3.  Operaciones con funciones
+
+        -   Operaciones básicas: suma, resta, multiplicación y división
+
+    4.  Composición de funciones
+
+    5.  Límites y continuidad
+
+        -   Límites: definición intuitiva, propiedades, laterales y al
+            infinito, formas indeterminadas
+
+    6.  Comportamiuento de funciones: creciente, decreciente, cóncavo o
+        convexo
+
+2.  Derivada
+
+    1.  Interpretación geométrica
+
+    2.  Optimización
+
+        -   Máximos y mínimos
+
+        -   Segunda derivada
+
+3.  Integrales
+
+    1.  Indefinida, definida y el teorema fundamental del cálculo
+
+    2.  Integración por sustitución
+
+    3.  Integración por partes
+
+# Bibliografía
+
+-   Hoffmann, Laurence D. (1994) Cálculo aplicado para la
+    adminiostración, la economía, contaduría y ciencias sociales. 5a
+    edición. Ed. Mc. Graw-Hill. Colombia
+-   Lovaglia, F. (1972) Álgebra. México: Harla
+-   Lehmann, C. (1964) Álgebra. México: LIMUSA.
+-   Haeussler, E., Paul, R. y Wood, R. (2008) Matemáticas para
+    administración y economía. México: Pearson.
+-   Sydsaeter, K., Hammond, P. y Carvaja, A. (2012) Matemáticas para el
+    análisis económico. Madrid, España.
+
+La bibliografía se encuentran disponible a través del siguiente código o
+enlace
+
+[Material de
+apoyo](https://drive.google.com/drive/folders/1t7LJa_ICSsLytR624LSGTdFc4txX9uVd){.uri}
+
+```{r, echo = FALSE}
+
+qr_code("https://drive.google.com/drive/folders/1t7LJa_ICSsLytR624LSGTdFc4txX9uVd") |> plot()
+
+```

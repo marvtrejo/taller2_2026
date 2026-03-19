@@ -1,0 +1,761 @@
+---
+title: "Apuntes de clase"
+---
+
+Una matriz $A$ es no singular e invertible si existe una matriz $B$ de $n \times n$ tal que $A \cdot B = B \cdot A = I$.
+La matriz B se denomina **inversa de A**
+
+Sean:
+
+$$
+A =
+\left[
+\begin{array}{ccc}
+2 & 3 \\
+2 & 2 \\
+\end{array}
+\right] ; \quad
+B =
+\left[
+\begin{array}{ccc}
+-1 & \frac{3}{2} \\
+1 & -1 \\
+\end{array}
+\right]
+$$
+
+Comprobemos que $A \cdot B = B \cdot A = I$.
+
+1) $A \cdot B$
+
+$$
+a_{11}=
+\left(
+\begin{array}{ccc}
+2 & 3 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+1 \\ 
+\end{array}
+\right)
+= -2+3=1
+$$
+
+$$
+a_{12}=
+\left(
+\begin{array}{ccc}
+2 & 3 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\frac{3}{2} \\
+-1 \\ 
+\end{array}
+\right)
+= 3+(-3)=0
+$$
+
+$$
+a_{21}=
+\left(
+\begin{array}{ccc}
+2 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-1 \\
+1 \\ 
+\end{array}
+\right)
+= -2+2=0
+$$
+
+$$
+a_{22}=
+\left(
+\begin{array}{ccc}
+2 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+\frac{3}{2} \\
+-1 \\ 
+\end{array}
+\right)
+= 3+(-2)=1
+$$
+
+$$
+A \cdot B =
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+2) $B \cdot A$
+
+$$
+a_{11}=
+\left(
+\begin{array}{ccc}
+-1 & \frac{3}{2} \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+2 \\
+2 \\ 
+\end{array}
+\right)
+= -2+3=1
+$$
+
+$$
+a_{12}=
+\left(
+\begin{array}{ccc}
+-1 & \frac{3}{2} \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+2 \\ 
+\end{array}
+\right)
+= -3+3=0
+$$
+
+$$
+a_{21}=
+\left(
+\begin{array}{ccc}
+1 & -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+2 \\
+2 \\ 
+\end{array}
+\right)
+= 2-2=0
+$$
+
+$$
+a_{22}=
+\left(
+\begin{array}{ccc}
+1 & -1 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+3 \\
+2 \\ 
+\end{array}
+\right)
+= 3-2=1
+$$
+
+$$
+B \cdot A =
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+Dado que $A \cdot B = B \cdot A$ podemos concluir que $B$ es inversa de $A$ y $A$ es invertible (no singular).
+
+Si una matriz tiene inversa, la inversa es única.
+
+La inversa de $A$ se escribe como $A^{-1}$ de forma que $A \cdot A^{-1}=I$ y $A^{-1} \cdot A=I$.
+
+## Cálculo de la inversa 
+
+Sea 
+
+$$
+A =
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+$$
+
+Para determinar $A^{-1}$, empezamos definiendola como:
+
+$$
+A^{-1} =
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right]
+$$
+
+Entonces
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+\cdot
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right] =
+I_2 =
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+a+2c & b+2d \\
+3a+4c & 3b+4d
+\end{array}
+\right]=
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+De lo anterior obtenemos dos sistemas de ecuaciones que nos permiten encontrar los valores de $a,b,c,d$
+
+$$
+\begin{align}
+a+2c &= 1 \tag{Sistema 1} \\
+3a+4c&= 0 \\
+\\
+b+2d&=0 \tag{Sistema 2}\\
+3b+4d&=1
+\end{align}
+$$
+
+1) Sistema 1
+
+$$
+\begin{align}
+a+2c &= 1 \\
+3a+4c&= 0 \\
+\\
+a &= 1-2c \\
+3(1-2c)+4c&=0 \\
+3-6c+4c &= 0 \\
+-2c &=-3 \\
+\mathbf{c} &= \mathbf{\frac{3}{2}} \\ \\
+a &= 1-2(\frac{3}{2}) \\
+\mathbf{a} &= \mathbf{-2}
+\end{align}
+$$
+
+2) Sistema 2
+
+$$
+\begin{align}
+b+2d&=0 \\
+3b+4d&=1 \\\\
+b&=-2d \\
+3(-2d)+4d &=1 \\
+-6d+4d &=1 \\
+-2d &=1 \\
+\mathbf{d}&= \mathbf{-\frac{1}{2}} \\\\
+b &= -2(-\frac{1}{2}) \\
+\mathbf{b}&= \mathbf{1}
+\end{align}
+$$
+
+Los valores de $a,b,c,d$ corresponden a los valores de la matriz inversa de A, recordemos que iniciamos definiendola como
+
+$$
+A^{-1} =
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right]
+$$
+
+Por lo tanto
+
+$$
+A^{-1} =
+\left[
+\begin{array}{ccc}
+a & b \\
+c & d
+\end{array}
+\right] =
+\left[
+\begin{array}{ccc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+$$
+
+Esta matriz cumple  con la $A \cdot A^{-1}=I$ y $A^{-1} \cdot A=I$
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+\cdot
+\left[
+\begin{array}{ccc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+$$
+
+$$
+a_{11}=
+\left(
+\begin{array}{ccc}
+1 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-2 \\
+\frac{3}{2} \\ 
+\end{array}
+\right)
+= -2+3=1
+$$
+
+$$
+a_{12}=
+\left(
+\begin{array}{ccc}
+1 & 2 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+-\frac{1}{2}\\ 
+\end{array}
+\right)
+= 1+(-1)=0
+$$
+
+$$
+a_{21}=
+\left(
+\begin{array}{ccc}
+3 & 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+-2 \\
+\frac{3}{2} \\ 
+\end{array}
+\right)
+= -6+6=0
+$$
+
+$$
+a_{22}=
+\left(
+\begin{array}{ccc}
+3 & 4 \\
+\end{array}
+\right)
+\left(
+\begin{array}{ccc}
+1 \\
+-\frac{1}{2} \\ 
+\end{array}
+\right)
+= 3+(-2)=1
+$$
+
+$$
+A \cdot A^{-1}=
+\left[
+\begin{array}{ccc}
+1 & 0 \\
+0 & 1
+\end{array}
+\right]
+$$
+
+Otra forma para calcular la inversa de una matriz esta dado por la siguiente fórmula, sin embargo **solo puede utilizarse en matrices de 2x2**
+
+$$
+A^{-1}_{2 \times 2}=
+\frac{1}{ad-bc}
+\left[
+\begin{array}{ccc}
+d & -b \\
+-c & a
+\end{array}
+\right]
+$$
+
+Retomando el ejemplo anterior, tenemos que
+
+$$
+A =
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+3 & 4
+\end{array}
+\right]
+$$
+
+Por lo tanto
+
+$$
+A^{-1}=
+\frac{1}{(1)(4)-(2)(3)}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-3 & 1
+\end{array}
+\right]
+$$
+
+$$
+A^{-1}=
+-\frac{1}{2}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-3 & 1
+\end{array}
+\right]
+$$
+
+$$
+A^{-1}=
+\left[
+\begin{array}{ccc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+$$
+
+Por último, podemos calcular la inversa de una matriz igualandola con la matriz identidad y resolviendo mediante el método de Gauss-Jordan
+
+$$
+A =
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+3 & 4 & 0 & 1
+\end{array}
+\right]
+$$
+
+
+$$
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+3 & 4 & 0 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-3F_1} \;\;
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & -2 & -3 & 1
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & -2 & -3 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & 1 & \frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+\left[
+\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\
+0 & 1 & \frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = -\frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{cc|cc}
+1 & 0 & -2 & 1 \\
+0 & 1 & \frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+A^{-1}=
+\left[
+\begin{array}{cc}
+-2 & 1 \\
+\frac{3}{2} & -\frac{1}{2}
+\end{array}
+\right]
+\\\\
+$$
+
+Este método también se puede utilizar en matrices de $3 \times 3$, por ejemplo
+
+$$
+B = 
+\left[
+\begin{array}{ccc}
+1 & 1 & 1 \\
+0 & 2 & 3 \\
+5 & 5 & 1
+\end{array}
+\right]
+$$
+
+$$
+B = 
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+5 & 5 & 1 & 0 & 0 & 1
+\end{array}
+\right]
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+5 & 5 & 1 & 0 & 0 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = F_3-5F_1} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & -4 & -5 & 0 & 1
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & -4 & -5 & 0 & 1
+\end{array}
+\right]
+\;\;\xrightarrow{F_3 = -\frac{1}{4}F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 3 & 0 & 1 & 0 \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = F_2-3F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 0 & -\frac{15}{4} & 1 & \frac{3}{4} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 2 & 0 & -\frac{15}{4} & 1 & \frac{3}{4} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_2 = \frac{1}{2}F_2} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 1 & 1 & 1 & 0 & 0 \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-F_2} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 0 & 1 & \frac{23}{8} & -\frac{1}{2} & -\frac{3}{8} \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+
+$$
+\left[
+\begin{array}{ccc|ccc}
+1 & 0 & 1 & \frac{23}{8} & -\frac{1}{2} & -\frac{3}{8} \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\;\;\xrightarrow{F_1 = F_1-F_3} \;\;
+\left[
+\begin{array}{ccc|ccc}
+1 & 0 & 0 & \frac{13}{8} & -\frac{1}{2} & -\frac{1}{8} \\
+0 & 1 & 0 & -\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+0 & 0 & 1 & \frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+$$
+B^{-1}=
+\left[
+\begin{array}{ccc}
+\frac{13}{8} & -\frac{1}{2} & -\frac{1}{8} \\
+-\frac{15}{8} & \frac{1}{2} & \frac{3}{8} \\
+\frac{5}{4} & 0 & -\frac{1}{4}
+\end{array}
+\right]
+\\\\
+$$
+
+Consideren que para resolver sistemas lineales $A^{-1} \cdot b=x$ donde:
+- $b$ es el vector de soluciones
+- $x$ es el resultado de las incógnitas
+
+
+Es importante señalar que **no todas las matrices tienen inversa**, tomemos el siguiente ejemplo
+
+$$
+A=
+\left[
+\begin{array}{ccc}
+1 & 2 \\
+2 & 4
+\end{array}
+\right]
+$$
+
+$$
+A^{-1}=
+\frac{1}{(1)(4)-(2)(2)}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-2 & 1
+\end{array}
+\right]
+$$
+
+
+$$
+A^{-1}=
+\color{red}{\frac{1}{0}}
+\left[
+\begin{array}{ccc}
+4 & -2 \\
+-2 & 1
+\end{array}
+\right]
+$$
+
+En este caso, el cálculo de la matriz inversa tiene como resultado un valor indeterminado ¿por qué? En la matriz A, la segunda fila es múltiplo de la primera lo que ocasiona que el determinante sea cero, por lo tanto
+- Cuando $|A|= \varnothing$ la matriz no tiene inversa
+
+## Propiedades de la inversa
+
+- Si una matriz tiene inversa, entonces la inversa también tiene inversa: $(A^{-1})^{-1}=A$
+- Si $A$ y $B$ son matrices no singulares, entonces $A \cdot B$ es no singular: $(AB)^{-1}=B^{-1} \cdot A^{-1}$
+- La inversa de la matriz transpuesta es igual a la matriz inversa transpuesta: $(A^T)^{-1}=(A^{-1})^{T}$

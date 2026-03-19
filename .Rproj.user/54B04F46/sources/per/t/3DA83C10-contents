@@ -1,0 +1,58 @@
+---
+title: "Clase 04"
+subtitle: "Taller de Economía Cuantitativa II"
+---
+
+## Tarea 04
+
+A continuación, se detalla el procedimiento para resolver los límites asignados en la tarea.
+
+### Límite 1: El número $e$
+
+**Problema:** $$\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x$$
+
+**Solución:**
+Este es un límite notable fundamental. Si evaluamos directamente obtenemos una indeterminación de la forma $1^\infty$. Sin embargo, por definición, esta expresión evaluada cuando $x$ crece infinitamente converge al número de Euler ($e$). 
+
+$$\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e$$
+
+### Límite 2: Identidad Trigonométrica
+
+**Problema:** $$\lim_{x \to 0} (\sin^2 x + \cos^2 x)$$
+
+**Solución:**
+Antes de evaluar el límite, utilizamos la Identidad Trigonométrica Pitagórica fundamental, la cual establece que $\sin^2 x + \cos^2 x = 1$ para cualquier valor de $x$.
+
+$$\lim_{x \to 0} (1) = 1$$
+
+### Límite 3: Límite Trigonométrico Especial
+
+**Problema:** $$\lim_{x \to 0} \frac{\sin x}{x}$$
+
+**Solución:**
+La evaluación directa genera la indeterminación $0/0$. Aplicando la Regla de L'Hôpital (derivando numerador y denominador de forma independiente):
+
+$$\lim_{x \to 0} \frac{\cos x}{1} = \frac{\cos(0)}{1} = \frac{1}{1} = 1$$
+
+**Visualización:**
+Podemos observar gráficamente cómo la función se acerca a 1 cuando $x$ se acerca a 0.
+
+```{r}
+#| label: fig-limite-seno
+#| fig-cap: "Comportamiento de f(x) = sin(x)/x alrededor de x = 0"
+library(ggplot2)
+
+x_vals <- seq(-10, 10, length.out = 400)
+# Evitamos el 0 exacto para no generar un NA en R
+x_vals <- x_vals[x_vals != 0] 
+y_vals <- sin(x_vals) / x_vals
+df <- data.frame(x = x_vals, y = y_vals)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_point(aes(x = 0, y = 1), shape = 1, size = 3, color = "red") +
+  theme_minimal() +
+  labs(x = "x", y = "f(x)") +
+  geom_hline(yintercept = 1, linetype = "dashed", color = "gray") +
+  geom_vline(xintercept = 0, color = "black")
+```

@@ -1,0 +1,603 @@
+---
+title: "Clase 02"
+subtitle: "Taller de Economía Cuantitativa II"
+---
+
+
+```{r}
+#| label: setup
+#| echo: false
+#| message: false
+#| warning: false
+library(highcharter)
+library(knitr)
+library(kableExtra)
+library(dplyr)
+library(ggplot2)
+```
+
+
+Una función $f(x)$ mapea elementos de un conjunto de entrada hacia un conjunto de salida. 
+
+* **Dominio:** Es el conjunto de entrada (los valores que puede tomar $x$).
+* **Rango:** Es el conjunto de salida (los valores resultantes de $y$ o $f(x)$).
+
+Por ejemplo, si tenemos $f(x) = x + 4$, al evaluar $a$, obtenemos $f(a) = a + 4$.
+
+**Todas las funciones se pueden graficar.**
+
+---
+
+## Tipos de Funciones
+
+Las funciones se dividen en dos grandes familias: algebraicas y trascendentes.
+
+### Funciones Algebraicas
+
+::: panel-tabset
+### Constante 
+$f(x) = k$
+
+**Ejemplo graficado:** $f(x) = 3$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(-5, 5)), aes(x = x)) +
+  stat_function(fun = function(x) 3, color = "#2980B9", linewidth = 1.2) +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Lineal
+$f(x) = mx + b$
+
+**Ejemplo graficado:** $f(x) = 2x + 1$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(-5, 5)), aes(x = x)) +
+  stat_function(fun = function(x) 2*x + 1, color = "#27AE60", linewidth = 1.2) +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Cuadrática
+$f(x) = ax^2 + bx + c$
+
+**Ejemplo graficado:** $f(x) = x^2 - 4$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(-4, 4)), aes(x = x)) +
+  stat_function(fun = function(x) x^2 - 4, color = "#E67E22", linewidth = 1.2) +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Polinómica
+$f(x) = a_n x^n + \dots + a_0$
+
+**Ejemplo graficado:** $f(x) = x^3 - 4x$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
+  stat_function(fun = function(x) x^3 - 4*x, color = "#8E44AD", linewidth = 1.2) +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Racional 
+$f(x) = \frac{P(x)}{Q(x)}$
+
+**Ejemplo graficado:** $f(x) = \frac{1}{x}$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+#| warning: false
+
+x_rat <- seq(-5, 5, length.out = 400)
+y_rat <- 1 / x_rat
+y_rat[abs(x_rat) < 0.1] <- NA 
+
+ggplot(data.frame(x = x_rat, y = y_rat), aes(x = x, y = y)) +
+  geom_line(color = "#C0392B", linewidth = 1.2, na.rm = TRUE) +
+  scale_y_continuous(limits = c(-10, 10)) +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Radical 
+$f(x) = \sqrt[n]{P(x)}$
+
+**Ejemplo graficado:** $f(x) = \sqrt{x}$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(0, 10)), aes(x = x)) +
+  stat_function(fun = function(x) sqrt(x), color = "#16A085", linewidth = 1.2) +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+:::
+
+
+### Funciones Trascendentes
+
+::: panel-tabset
+### Exponencial
+$f(x) = a^x$ 
+
+**Ejemplo graficado:** $f(x) = e^x$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
+  stat_function(fun = function(x) exp(x), color = "#D35400", linewidth = 1.2) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Logarítmica
+$f(x) = \log_a(x)$ 
+
+**Ejemplo graficado:** $f(x) = \ln(x)$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+#| warning: false
+
+ggplot(data.frame(x = c(0.01, 10)), aes(x = x)) +
+  stat_function(fun = function(x) log(x), color = "#27AE60", linewidth = 1.2) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
+  theme_minimal() + 
+  labs(x = "x", y = "f(x)")
+```
+
+### Trigonométricas
+$f(x) = \sin(x), \cos(x), \tan(x)$ 
+
+**Ejemplo graficado:** $f(x) = \sin(x)$
+
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-width: 5
+
+ggplot(data.frame(x = c(-2*pi, 2*pi)), aes(x = x)) +
+  stat_function(fun = function(x) sin(x), color = "#2980B9", linewidth = 1.2) +
+  geom_hline(yintercept = 0, color = "gray80") +
+  theme_minimal() + 
+  labs(x = "x (radianes)", y = "f(x)") +
+  scale_x_continuous(breaks = c(-2*pi, -pi, 0, pi, 2*pi),
+                     labels = c("-2π", "-π", "0", "π", "2π"))
+```
+:::
+
+## Propiedades de las Funciones
+Al analizar la gráfica de una función, podemos identificar las siguientes propiedades:
+
+1.  Concavidad
+2.  Acotación
+3.  Periodicidad
+4.  Asíntotas
+
+---
+
+## Ejemplos de funciones
+
+### 1. $f(x) = x^2 - 4$
+
+* **Dominio:** $x \in \mathbb{R}$ o $(-\infty, \infty)$
+* **Rango:** $\{y \in \mathbb{R} \mid y \ge -4\}$ o $[-4, \infty)$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- -3:3
+y_vals <- x_vals^2 - 4
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+x_hc <- seq(-4, 4, by = 0.1)
+df_hc <- data.frame(x = round(x_hc, 2), y = round(x_hc^2 - 4, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#2980B9", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)")) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 2. $f(x) = \frac{1}{x+3}$
+
+* **Dominio:** $\{x \in \mathbb{R} \mid x \neq -3\}$ o $(-\infty, -3) \cup (-3, \infty)$
+* **Rango:** $\{y \in \mathbb{R} \mid y \neq 0\}$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+x_vals <- -6:0
+y_vals <- round(1 / (x_vals + 3), 2)
+y_vals[is.infinite(y_vals)] <- "Indefinido"
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(4, bold = TRUE, color = "white", background = "#E74C3C")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+x_hc <- seq(-8, 2, by = 0.05)
+y_hc <- 1 / (x_hc + 3)
+y_hc[abs(x_hc + 3) < 0.1] <- NA
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#8E44AD", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = -10, max = 10) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 3. $f(x) = \sqrt{9-x^2}$
+
+* **Dominio:** $9-x^2 \ge 0 \implies (3-x)(3+x) \ge 0 \implies -3 \le x \le 3$. Dominio: $[-3, 3]$
+* **Rango:** $[0, 3]$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+x_vals <- -4:4
+y_vals <- suppressWarnings(sqrt(9 - x_vals^2))
+y_vals <- ifelse(is.nan(y_vals), "No Real", round(y_vals, 2))
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+x_hc <- seq(-3, 3, by = 0.05)
+y_hc <- sqrt(9 - x_hc^2)
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#27AE60", name = "f(x)") %>%
+  hc_plotOptions(line = list(lineWidth = 3)) %>% 
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = 0, max = 4) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 4. $f(x) = |x-2|$
+
+* **Dominio:** $x \in \mathbb{R}$
+* **Rango:** $\{y \in \mathbb{R} \mid y \ge 0\}$ o $[0, \infty)$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- -1:5
+y_vals <- abs(x_vals - 2)
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_hc <- seq(-2, 6, by = 0.1)
+y_hc <- abs(x_hc - 2)
+df_hc <- data.frame(x = round(x_hc, 2), y = y_hc)
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#E67E22", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)")) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 5. $f(x) = \sqrt{5-x}$
+
+* **Dominio:** $5-x \ge 0 \implies x \le 5$. Dominio: $(-\infty, 5]$
+* **Rango:** $[0, \infty)$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- 1:7
+y_vals <- suppressWarnings(sqrt(5 - x_vals))
+y_vals <- ifelse(is.nan(y_vals), "No Real", round(y_vals, 2))
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_hc <- seq(-5, 5, by = 0.05)
+y_hc <- sqrt(5 - x_hc)
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#16A085", name = "f(x)") %>%
+  hc_plotOptions(line = list(lineWidth = 3)) %>% # <--- Línea agregada
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)")) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 6. $f(x) = \frac{x}{|x|}$
+
+* **Dominio:** $x \in \mathbb{R} \mid x \neq 0$
+* **Rango:** $\{-1, 1\}$ (Es 1 si $x > 0$, y -1 si $x < 0$)
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- -3:3
+y_vals <- x_vals / abs(x_vals)
+y_vals[is.nan(y_vals)] <- "Indefinido"
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(4, bold = TRUE, color = "white", background = "#E74C3C")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_hc <- seq(-5, 5, by = 0.05)
+y_hc <- x_hc / abs(x_hc)
+y_hc[abs(x_hc) < 0.1] <- NA # Romper línea en el salto
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#2C3E50", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = -2, max = 2) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+### 7. $f(x) = \frac{2x}{x^2 - 9}$
+
+* **Dominio:** El denominador se hace cero cuando $x^2 - 9 = 0$, es decir, en $x = 3$ y $x = -3$. 
+  * $D_f = \mathbb{R} \setminus \{-3, 3\}$ o $(-\infty, -3) \cup (-3, 3) \cup (3, \infty)$
+* **Rango:** La función cruza el eje horizontal y cubre todos los valores reales.
+  * $R_f = \mathbb{R}$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- -5:5
+y_vals <- suppressWarnings(2 * x_vals / (x_vals^2 - 9))
+y_vals <- ifelse(is.infinite(y_vals), "Indefinido", round(y_vals, 2))
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(c(3, 9), bold = TRUE, color = "white", background = "#E74C3C")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_hc <- seq(-8, 8, by = 0.05)
+y_hc <- (2 * x_hc) / (x_hc^2 - 9)
+# Cortar la línea en las asíntotas
+y_hc[abs(x_hc - 3) < 0.1 | abs(x_hc + 3) < 0.1] <- NA 
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#C0392B", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = -10, max = 10) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 8. $f(x) = \sqrt{x^2 - 4}$
+
+* **Dominio:** $x^2 - 4 \ge 0 \implies (x-2)(x+2) \ge 0$. Esto ocurre en los extremos exteriores de las raíces.
+  * $D_f = (-\infty, -2] \cup [2, \infty)$
+* **Rango:** Como es una raíz principal par, sus valores son no negativos.
+  * $R_f = [0, \infty)$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- -4:4
+y_vals <- suppressWarnings(sqrt(x_vals^2 - 4))
+y_vals <- ifelse(is.nan(y_vals), "No Real", round(y_vals, 2))
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(4:6, color = "#7F8C8D", italic = TRUE)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_hc <- seq(-6, 6, by = 0.05)
+y_hc <- sqrt(x_hc^2 - 4)
+y_hc[x_hc > -2 & x_hc < 2] <- NA 
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#D35400", name = "f(x)") %>%
+  hc_plotOptions(line = list(lineWidth = 3)) %>% # <--- Línea agregada
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = 0, max = 6) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 9. $f(x) = \frac{1}{\sqrt{x}}$
+
+* **Dominio:** El argumento de la raíz debe ser positivo y, al estar en el denominador, no puede ser cero.
+  * $D_f = (0, \infty)$
+* **Rango:** El numerador es una constante positiva y la raíz siempre da valores positivos, por lo que nunca toca el cero ni los negativos.
+  * $R_f = (0, \infty)$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- 0:5
+y_vals <- suppressWarnings(1 / sqrt(x_vals))
+y_vals <- ifelse(is.infinite(y_vals), "Asíntota", round(y_vals, 2))
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(1, bold = TRUE, color = "white", background = "#E74C3C")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+# Iniciamos en un valor apenas mayor a cero
+x_hc <- seq(0.01, 8, by = 0.05)
+y_hc <- 1 / sqrt(x_hc)
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#2980B9", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = 0, max = 10) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
+
+---
+
+### 10. $f(x) = \frac{1}{x+3}$
+
+* **Dominio:** El denominador no puede ser cero.
+  * $D_f = \mathbb{R} \setminus \{-3\}$ o $(-\infty, -3) \cup (-3, \infty)$
+* **Rango:** Como el numerador nunca es cero, $f(x)$ nunca vale cero.
+  * $R_f = \mathbb{R} \setminus \{0\}$
+
+::: {layout-ncol=2 style="display: flex; align-items: center;"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_vals <- -6:0
+y_vals <- suppressWarnings(1 / (x_vals + 3))
+y_vals <- ifelse(is.infinite(y_vals), "Indefinido", round(y_vals, 2))
+df_tbl <- data.frame(x = x_vals, `f(x)` = y_vals, check.names = FALSE)
+
+kable(df_tbl, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(4, bold = TRUE, color = "white", background = "#E74C3C")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+x_hc <- seq(-8, 2, by = 0.05)
+y_hc <- 1 / (x_hc + 3)
+y_hc[abs(x_hc + 3) < 0.1] <- NA
+df_hc <- data.frame(x = round(x_hc, 2), y = round(y_hc, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#8E44AD", name = "f(x)") %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = -10, max = 10) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+:::
