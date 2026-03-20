@@ -222,12 +222,12 @@
   {
     "objectID": "02_clase.html",
     "href": "02_clase.html",
-    "title": "Clase 02: tipos de funciones",
+    "title": "Clase 02: Tipos de funciones",
     "section": "",
     "text": "Tipos de Funciones\nUna función \\(f(x)\\) mapea elementos de un conjunto de entrada hacia un conjunto de salida.\nPor ejemplo, si tenemos \\(f(x) = x + 4\\), al evaluar \\(a\\), obtenemos \\(f(a) = a + 4\\).\nTodas las funciones se pueden graficar.\nLas funciones se dividen en dos grandes familias: algebraicas y trascendentes.",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: Tipos de funciones</span>"
     ]
   },
   {
@@ -244,34 +244,34 @@
   {
     "objectID": "02_clase.html#tipos-de-funciones",
     "href": "02_clase.html#tipos-de-funciones",
-    "title": "Clase 02: tipos de funciones",
+    "title": "Clase 02: Tipos de funciones",
     "section": "",
     "text": "Funciones Algebraicas\n\nConstanteLinealCuadráticaPolinómicaRacionalRadical\n\n\n\\(f(x) = k\\)\nEjemplo: \\(f(x) = 3\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = mx + b\\)\nEjemplo: \\(f(x) = 2x + 1\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = ax^2 + bx + c\\)\nEjemplo: \\(f(x) = x^2 - 4\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = a_n x^n + \\dots + a_0\\)\nEjemplo: \\(f(x) = x^3 - 4x\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\frac{P(x)}{Q(x)}\\)\nEjemplo: \\(f(x) = \\frac{1}{x}\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\sqrt[n]{P(x)}\\)\nEjemplo: \\(f(x) = \\sqrt{x}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones Trascendentes\n\nExponencialLogarítmicaTrigonométricas\n\n\n\\(f(x) = a^x\\)\nEjemplo: \\(f(x) = e^x\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\log_a(x)\\)\nEjemplo: \\(f(x) = \\ln(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(f(x) = \\sin(x), \\cos(x), \\tan(x)\\)\nEjemplo: \\(f(x) = \\sin(x)\\)",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: Tipos de funciones</span>"
     ]
   },
   {
     "objectID": "02_clase.html#propiedades-de-las-funciones",
     "href": "02_clase.html#propiedades-de-las-funciones",
-    "title": "Clase 02: tipos de funciones",
+    "title": "Clase 02: Tipos de funciones",
     "section": "Propiedades de las Funciones",
     "text": "Propiedades de las Funciones\nAl analizar la gráfica de una función, podemos identificar las siguientes propiedades:\n\nConcavidad\nAcotación\nPeriodicidad\nAsíntotas",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: Tipos de funciones</span>"
     ]
   },
   {
     "objectID": "02_clase.html#ejemplos-de-funciones",
     "href": "02_clase.html#ejemplos-de-funciones",
-    "title": "Clase 02: tipos de funciones",
+    "title": "Clase 02: Tipos de funciones",
     "section": "Ejemplos de funciones",
     "text": "Ejemplos de funciones\n\n1. \\(f(x) = x^2 - 4\\)\n\nDominio: \\(x \\in \\mathbb{R}\\) o \\((-\\infty, \\infty)\\)\nRango: \\(\\{y \\in \\mathbb{R} \\mid y \\ge -4\\}\\) o \\([-4, \\infty)\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-3\n5\n\n\n-2\n0\n\n\n-1\n-3\n\n\n0\n-4\n\n\n1\n-3\n\n\n2\n0\n\n\n3\n5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. \\(f(x) = \\frac{1}{x+3}\\)\n\nDominio: \\(\\{x \\in \\mathbb{R} \\mid x \\neq -3\\}\\) o \\((-\\infty, -3) \\cup (-3, \\infty)\\)\nRango: \\(\\{y \\in \\mathbb{R} \\mid y \\neq 0\\}\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-6\n-0.33\n\n\n-5\n-0.5\n\n\n-4\n-1\n\n\n-3\nIndefinido\n\n\n-2\n1\n\n\n-1\n0.5\n\n\n0\n0.33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. \\(f(x) = \\sqrt{9-x^2}\\)\n\nDominio: \\(9-x^2 \\ge 0 \\implies (3-x)(3+x) \\ge 0 \\implies -3 \\le x \\le 3\\). Dominio: \\([-3, 3]\\)\nRango: \\([0, 3]\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-4\nNo Real\n\n\n-3\n0\n\n\n-2\n2.24\n\n\n-1\n2.83\n\n\n0\n3\n\n\n1\n2.83\n\n\n2\n2.24\n\n\n3\n0\n\n\n4\nNo Real\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4. \\(f(x) = |x-2|\\)\n\nDominio: \\(x \\in \\mathbb{R}\\)\nRango: \\(\\{y \\in \\mathbb{R} \\mid y \\ge 0\\}\\) o \\([0, \\infty)\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-1\n3\n\n\n0\n2\n\n\n1\n1\n\n\n2\n0\n\n\n3\n1\n\n\n4\n2\n\n\n5\n3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5. \\(f(x) = \\sqrt{5-x}\\)\n\nDominio: \\(5-x \\ge 0 \\implies x \\le 5\\). Dominio: \\((-\\infty, 5]\\)\nRango: \\([0, \\infty)\\)\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n1\n2\n\n\n2\n1.73\n\n\n3\n1.41\n\n\n4\n1\n\n\n5\n0\n\n\n6\nNo Real\n\n\n7\nNo Real\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6. \\(f(x) = \\frac{x}{|x|}\\)\n\nDominio: \\(x \\in \\mathbb{R} \\mid x \\neq 0\\)\nRango: \\(\\{-1, 1\\}\\) (Es 1 si \\(x &gt; 0\\), y -1 si \\(x &lt; 0\\))\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-3\n-1\n\n\n-2\n-1\n\n\n-1\n-1\n\n\n0\nIndefinido\n\n\n1\n1\n\n\n2\n1\n\n\n3\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7. \\(f(x) = \\frac{2x}{x^2 - 9}\\)\n\nDominio: El denominador se hace cero cuando \\(x^2 - 9 = 0\\), es decir, en \\(x = 3\\) y \\(x = -3\\).\n\n\\(D_f = \\mathbb{R} \\setminus \\{-3, 3\\}\\) o \\((-\\infty, -3) \\cup (-3, 3) \\cup (3, \\infty)\\)\n\nRango: La función cruza el eje horizontal y cubre todos los valores reales.\n\n\\(R_f = \\mathbb{R}\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-5\n-0.62\n\n\n-4\n-1.14\n\n\n-3\nIndefinido\n\n\n-2\n0.8\n\n\n-1\n0.25\n\n\n0\n0\n\n\n1\n-0.25\n\n\n2\n-0.8\n\n\n3\nIndefinido\n\n\n4\n1.14\n\n\n5\n0.62\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8. \\(f(x) = \\sqrt{x^2 - 4}\\)\n\nDominio: \\(x^2 - 4 \\ge 0 \\implies (x-2)(x+2) \\ge 0\\). Esto ocurre en los extremos exteriores de las raíces.\n\n\\(D_f = (-\\infty, -2] \\cup [2, \\infty)\\)\n\nRango: Como es una raíz principal par, sus valores son no negativos.\n\n\\(R_f = [0, \\infty)\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-4\n3.46\n\n\n-3\n2.24\n\n\n-2\n0\n\n\n-1\nNo Real\n\n\n0\nNo Real\n\n\n1\nNo Real\n\n\n2\n0\n\n\n3\n2.24\n\n\n4\n3.46\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9. \\(f(x) = \\frac{1}{\\sqrt{x}}\\)\n\nDominio: El argumento de la raíz debe ser positivo y, al estar en el denominador, no puede ser cero.\n\n\\(D_f = (0, \\infty)\\)\n\nRango: El numerador es una constante positiva y la raíz siempre da valores positivos, por lo que nunca toca el cero ni los negativos.\n\n\\(R_f = (0, \\infty)\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n0\nAsíntota\n\n\n1\n1\n\n\n2\n0.71\n\n\n3\n0.58\n\n\n4\n0.5\n\n\n5\n0.45\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10. \\(f(x) = \\frac{1}{x+3}\\)\n\nDominio: El denominador no puede ser cero.\n\n\\(D_f = \\mathbb{R} \\setminus \\{-3\\}\\) o \\((-\\infty, -3) \\cup (-3, \\infty)\\)\n\nRango: Como el numerador nunca es cero, \\(f(x)\\) nunca vale cero.\n\n\\(R_f = \\mathbb{R} \\setminus \\{0\\}\\)\n\n\n\n\n\n\n\n\n\nx\nf(x)\n\n\n\n\n-6\n-0.33\n\n\n-5\n-0.5\n\n\n-4\n-1\n\n\n-3\nIndefinido\n\n\n-2\n1\n\n\n-1\n0.5\n\n\n0\n0.33",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: tipos de funciones</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clase 02: Tipos de funciones</span>"
     ]
   },
   {
@@ -387,34 +387,34 @@
   {
     "objectID": "04_clase.html",
     "href": "04_clase.html",
-    "title": "Clase 04: El Concepto de Límite",
+    "title": "Clase 04: Límites",
     "section": "",
     "text": "Funciones con restricciones\n¿Qué ocurre a \\(f(x)\\) cuando la variable \\(x\\) se aproxima al número “\\(a\\)”?\nPara entender la base del cálculo, nos interesa saber cómo está definida una función \\(f(x)\\) cercana a un valor específico “\\(a\\)”.\nTomemos como ejemplo la función \\(f(x) = x^2 + 2\\).\nSi evaluamos directamente en \\(a\\), tenemos que \\(f(a) = a^2 + 2\\).\nLa notación formal para analizar esta aproximación es la siguiente: \\[\\lim_{x\\to a} (x^2 + 2) = a^2 + 2\\]\nPor ejemplo, si \\(a = 2\\): \\[\\lim_{x\\to 2} (x^2 + 2) = 4\\]\nDe manera general, llegamos a la siguiente estructura: \\[\\lim_{x\\to a} f(x) = L\\] Se lee como “el límite de \\(f(x)\\), cuando \\(x\\) se aproxima a ‘\\(a\\)’, es igual a ‘\\(L\\)’”).\n¿Qué le pasa a la función cuando nos acercamos a un punto conflictivo, como un punto indeterminado? Analicemos el siguiente límite:\n\\[\\lim_{x\\to 1} \\frac{x-1}{x^2-1}\\]\nSi observamos la función original \\(f(x) = \\frac{x-1}{x^2-1}\\), notaremos que no está definida en \\(x=1\\) ya que el denominador se haría cero, resultando en la forma indeterminada \\(0/0\\).\n¿La función está definida en ese punto? No. Sin embargo, la definición del límite \\(\\lim_{x\\to a}\\) nos dice que debemos considerar valores de \\(x\\) cercanos, pero no iguales a “\\(a\\)”. Nos interesa saber a qué tiende la función, es decir, hacia dónde se acerca.",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: El Concepto de Límite</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: Límites</span>"
     ]
   },
   {
     "objectID": "04_clase.html#funciones-con-restricciones",
     "href": "04_clase.html#funciones-con-restricciones",
-    "title": "Clase 04: El Concepto de Límite",
+    "title": "Clase 04: Límites",
     "section": "",
     "text": "1. Aproximación tabular\nPara descubrir hacia dónde tiende la función, evaluamos valores que se acerquen a \\(1\\) por la izquierda (valores menores que 1) y por la derecha (valores mayores que 1).\n\n\n\n\n\n\n\nPor la izquierda (x &lt; 1)\nf(x)\n\n\n\n\n0.9000\n0.526000\n\n\n0.9900\n0.502000\n\n\n0.9990\n0.500250\n\n\n0.9999\n0.500025\n\n\n\n\n\n\n\n\n\n\nPor la derecha (x &gt; 1)\nf(x)\n\n\n\n\n1.1000\n0.47600\n\n\n1.0100\n0.49700\n\n\n1.0010\n0.49970\n\n\n1.0001\n0.49997\n\n\n\n\n\n\n\n¿A dónde tiende? Como podemos observar en ambas tablas, conforme \\(x\\) se acera a \\(1\\), el valor de \\(f(x)\\) se aproxima a 0.5.\n\n\n2. Comportamiento gráfico\nSi graficamos la función, notaremos que tiene una asíntota vertical en \\(x = -1\\) y un “hueco” exactamente en la coordenada \\((1, 0.5)\\), corroborando que la función sí tiende a un valor concreto, aunque no esté definida allí.\n\n\n\n\n\n\n\n\nFigure 5.1\n\n\n\n\n\n\n3. Solución algebraica\nPara evitar hacer tablas o gráficas cada vez que evaluamos un límite indeterminado, podemos recurrir al álgebra. Si factorizamos el denominador utilizando la diferencia de cuadrados \\(x^2 - 1 = (x+1)(x-1)\\), podemos simplificar la expresión:\n\\[\n\\begin{aligned}\n\\lim_{x\\to 1} \\frac{x-1}{x^2-1} &= \\lim_{x\\to 1} \\frac{x-1}{(x+1)(x-1)} \\\\\n\\end{aligned}\n\\]\nSimplificamos el término común \\((x-1)\\) tanto en el numerador como en el denominador:\n\\[\n\\begin{aligned}\n&= \\lim_{x\\to 1} \\frac{1}{x+1}\n\\end{aligned}\n\\]\nAhora que hemos eliminado la indeterminación, evaluamos el límite sustituyendo directamente \\(x = 1\\):\n\\[\n\\begin{aligned}\n&= \\frac{1}{1+1} \\\\\n&= \\frac{1}{2} = 0.5\n\\end{aligned}\n\\]\nEn el ejemplo anterior, el límite existe porque llegamos al mismo lugar por la izquierda y por la derecha. Sin embargo, existe la posibilidad de que un límite no exista, por ejemplo evaluemos el mismo límite ahora en \\(x \\to -1\\):\n\\[ \\lim_{x\\to -1} \\frac{x-1}{x^2-1} = \\lim_{x\\to -1} \\frac{x-1}{(x+1)(x-1)} = \\lim_{x\\to -1} \\frac{1}{x+1} \\]\nSi intentamos hacer sustitución directa obtenemos \\(\\frac{1}{0}\\), lo cual no está definido.\n¿A dónde llega la función por la derecha y por la izquierda? * Por la izquierda (\\(x \\to -1^-\\)): \\(\\lim \\frac{1}{x+1} = -\\infty\\) (un número negativo muy grande) * Por la derecha (\\(x \\to -1^+\\)): \\(\\lim \\frac{1}{x+1} = +\\infty\\) (un número positivo muy grande)\nComo los límites laterales se disparan a direcciones opuestas, concluimos que el límite no existe.\n\n\n\n\n\n\n\n\nFigure 5.2",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: El Concepto de Límite</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: Límites</span>"
     ]
   },
   {
     "objectID": "04_clase.html#ejercicios",
     "href": "04_clase.html#ejercicios",
-    "title": "Clase 04: El Concepto de Límite",
+    "title": "Clase 04: Límites",
     "section": "Ejercicios",
     "text": "Ejercicios\nPara resolver límites, utilizamos tres técnicas algebraicas principales: sustitución directa, factorización y racionalización. A continuación se resuelven los ejercicios vistos en clase.\n\nSustitución Directa\nSi la función es continua en el punto a evaluar, basta con sustituir el valor de \\(x\\).\n1. \\(\\lim_{x\\to 3} (2x+5)\\)  \\[ \\lim_{x\\to 3} (2x+5) = 2(3) + 5 = 6 + 5 = \\mathbf{11} \\]\n2. \\(\\lim_{x\\to -2} (x^2-4x+1)\\) \\[ \\lim_{x\\to -2} (x^2-4x+1) = (-2)^2 - 4(-2) + 1 = 4 + 8 + 1 = \\mathbf{13} \\]\n3. \\(\\lim_{x\\to 5} \\sqrt{x+4}\\) \\[ \\lim_{x\\to 5} \\sqrt{x+4} = \\sqrt{5+4} = \\sqrt{9} = \\mathbf{3} \\]\n\n\n\nFactorización y expansión\nCuando obtenemos la forma indeterminada \\(0/0\\), factorizamos polinomios para simplificar los términos problemáticos.\n4. \\(\\lim_{x\\to 2} \\frac{x^2-1}{x-2}\\) Al evaluar directamente obtenemos \\(\\frac{3}{0}\\). Dado que el numerador no se hace cero pero el denominador sí, tenemos una asíntota vertical. Resultado: \\(\\mathbf{\\nexists}\\) (El límite no existe)\n5. \\(\\lim_{x\\to 3} \\frac{x-3}{x^2-9}\\) \\[ \\lim_{x\\to 3} \\frac{x-3}{(x-3)(x+3)} = \\lim_{x\\to 3} \\frac{1}{x+3} = \\frac{1}{3+3} = \\mathbf{\\frac{1}{6}} \\]\n6. \\(\\lim_{x\\to 0} \\frac{x^2-2x}{x}\\) \\[ \\lim_{x\\to 0} \\frac{x(x-2)}{x} = \\lim_{x\\to 0} (x-2) = 0 - 2 = \\mathbf{-2} \\]\n9. \\(\\lim_{x\\to 0} \\frac{(3+x)^2 - 9}{x}\\)\nPrimero desarrollamos el binomio al cuadrado: \\[ \\lim_{x\\to 0} \\frac{(9 + 6x + x^2) - 9}{x} = \\lim_{x\\to 0} \\frac{6x + x^2}{x} = \\lim_{x\\to 0} \\frac{x(6 + x)}{x} = \\lim_{x\\to 0} (6 + x) = \\mathbf{6} \\]\n\n\n\nRacionalización\nSe utiliza principalmente cuando hay raíces cuadradas involucradas y obtenemos \\(0/0\\). Consiste en multiplicar numerador y denominador por el conjugado.\n10. \\(\\lim_{x\\to 0} \\frac{\\sqrt{x^2+9} - 3}{x^2}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x^2+9} + 3\\): \\[\n\\begin{aligned}\n&= \\lim_{x\\to 0} \\frac{\\sqrt{x^2+9} - 3}{x^2} \\cdot \\left( \\frac{\\sqrt{x^2+9} + 3}{\\sqrt{x^2+9} + 3} \\right) \\\\\n&= \\lim_{x\\to 0} \\frac{(\\sqrt{x^2+9})^2 - (3)^2}{x^2(\\sqrt{x^2+9} + 3)} \\\\\n&= \\lim_{x\\to 0} \\frac{x^2 + 9 - 9}{x^2(\\sqrt{x^2+9} + 3)} \\\\\n&= \\lim_{x\\to 0} \\frac{x^2}{x^2(\\sqrt{x^2+9} + 3)} \\\\\n&= \\lim_{x\\to 0} \\frac{1}{\\sqrt{x^2+9} + 3} = \\frac{1}{\\sqrt{9} + 3} = \\mathbf{\\frac{1}{6}}\n\\end{aligned}\n\\]\n13. \\(\\lim_{x\\to 4} \\frac{\\sqrt{x}-2}{x-4}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x} + 2\\): \\[ \\lim_{x\\to 4} \\frac{\\sqrt{x}-2}{x-4} \\cdot \\frac{\\sqrt{x}+2}{\\sqrt{x}+2} = \\lim_{x\\to 4} \\frac{x-4}{(x-4)(\\sqrt{x}+2)} = \\lim_{x\\to 4} \\frac{1}{\\sqrt{x}+2} = \\frac{1}{2+2} = \\mathbf{\\frac{1}{4}} \\]\n14. \\(\\lim_{x\\to 9} \\frac{x-9}{\\sqrt{x}-3}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x} + 3\\): \\[ \\lim_{x\\to 9} \\frac{x-9}{\\sqrt{x}-3} \\cdot \\frac{\\sqrt{x}+3}{\\sqrt{x}+3} = \\lim_{x\\to 9} \\frac{(x-9)(\\sqrt{x}+3)}{x-9} = \\lim_{x\\to 9} (\\sqrt{x}+3) = \\sqrt{9} + 3 = \\mathbf{6} \\]\n15. \\(\\lim_{x\\to 0} \\frac{\\sqrt{x+1}-1}{x}\\)\nMultiplicamos por el conjugado \\(\\sqrt{x+1} + 1\\): \\[ \\lim_{x\\to 0} \\frac{\\sqrt{x+1}-1}{x} \\cdot \\frac{\\sqrt{x+1}+1}{\\sqrt{x+1}+1} = \\lim_{x\\to 0} \\frac{(x+1)-1}{x(\\sqrt{x+1}+1)} = \\lim_{x\\to 0} \\frac{x}{x(\\sqrt{x+1}+1)} = \\lim_{x\\to 0} \\frac{1}{\\sqrt{x+1}+1} = \\frac{1}{\\sqrt{1}+1} = \\mathbf{\\frac{1}{2}} \\]\n\n\n\nCasos Especiales (Límites Inexistentes o Infinitos)\n7. \\(\\lim_{x\\to 0} \\frac{|x|}{x}\\)\nEl valor absoluto se comporta distinto dependiendo del lado: por la derecha el límite es \\(1\\), por la izquierda es \\(-1\\). Resultado: \\(\\mathbf{\\nexists}\\) (No existe)\n8. \\(\\lim_{x\\to 0} \\frac{1}{x}\\)\nPor la derecha tiende a \\(\\infty\\), por la izquierda a \\(-\\infty\\). Resultado: \\(\\mathbf{\\nexists}\\) (No existe)\n11. \\(\\lim_{x\\to 0} \\sin\\left(\\frac{\\pi}{x}\\right)\\)\nConforme \\(x\\) se acerca a cero, la función oscila infinitamente entre \\(1\\) y \\(-1\\) sin estabilizarse. Resultado: \\(\\mathbf{\\nexists}\\) (No existe)\n12. \\(\\lim_{x\\to 0} \\frac{1}{x^2}\\)\nDado que cualquier número (positivo o negativo) elevado al cuadrado es positivo, tanto por la izquierda como por la derecha el denominador se acerca a \\(+0\\). Resultado: \\(\\mathbf{\\infty}\\) (Tiende a infinito positivo)",
     "crumbs": [
       "Clases",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: El Concepto de Límite</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Clase 04: Límites</span>"
     ]
   }
 ]
