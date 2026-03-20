@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Clase 03: Álgebra de funciones – Taller de Economía Cuantitativa II</title>
+<title>03 Álgebra de funciones – Taller de Economía Cuantitativa II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,18 +30,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_tarea.html" rel="next">
+<link href="./04_clase.html" rel="next">
 <link href="./02_clase.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9433637ef549dc8e12c034407cebd572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5767b3ea4cf5f3d04444d8c3632b86d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +86,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -111,6 +112,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Taller de Economía Cuantitativa II</span>
     </a>
@@ -125,7 +128,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_clase.html">Clases</a></li><li class="breadcrumb-item"><a href="./03_clase.html"><span class="chapter-title">Clase 03: Álgebra de funciones</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_clase.html">Clases</a></li><li class="breadcrumb-item"><a href="./03_clase.html"><span class="chapter-title">03 Álgebra de funciones</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -135,6 +138,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -164,17 +171,22 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Clase 01: Introducción a las funciones</span></a>
+  <a href="./01_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">01 Introducción a las funciones</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Clase 02</span></a>
+  <a href="./02_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">02 Tipos de funciones</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_clase.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Clase 03: Álgebra de funciones</span></a>
+  <a href="./03_clase.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">03 Álgebra de funciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">04 Límites</span></a>
   </div>
 </li>
       </ul>
@@ -224,12 +236,11 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#propiedades-de-los-logaritmos" id="toc-propiedades-de-los-logaritmos" class="nav-link" data-scroll-target="#propiedades-de-los-logaritmos">Propiedades de los logaritmos</a></li>
   </ul></li>
-  <li><a href="#álgebra-de-funciones" id="toc-álgebra-de-funciones" class="nav-link" data-scroll-target="#álgebra-de-funciones">Álgebra de Funciones</a>
+  <li><a href="#álgebra-de-funciones" id="toc-álgebra-de-funciones" class="nav-link" data-scroll-target="#álgebra-de-funciones">Álgebra de funciones</a>
   <ul class="collapse">
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
-  <li><a href="#ejercicio-práctico-2-álgebra-de-funciones-y-leyes-de-exponentes" id="toc-ejercicio-práctico-2-álgebra-de-funciones-y-leyes-de-exponentes" class="nav-link" data-scroll-target="#ejercicio-práctico-2-álgebra-de-funciones-y-leyes-de-exponentes">Ejercicio Práctico 2: Álgebra de Funciones y Leyes de Exponentes</a></li>
   </ul></li>
-  <li><a href="#composición-de-funciones" id="toc-composición-de-funciones" class="nav-link" data-scroll-target="#composición-de-funciones">Composición de Funciones</a>
+  <li><a href="#composición-de-funciones" id="toc-composición-de-funciones" class="nav-link" data-scroll-target="#composición-de-funciones">Composición de funciones</a>
   <ul class="collapse">
   <li><a href="#ejemplos-1" id="toc-ejemplos-1" class="nav-link" data-scroll-target="#ejemplos-1">Ejemplos</a></li>
   </ul></li>
@@ -239,10 +250,10 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_clase.html">Clases</a></li><li class="breadcrumb-item"><a href="./03_clase.html"><span class="chapter-title">Clase 03: Álgebra de funciones</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_clase.html">Clases</a></li><li class="breadcrumb-item"><a href="./03_clase.html"><span class="chapter-title">03 Álgebra de funciones</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Clase 03: Álgebra de funciones</span></h1>
-<p class="subtitle lead">Taller de Economía Cuantitativa II</p>
+<h1 class="title"><span class="chapter-title">03 Álgebra de funciones</span></h1>
+<p class="subtitle lead">20 de febrero de 2026</p>
 </div>
 
 
@@ -263,7 +274,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="las-funciones-logarítmica-y-exponencial">Las funciones logarítmica y exponencial</h2>
 <p>Antes de entrar a las operaciones con funciones, consideremos algunas propiedades de la función logarítmica, la cual es la inversa de la función exponencial.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Función Logarítmica</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Función Exponencial</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Función logarítmica</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Función exponencial</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p><strong>Forma general:</strong> <span class="math inline">\(f(x) = \log_a(x)\)</span> con <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(a \neq 1\)</span></p>
@@ -313,11 +324,10 @@ window.Quarto = {
 <li><span class="math inline">\(\log_a\left(\frac{x}{y}\right) = \log_a(x) - \log_a(y)\)</span></li>
 <li><span class="math inline">\(\log_a(x^k) = k \cdot \log_a(x)\)</span></li>
 </ul>
-<hr>
 </section>
 </section>
 <section id="álgebra-de-funciones" class="level2">
-<h2 class="anchored" data-anchor-id="álgebra-de-funciones">Álgebra de Funciones</h2>
+<h2 class="anchored" data-anchor-id="álgebra-de-funciones">Álgebra de funciones</h2>
 <p>Así como podemos sumar, restar, multiplicar y dividir números reales, podemos realizar estas mismas operaciones con funciones para crear nuevas funciones.</p>
 <p>Dadas dos funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span>, definimos las siguientes operaciones:</p>
 <ol type="1">
@@ -366,30 +376,15 @@ window.Quarto = {
 <section id="división-fgx" class="level4">
 <h4 class="anchored" data-anchor-id="división-fgx">4. División <span class="math inline">\((f/g)(x)\)</span></h4>
 <p><span class="math display">\[\left(\frac{f}{g}\right)(x) = \frac{\frac{1}{x-2}}{\sqrt{x}} = \frac{1}{\sqrt{x}(x-2)}\]</span></p>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-¡Atención con el dominio de la división!
-</div>
-</div>
-<div class="callout-body-container callout-body">
 <p>Para el cociente de funciones, el dominio es la intersección de los dominios originales <strong>excluyendo</strong> los valores donde la función del denominador se hace cero (<span class="math inline">\(g(x) = 0\)</span>).</p>
 <p>Dado que <span class="math inline">\(g(0) = \sqrt{0} = 0\)</span>, debemos sacar al cero de nuestro dominio base. El corchete en el cero se convierte en un paréntesis.</p>
-</div>
-</div>
 <ul>
 <li><strong>Dominio de la división:</strong> <span class="math inline">\((0, 2) \cup (2, \infty)\)</span></li>
 </ul>
+<hr>
 </section>
 <section id="ejercicio-2" class="level4">
 <h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h4>
-</section>
-</section>
-<section id="ejercicio-práctico-2-álgebra-de-funciones-y-leyes-de-exponentes" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicio-práctico-2-álgebra-de-funciones-y-leyes-de-exponentes">Ejercicio Práctico 2: Álgebra de Funciones y Leyes de Exponentes</h3>
 <p>Dadas las funciones:</p>
 <ul>
 <li><span class="math inline">\(f(x) = x^2\)</span> cuyo dominio es <span class="math inline">\(D_f = \mathbb{R}\)</span> o <span class="math inline">\((-\infty, \infty)\)</span></li>
@@ -400,6 +395,7 @@ window.Quarto = {
 <li><strong>Dominio de intersección base:</strong> <span class="math inline">\((0, \infty)\)</span></li>
 </ul>
 <p>A continuación, realizamos las operaciones algebraicas, simplificando los resultados mediante las leyes de los exponentes (<span class="math inline">\(x^n \cdot x^m = x^{n+m}\)</span> y <span class="math inline">\(\frac{x^n}{x^m} = x^{n-m}\)</span>):</p>
+</section>
 <section id="suma-fgx-1" class="level4">
 <h4 class="anchored" data-anchor-id="suma-fgx-1">1. Suma <span class="math inline">\((f+g)(x)\)</span></h4>
 <p><span class="math display">\[(f+g)(x) = x^2 + \frac{1}{\sqrt{x}}\]</span></p>
@@ -424,29 +420,15 @@ window.Quarto = {
 <section id="división-fgx-1" class="level4">
 <h4 class="anchored" data-anchor-id="división-fgx-1">4. División <span class="math inline">\((f/g)(x)\)</span></h4>
 <p>Aplicamos la ley del sándwich (o extremos por extremos y medios por medios) para simplificar la fracción compleja: <span class="math display">\[\left(\frac{f}{g}\right)(x) = \frac{x^2}{\frac{1}{\sqrt{x}}} = \frac{\frac{x^2}{1}}{\frac{1}{x^{1/2}}} = x^2 \cdot x^{1/2} = x^{2 + 1/2} = x^{5/2} = \sqrt{x^5} = x^2\sqrt{x}\]</span></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Análisis del dominio en esta división
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recordemos que para el cociente de funciones, la regla general dice que el dominio es la intersección de los dominios originales <strong>excluyendo</strong> los valores donde la función del denominador se hace cero (<span class="math inline">\(g(x) = 0\)</span>).</p>
-<p>Sin embargo, en este caso particular, la función <span class="math inline">\(g(x) = \frac{1}{\sqrt{x}}\)</span> <strong>nunca</strong> es igual a cero para ningún valor real de <span class="math inline">\(x\)</span> (ya que el numerador es una constante <span class="math inline">\(1\)</span>). Por lo tanto, no tenemos que excluir ningún valor adicional de nuestra intersección original.</p>
-</div>
-</div>
+<p>Como vimos en el ejercicio pasado, en el cociente de funciones, el dominio es la intersección de los dominios originales <strong>excluyendo</strong> los valores donde la función del denominador se hace cero (<span class="math inline">\(g(x) = 0\)</span>).</p>
 <ul>
 <li><strong>Dominio de la división:</strong> <span class="math inline">\((0, \infty)\)</span></li>
 </ul>
-<hr>
 </section>
 </section>
 </section>
 <section id="composición-de-funciones" class="level2">
-<h2 class="anchored" data-anchor-id="composición-de-funciones">Composición de Funciones</h2>
+<h2 class="anchored" data-anchor-id="composición-de-funciones">Composición de funciones</h2>
 <p>La composición es una operación donde aplicamos una función sobre el resultado de otra. En lugar de evaluar la función en un número <span class="math inline">\(x\)</span>, la evaluamos en otra función <span class="math inline">\(g(x)\)</span>.</p>
 <p><strong>Definición:</strong> Dadas dos funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span>, la función compuesta <span class="math inline">\(f \circ g\)</span> (se lee “<span class="math inline">\(f\)</span> composición <span class="math inline">\(g\)</span>”) está definida por: <span class="math display">\[(f \circ g)(x) = f(g(x))\]</span></p>
 <section id="ejemplos-1" class="level3">
@@ -595,13 +577,14 @@ f(g(h(x))) &amp;= \frac{x^2 + 6x + 9}{(x^2 + 6x + 9) + 1} \\
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -945,13 +928,13 @@ f(g(h(x))) &amp;= \frac{x^2 + 6x + 9}{(x^2 + 6x + 9) + 1} \\
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02_clase.html" class="pagination-link" aria-label="Clase 02">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Clase 02</span></span>
+      <a href="./02_clase.html" class="pagination-link" aria-label="02 Tipos de funciones">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">02 Tipos de funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_tarea.html" class="pagination-link" aria-label="Tarea 01">
-        <span class="nav-page-text"><span class="chapter-title">Tarea 01</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04_clase.html" class="pagination-link" aria-label="04 Límites">
+        <span class="nav-page-text"><span class="chapter-title">04 Límites</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

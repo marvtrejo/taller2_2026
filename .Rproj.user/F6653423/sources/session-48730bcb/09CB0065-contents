@@ -1,0 +1,266 @@
+---
+title: "Clase 04: Límites"
+subtitle: "27 de febrero de 2026"
+---
+
+```{r}
+#| label: setup
+#| echo: false
+
+library(highcharter)
+library(knitr)
+library(kableExtra)
+```
+
+¿Qué ocurre a $f(x)$ cuando la variable $x$ se aproxima al número "$a$"?
+
+Para entender la base del cálculo, nos interesa saber **cómo está definida una función $f(x)$ cercana a un valor específico "$a$"**.
+
+Tomemos como ejemplo la función $f(x) = x^2 + 2$.
+
+Si evaluamos directamente en $a$, tenemos que $f(a) = a^2 + 2$.
+
+La notación formal para analizar esta aproximación es la siguiente:
+$$\lim_{x\to a} (x^2 + 2) = a^2 + 2$$
+
+Por ejemplo, si $a = 2$:
+$$\lim_{x\to 2} (x^2 + 2) = 4$$
+
+De manera general, llegamos a la siguiente estructura:
+$$\lim_{x\to a} f(x) = L$$
+**Se lee como "el límite de $f(x)$, cuando $x$ se aproxima a '$a$', es igual a '$L$'").**
+
+---
+
+## Funciones con restricciones
+
+¿Qué le pasa a la función cuando nos acercamos a un punto conflictivo, como un punto indeterminado? Analicemos el siguiente límite:
+
+$$\lim_{x\to 1} \frac{x-1}{x^2-1}$$
+
+Si observamos la función original $f(x) = \frac{x-1}{x^2-1}$, notaremos que no está definida en $x=1$ ya que el denominador se haría cero, resultando en la forma indeterminada $0/0$. 
+
+**¿La función está definida en ese punto?** No. Sin embargo, la definición del límite $\lim_{x\to a}$ nos dice que debemos considerar valores de $x$ **cercanos, pero no iguales** a "$a$". Nos interesa saber a qué **tiende** la función, es decir, hacia dónde se acerca.
+
+### 1. Aproximación tabular
+
+Para descubrir hacia dónde tiende la función, evaluamos valores que se acerquen a $1$ por la izquierda (valores menores que 1) y por la derecha (valores mayores que 1).
+
+::: {layout-ncol=2 style="display: flex; align-items: flex-start;"}
+
+```{r}
+#| echo: false
+# Tabla por la izquierda
+df_izq <- data.frame(
+  `Por la izquierda (x < 1)` = c(0.9, 0.99, 0.999, 0.9999),
+  `f(x)` = c(0.526, 0.502, 0.50025, 0.500025),
+  check.names = FALSE
+)
+
+kable(df_izq, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(0, background = "#2980B9", color = "white")
+```
+
+```{r}
+#| echo: false
+# Tabla por la derecha
+df_der <- data.frame(
+  `Por la derecha (x > 1)` = c(1.1, 1.01, 1.001, 1.0001),
+  `f(x)` = c(0.476, 0.497, 0.4997, 0.49997),
+  check.names = FALSE
+)
+
+kable(df_der, align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  row_spec(0, background = "#E74C3C", color = "white")
+```
+:::
+
+**¿A dónde tiende?** Como podemos observar en ambas tablas, conforme $x$ se acera a $1$, el valor de $f(x)$ se aproxima a **0.5**.
+
+### 2. Comportamiento gráfico
+
+Si graficamos la función, notaremos que tiene una asíntota vertical en $x = -1$ y un "hueco" exactamente en la coordenada $(1, 0.5)$, corroborando que la función sí tiende a un valor concreto, aunque no esté definida allí.
+
+```{r}
+#| label: fig-limite-hueco
+#| echo: false
+
+x_vals <- seq(-3, 3, by = 0.05)
+y_vals <- (x_vals - 1) / (x_vals^2 - 1)
+
+y_vals[abs(x_vals + 1) < 0.1] <- NA 
+
+df_hc <- data.frame(x = round(x_vals, 3), y = round(y_vals, 3))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#8E44AD", name = "f(x)") %>%
+  hc_plotOptions(line = list(lineWidth = 2)) %>%
+  hc_add_series(
+    data = data.frame(x = 1, y = 0.5), type = "scatter", 
+    name = "No definido (Hueco)", color = "#E74C3C",
+    marker = list(radius = 5, fillColor = "white", lineWidth = 2, lineColor = "#E74C3C")
+  ) %>%
+  hc_xAxis(
+    title = list(text = "x"), 
+    crosshair = TRUE,
+    plotLines = list(list(value = -1, color = "gray", dashStyle = "Dash", width = 2, label = list(text = "Asíntota")))
+  ) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = -4, max = 4) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+
+### 3. Solución algebraica
+
+Para evitar hacer tablas o gráficas cada vez que evaluamos un límite indeterminado, podemos recurrir al álgebra. Si factorizamos el denominador utilizando la diferencia de cuadrados $x^2 - 1 = (x+1)(x-1)$, podemos simplificar la expresión:
+
+$$
+\begin{aligned}
+\lim_{x\to 1} \frac{x-1}{x^2-1} &= \lim_{x\to 1} \frac{x-1}{(x+1)(x-1)} \\
+\end{aligned}
+$$
+
+Simplificamos el término común $(x-1)$ tanto en el numerador como en el denominador:
+
+$$
+\begin{aligned}
+&= \lim_{x\to 1} \frac{1}{x+1}
+\end{aligned}
+$$
+
+Ahora que hemos eliminado la indeterminación, evaluamos el límite sustituyendo directamente $x = 1$:
+
+$$
+\begin{aligned}
+&= \frac{1}{1+1} \\
+&= \frac{1}{2} = 0.5
+\end{aligned}
+$$
+
+En el ejemplo anterior, **el límite existe porque llegamos al mismo lugar por la izquierda y por la derecha**. Sin embargo, existe la posibilidad de que un límite no exista, por ejemplo evaluemos el mismo límite ahora en $x \to -1$:
+
+$$ \lim_{x\to -1} \frac{x-1}{x^2-1} = \lim_{x\to -1} \frac{x-1}{(x+1)(x-1)} = \lim_{x\to -1} \frac{1}{x+1} $$
+
+Si intentamos hacer sustitución directa obtenemos $\frac{1}{0}$, lo cual **no está definido**. 
+
+¿A dónde llega la función por la derecha y por la izquierda?
+* Por la izquierda ($x \to -1^-$): $\lim \frac{1}{x+1} = -\infty$ *(un número negativo muy grande)*
+* Por la derecha ($x \to -1^+$): $\lim \frac{1}{x+1} = +\infty$ *(un número positivo muy grande)*
+
+Como los límites laterales se disparan a direcciones opuestas, concluimos que **el límite no existe**.
+
+```{r}
+#| label: fig-limite-no-existe
+#| echo: false
+
+x_vals <- seq(-3, 1, by = 0.05)
+y_vals <- 1 / (x_vals + 1)
+y_vals[abs(x_vals + 1) < 0.1] <- NA # Romper la línea en la asíntota
+
+df_hc <- data.frame(x = round(x_vals, 2), y = round(y_vals, 2))
+
+hchart(df_hc, "line", hcaes(x = x, y = y), color = "#C0392B", name = "f(x) = 1/(x+1)") %>%
+  hc_xAxis(
+    title = list(text = "x"), crosshair = TRUE,
+    plotLines = list(list(value = -1, color = "black", dashStyle = "Dash", width = 2, label = list(text = "Asíntota x=-1")))
+  ) %>%
+  hc_yAxis(title = list(text = "f(x)"), min = -15, max = 15) %>%
+  hc_tooltip(pointFormat = "<b>f(x):</b> {point.y}")
+```
+
+---
+
+## Ejercicios
+
+Para resolver límites, utilizamos tres técnicas algebraicas principales: **sustitución directa**, **factorización** y **racionalización**. A continuación se resuelven los ejercicios vistos en clase.
+
+### Sustitución Directa
+Si la función es continua en el punto a evaluar, basta con sustituir el valor de $x$.
+
+**1. $\lim_{x\to 3} (2x+5)$ **
+$$ \lim_{x\to 3} (2x+5) = 2(3) + 5 = 6 + 5 = \mathbf{11} $$
+
+**2. $\lim_{x\to -2} (x^2-4x+1)$**
+$$ \lim_{x\to -2} (x^2-4x+1) = (-2)^2 - 4(-2) + 1 = 4 + 8 + 1 = \mathbf{13} $$
+
+**3. $\lim_{x\to 5} \sqrt{x+4}$**
+$$ \lim_{x\to 5} \sqrt{x+4} = \sqrt{5+4} = \sqrt{9} = \mathbf{3} $$
+
+---
+
+### Factorización y expansión
+Cuando obtenemos la forma indeterminada $0/0$, factorizamos polinomios para simplificar los términos problemáticos.
+
+**4. $\lim_{x\to 2} \frac{x^2-1}{x-2}$**
+Al evaluar directamente obtenemos $\frac{3}{0}$. Dado que el numerador no se hace cero pero el denominador sí, tenemos una asíntota vertical.
+**Resultado:** $\mathbf{\nexists}$ *(El límite no existe)*
+
+**5. $\lim_{x\to 3} \frac{x-3}{x^2-9}$**
+$$ \lim_{x\to 3} \frac{x-3}{(x-3)(x+3)} = \lim_{x\to 3} \frac{1}{x+3} = \frac{1}{3+3} = \mathbf{\frac{1}{6}} $$
+
+**6. $\lim_{x\to 0} \frac{x^2-2x}{x}$**
+$$ \lim_{x\to 0} \frac{x(x-2)}{x} = \lim_{x\to 0} (x-2) = 0 - 2 = \mathbf{-2} $$
+
+**9. $\lim_{x\to 0} \frac{(3+x)^2 - 9}{x}$**
+
+Primero desarrollamos el binomio al cuadrado:
+$$ \lim_{x\to 0} \frac{(9 + 6x + x^2) - 9}{x} = \lim_{x\to 0} \frac{6x + x^2}{x} = \lim_{x\to 0} \frac{x(6 + x)}{x} = \lim_{x\to 0} (6 + x) = \mathbf{6} $$
+
+---
+
+### Racionalización
+Se utiliza principalmente cuando hay raíces cuadradas involucradas y obtenemos $0/0$. Consiste en multiplicar numerador y denominador por el **conjugado**.
+
+**10. $\lim_{x\to 0} \frac{\sqrt{x^2+9} - 3}{x^2}$**
+
+Multiplicamos por el conjugado $\sqrt{x^2+9} + 3$:
+$$ 
+\begin{aligned}
+&= \lim_{x\to 0} \frac{\sqrt{x^2+9} - 3}{x^2} \cdot \left( \frac{\sqrt{x^2+9} + 3}{\sqrt{x^2+9} + 3} \right) \\
+&= \lim_{x\to 0} \frac{(\sqrt{x^2+9})^2 - (3)^2}{x^2(\sqrt{x^2+9} + 3)} \\
+&= \lim_{x\to 0} \frac{x^2 + 9 - 9}{x^2(\sqrt{x^2+9} + 3)} \\
+&= \lim_{x\to 0} \frac{x^2}{x^2(\sqrt{x^2+9} + 3)} \\
+&= \lim_{x\to 0} \frac{1}{\sqrt{x^2+9} + 3} = \frac{1}{\sqrt{9} + 3} = \mathbf{\frac{1}{6}}
+\end{aligned}
+$$
+
+**13. $\lim_{x\to 4} \frac{\sqrt{x}-2}{x-4}$**
+
+Multiplicamos por el conjugado $\sqrt{x} + 2$:
+$$ \lim_{x\to 4} \frac{\sqrt{x}-2}{x-4} \cdot \frac{\sqrt{x}+2}{\sqrt{x}+2} = \lim_{x\to 4} \frac{x-4}{(x-4)(\sqrt{x}+2)} = \lim_{x\to 4} \frac{1}{\sqrt{x}+2} = \frac{1}{2+2} = \mathbf{\frac{1}{4}} $$
+
+**14. $\lim_{x\to 9} \frac{x-9}{\sqrt{x}-3}$**
+
+Multiplicamos por el conjugado $\sqrt{x} + 3$:
+$$ \lim_{x\to 9} \frac{x-9}{\sqrt{x}-3} \cdot \frac{\sqrt{x}+3}{\sqrt{x}+3} = \lim_{x\to 9} \frac{(x-9)(\sqrt{x}+3)}{x-9} = \lim_{x\to 9} (\sqrt{x}+3) = \sqrt{9} + 3 = \mathbf{6} $$
+
+**15. $\lim_{x\to 0} \frac{\sqrt{x+1}-1}{x}$**
+
+Multiplicamos por el conjugado $\sqrt{x+1} + 1$:
+$$ \lim_{x\to 0} \frac{\sqrt{x+1}-1}{x} \cdot \frac{\sqrt{x+1}+1}{\sqrt{x+1}+1} = \lim_{x\to 0} \frac{(x+1)-1}{x(\sqrt{x+1}+1)} = \lim_{x\to 0} \frac{x}{x(\sqrt{x+1}+1)} = \lim_{x\to 0} \frac{1}{\sqrt{x+1}+1} = \frac{1}{\sqrt{1}+1} = \mathbf{\frac{1}{2}} $$
+
+---
+
+### Casos Especiales (Límites Inexistentes o Infinitos)
+
+**7. $\lim_{x\to 0} \frac{|x|}{x}$**
+
+El valor absoluto se comporta distinto dependiendo del lado: por la derecha el límite es $1$, por la izquierda es $-1$.
+**Resultado:** $\mathbf{\nexists}$ *(No existe)*
+
+**8. $\lim_{x\to 0} \frac{1}{x}$**
+
+Por la derecha tiende a $\infty$, por la izquierda a $-\infty$.
+**Resultado:** $\mathbf{\nexists}$ *(No existe)*
+
+**11. $\lim_{x\to 0} \sin\left(\frac{\pi}{x}\right)$**
+
+Conforme $x$ se acerca a cero, la función oscila infinitamente entre $1$ y $-1$ sin estabilizarse.
+**Resultado:** $\mathbf{\nexists}$ *(No existe)*
+
+**12. $\lim_{x\to 0} \frac{1}{x^2}$**
+
+Dado que cualquier número (positivo o negativo) elevado al cuadrado es positivo, tanto por la izquierda como por la derecha el denominador se acerca a $+0$. 
+**Resultado:** $\mathbf{\infty}$ *(Tiende a infinito positivo)*
+
+---
