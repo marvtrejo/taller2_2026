@@ -26,6 +26,7 @@ book:
     - 02_clase.qmd
     - 03_clase.qmd
     - 04_clase.qmd
+    - 05_clase.qmd
   - part: Tareas
     chapters:
     - 01_tarea.qmd
