@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_tarea.html" rel="next">
+<link href="./06_clase.html" rel="next">
 <link href="./04_clase.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -282,6 +282,11 @@ window.Quarto = {
   <a href="./05_clase.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">05 Límites al infinito</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_clase.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">06 Derivada</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -492,8 +497,8 @@ m_{PQ} = \frac{6 - 4}{5 - 1} = \frac{2}{4} = \mathbf{\frac{1}{2}}
 <div id="fig-pendiente" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pendiente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="highchart html-widget html-fill-item" id="htmlwidget-37640c6932629ee0e89d" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-37640c6932629ee0e89d">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Eje Y"},"type":"linear","min":0,"max":8,"breaks":[0,1,2,3,4,5,6,7,8]},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"},"dataLabels":{"enabled":true,"format":"{point.point_label}","style":{"color":"#333","fontSize":"13px"}}}},"series":[{"group":"group","data":[{"x":1,"y":4,"point_label":"P(1, 4)"},{"x":5,"y":6,"point_label":"Q(5, 6)"}],"type":"scatter","color":"#2980B9","name":"Puntos P y Q","marker":{"radius":7}},{"group":"group","data":[{"x":1,"y":4,"point_label":"P(1, 4)"},{"x":5,"y":6,"point_label":"Q(5, 6)"}],"type":"line","color":"#27AE60","name":"Recta secante m = 1/2","lineWidth":2}],"xAxis":{"type":"linear","title":{"text":"Eje X"},"crosshair":true,"min":0,"max":6,"breaks":[0,1,2,3,4,5,6]},"tooltip":{"pointFormat":"<b>({point.x}, {point.y})<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<div class="highchart html-widget html-fill-item" id="htmlwidget-9bbf5208fc2853263d55" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-9bbf5208fc2853263d55">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Eje Y"},"type":"linear","min":0,"max":8,"breaks":[0,1,2,3,4,5,6,7,8]},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"},"dataLabels":{"enabled":true,"format":"{point.point_label}","style":{"color":"#333","fontSize":"13px"}}}},"series":[{"group":"group","data":[{"x":1,"y":4,"point_label":"P(1, 4)"},{"x":5,"y":6,"point_label":"Q(5, 6)"}],"type":"scatter","color":"#2980B9","name":"Puntos P y Q","marker":{"radius":7}},{"group":"group","data":[{"x":1,"y":4,"point_label":"P(1, 4)"},{"x":5,"y":6,"point_label":"Q(5, 6)"}],"type":"line","color":"#27AE60","name":"Recta secante m = 1/2","lineWidth":2}],"xAxis":{"type":"linear","title":{"text":"Eje X"},"crosshair":true,"min":0,"max":6,"breaks":[0,1,2,3,4,5,6]},"tooltip":{"pointFormat":"<b>({point.x}, {point.y})<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pendiente-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6.1: Recta secante que pasa por los puntos P y Q
@@ -951,8 +956,8 @@ f'(x)=\lim_{h \to 0} (4x + 2h) = 4x + 2(0) = \mathbf{4x}
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_tarea.html" class="pagination-link" aria-label="Tarea 01">
-        <span class="nav-page-text"><span class="chapter-title">Tarea 01</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_clase.html" class="pagination-link" aria-label="06 Derivada">
+        <span class="nav-page-text"><span class="chapter-title">06 Derivada</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

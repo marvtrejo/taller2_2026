@@ -264,6 +264,17 @@
     ]
   },
   {
+    "objectID": "06_clase.html",
+    "href": "06_clase.html",
+    "title": "06 Derivada",
+    "section": "",
+    "text": "La siguiente función de costo describe los costos de una empresa:\n\\[\nC(q)=\\frac{1}{3}q^3-4q^2+12q+30\n\\]\n1. Encuentra la función del costo marginal\nLa función de costo marginal esta representada por la primera derivada de la función \\(C(q)\\)\n\\[\n\\begin{aligned}\nC'(q)&=\\frac{1(3)}{3}q^2-4(2)q+12  \\\\\n&=\\frac{3}{3}q^2-8q+12 \\\\\n&=q^2-8q+12\n\\end{aligned}\n\\]\n2. Encuentra la \\(q\\) que maximiza y minimiza el costo en el intervalo de \\([0,10]\\)\n\nPrimero igualamos a cero \\(C'(q)\\) ya que es el punto en donde la pendiente es nula\n\n\\[q^2-8q+12=0\\]\n\nPosteriormente factorizamos para conocer los puntos en donde \\(C'(q)=0\\)\n\n\\[q^2-8q+12=0 \\implies (q-2)(q-6)=0\\]\nDe lo anterior obtenemos que los puntos críticos de esta función de costos son:\n\\[\nq_1=2 \\\\\nq_2=6\n\\]\n\nPara saber si el punto crítico es máximo o mínimo, utilizamos el criterio de la segunda derivada, es decir, vamos a derivar \\(C'(q)\\):\n\n\\[C''(q)=2q-8\\]\n\nAhora evaluamos los puntos críticos en la segunda derivada:\n\n\\[C''(2)=2 \\cdot 2-8=4-8=-4\\]\n\\[C''(6)=2 \\cdot 6-8=12-8=4\\]\nAl evaluar en la segunda derivada, sabemos que es un máximo o un mínimo de acuerdo a los siguientes criterios:\n\\[C''(x) = \\begin{cases} \\text{Máximo} & C''(x)&lt; 0 \\\\ \\text{Mínimo} & C''(x)&gt; 0 \\end{cases}\\]\nPor lo tanto: \\[\nq_{max}=2\\\\\nq_{min}=6\n\\]\n3. La \\(q\\) que maximiza y minimiza ¿es local (relativa) o absoluta?\nSon valores relativos, ya que en todo el dominio de la función no son los valores máximos o mínimos.\n4. ¿Cuál es el costo máximo y cuál el mínimo cuando se producen 2, 6 y 20 unidades?\nEn este caso estamos comparando entre diferentes niveles de producción, solo evaluamos en la función \\(C'(q)\\)\n\\[\n\\begin{aligned}\nC(2)&=\\frac{122}{3} \\approx 40.66\\\\\nC(6)&=30 \\\\\nC(20)&=\\frac{4010}{3} \\approx 1336.66\n\\end{aligned}\n\\]\nPor lo tanto, de las tres opciones dadas:\n\nCosto máximo \\(C(20)\\approx 1336.66\\)\nCosto mínimo \\(C(6)=30\\)\n\n5. ¿Por qué \\(q=20\\) devuelve un costo más alto que \\(q_{max}\\)\nPorque \\(q_{max}\\) es un máximo relativo.",
+    "crumbs": [
+      "Clases",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>06 Derivada</span>"
+    ]
+  },
+  {
     "objectID": "01_tarea.html",
     "href": "01_tarea.html",
     "title": "Tarea 01",
@@ -271,7 +282,7 @@
     "text": "1. \\(f(x) = \\frac{x-1}{x^2-4}\\)\nEncuentra el dominio y rango de las siguientes funciones, posteriormente grafica.\n\\[D_f = \\mathbb{R} \\setminus \\{-2, 2\\}\\]\n\\[R_f = \\mathbb{R}\\]",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 01</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -282,7 +293,7 @@
     "text": "Dominio: El denominador no puede ser cero \\(x^2 - 4 \\neq 0 \\implies (x-2)(x+2) \\neq 0\\), por lo tanto el dominio esta compuesto por todos los reales excepto \\(x = 2\\) y \\(x = -2\\).\n\n\n\nRango: La función toma todos los valores reales.\n\n\n\nGráfica 1. \\(f(x) = \\frac{x-1}{x^2-4}\\)",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 01</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -293,7 +304,7 @@
     "text": "2. \\(g(x) = \\sqrt{x^2-6x+5}\\)\n\nDominio: El argumento de la raíz debe ser mayor o igual a cero: \\(x^2 - 6x + 5 \\ge 0 \\implies (x-1)(x-5) \\ge 0\\). Por lo tanto, el dominio es\n\n\\[D_{g(x)} = (-\\infty, 1] \\cup [5, \\infty)\\]\n\nRango: Al ser una raíz, toma desde su valor mínimo (cero) hasta infinito.\n\n\\[R_g = [0, \\infty)\\]\n\nGráfica 2. \\(g(x) = \\sqrt{x^2-6x+5}\\)",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 01</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -304,7 +315,7 @@
     "text": "3. \\(h(x) = \\frac{1}{\\sqrt{2x-1}}\\)\n\nDominio: El argumento de la raíz debe ser estrictamente positivo por estar en el denominador: \\(2x - 1 &gt; 0 \\implies x &gt; 1/2\\). Por lo tanto:\n\n\\[D_h = (1/2, \\infty)\\]\n\nRango: El denominador es positivo y creciente, el numerador es 1 constante. Nunca toca el cero.\n\n\\[R_h = (0, \\infty)\\]\n\nGráfica 3. \\(h(x) = \\frac{1}{\\sqrt{2x-1}}\\)",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 01</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -315,7 +326,7 @@
     "text": "4. \\(i(x) = \\frac{|x|}{x+2}\\)\n\nDominio: El denominador no puede ser cero. \\(x + 2 \\neq 0 \\implies x \\neq -2\\).Por lo tanto:\n\n\\[D_i = \\mathbb{R} \\setminus \\{-2\\}\\]\n\nRango: Analizando el comportamiento a ambos lados de la asíntota y el valor absoluto, la función salta el intervalo \\([-1, 0)\\).\n\n\\[R_i = (-\\infty, -1) \\cup [0, \\infty)\\]\n\nGráfica 4. \\(i(x) = \\frac{|x|}{x+2}\\)",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 01</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -326,7 +337,7 @@
     "text": "5. \\(j(x) = \\sqrt{\\frac{x-3}{x+1}}\\)\n\nDominio: La fracción debe ser positiva o cero, y el denominador \\(x \\neq -1\\). Evaluando los intervalos de signos, la fracción es no negativa antes del -1 y después del 3.Por lo tanto:\n\n\\[D_j = (-\\infty, -1) \\cup [3, \\infty)\\]\n\nRango: El único valor no permitido es cuando la raíz tendería a 1 (ya que el grado del numerador y denominador es el mismo), y como es raíz principal, solo da positivos.\n\n\\[R_j = [0, 1) \\cup (1, \\infty)\\]\n\nGráfica 5. \\(j(x) = \\sqrt{\\frac{x-3}{x+1}}\\)",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Tarea 01</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 01</span>"
     ]
   },
   {
@@ -337,7 +348,7 @@
     "text": "Preguntas\n1. \\(\\log\\left(\\frac{a^3}{b^2}\\right)\\)\n\\[\n\\begin{aligned}\n\\log\\left(\\frac{a^3}{b^2}\\right) &= \\log(a^3) - \\log(b^2) \\\\\n&= 3\\log(a) - 2\\log(b)\n\\end{aligned}\n\\]\n2. \\(\\log(10xy^4)\\)\n\\[\n\\begin{aligned}\n\\log(10xy^4) &= \\log(10) + \\log(x) + \\log(y^4) \\\\\n&= 1 + \\log(x) + 4\\log(y) \\quad \\text{(Asumiendo base 10)}\n\\end{aligned}\n\\]\n3. \\(\\log\\left(\\frac{5m^2}{n^3p}\\right)\\)\n\\[\n\\begin{aligned}\n\\log\\left(\\frac{5m^2}{n^3p}\\right) &= \\log(5m^2) - \\log(n^3p) \\\\\n&= [\\log(5) + \\log(m^2)] - [\\log(n^3) + \\log(p)] \\\\\n&= \\log(5) + 2\\log(m) - 3\\log(n) - \\log(p)\n\\end{aligned}\n\\]\n4. \\(\\log\\left(\\frac{x^5y}{3z^4}\\right)\\)\n\\[\n\\begin{aligned}\n\\log\\left(\\frac{x^5y}{3z^4}\\right) &= \\log(x^5y) - \\log(3z^4) \\\\\n&= [\\log(x^5) + \\log(y)] - [\\log(3) + \\log(z^4)] \\\\\n&= 5\\log(x) + \\log(y) - \\log(3) - 4\\log(z)\n\\end{aligned}\n\\]",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 02</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tarea 02</span>"
     ]
   },
   {
@@ -345,10 +356,10 @@
     "href": "02_tarea.html#preguntas",
     "title": "Tarea 02",
     "section": "",
-    "text": "1. Rango de \\(\\sin(x)\\) y \\(\\cos(x)\\)\n¿Por qué las funciones \\(\\sin(x)\\) y \\(\\cos(x)\\) tienen un rango entre -1 y 1?\nEsto se fundamenta en la definición de estas funciones a partir del círculo unitario (un círculo con radio \\(r = 1\\) centrado en el origen). Para cualquier ángulo \\(x\\), las coordenadas de un punto sobre la circunferencia son \\((\\cos(x), \\sin(x))\\). Como el radio máximo desde el origen en cualquier dirección es 1, los valores en el eje horizontal (coseno) y vertical (seno) nunca pueden exceder 1 ni ser menores a -1.\nA continuación, se muestra la gráfica de las funciones, noten que ambas se encuentran en el rango de \\([-1, 1]\\):\n\n\n\n\n\n\n\n\n2. Función tangente\nExpresa la función \\(\\tan(x)\\) como una función racional.\nUna función racional se expresa como el cociente de dos funciones. Usando las identidades trigonométricas, la tangente es equivalente al cociente del seno entre el coseno: $ (x) = $\n\n\n3. Dominio y rango de identidad pitagórica\nEncuentra el dominio y rango de la siguiente función \\(f(x) = \\sin^2(x) + \\cos^2(x)\\)\nPara resolver esta pregunta, debemos recordar que por identidad trigonométrica, la suma del cuadrado del seno y el coseno para un mismo ángulo siempre es igual a 1.\n\\[ f(x) = \\sin^2(x) + \\cos^2(x) =1 \\] Por lo tanto:\n\nDominio: dado que la función es constante: \\(D_f = \\mathbb{R}\\) o \\((-\\infty, \\infty)\\).\nRango: sin importar el valor que tome \\(x\\), la función siempre da como resultado 1. Por lo tanto, el rango es un único valor: \\(R_f = \\{1\\}\\).\n\n\n\n\n\n\n\nNoteNotación de intervalos\n\n\n\nUn error muy común que hemos identificado en sus tareas es la notación de los intervalos para indicar dominio y rango. Siempre tengan en mente lo siguiente:\nOrden Los intervalos se leen de izquierda a derecha. Cada valor representa un extremo del conjunto de números que estamos indicando, de esta manera el valor de la izquierda indica el número más pequeño y el de la derecha el de mayor tamaño. Por ejemplo, \\([0,10]\\)\nIntervalo abierto \\((\\quad)\\): Este tipo de intervalo NO incluye los valores de los extremos, pero si los valores que estan entre ellos. Para denotarlo se utilizan paréntesis \\(( \\quad )\\), por ejemplo el intervalo \\((0, 10)\\) contiene todos los valores mayores a \\(0\\) y menores a \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)), pero NUNCA \\(0\\) y \\(10\\). Asimismo, por convención cualquier infinito utiliza la notación de intervalo abierto, por ejemplo \\((-\\infty, \\infty)\\), ya que son valores que desconocemos y a los que nos podemos acercar indefinidamente.\nIntervalo cerrado \\([\\quad]\\): Por el contrario, este tipo de intervalo incluye tanto los valores de los extremos y los valores intermedios. Para denotarlo se utilizan corchetes \\([ \\quad ]\\), por ejemplo el intervalo \\([0, 10]\\) contiene todos los valores desde el \\(0\\) al \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)).\nIntervalos abiertos y cerrados: En la práctica, podemos combinar ambos tipos de notaciones pues existen funciones que parten de un valor específico y se extienden al infinito o que estan indeterminadas en algún punto. Por ejemplo la función \\(f(x)=\\sqrt{x}\\) tiene un dominio que va del \\(0\\) al \\(\\infty\\), en notación \\([0,\\infty)\\).",
+    "text": "1. Rango de \\(\\sin(x)\\) y \\(\\cos(x)\\)\n¿Por qué las funciones \\(\\sin(x)\\) y \\(\\cos(x)\\) tienen un rango entre -1 y 1?\nEsto se fundamenta en la definición de estas funciones a partir del círculo unitario (un círculo con radio \\(r = 1\\) centrado en el origen). Para cualquier ángulo \\(x\\), las coordenadas de un punto sobre la circunferencia son \\((\\cos(x), \\sin(x))\\). Como el radio máximo desde el origen en cualquier dirección es 1, los valores en el eje horizontal (coseno) y vertical (seno) nunca pueden exceder 1 ni ser menores a -1.\nA continuación, se muestra la gráfica de las funciones, noten que ambas se encuentran en el rango de \\([-1, 1]\\):\n\n\n\n\n\n\n\n\n2. Función tangente\nExpresa la función \\(\\tan(x)\\) como una función racional.\nUna función racional se expresa como el cociente de dos funciones. Usando las identidades trigonométricas, la tangente es equivalente al cociente del seno entre el coseno: \\(\\tan(x) = \\frac{\\sin(x)}{\\cos(x)}\\)\n\n\n3. Dominio y rango de identidad pitagórica\nEncuentra el dominio y rango de la siguiente función \\(f(x) = \\sin^2(x) + \\cos^2(x)\\)\nPara resolver esta pregunta, debemos recordar que por identidad trigonométrica, la suma del cuadrado del seno y el coseno para un mismo ángulo siempre es igual a 1.\n\\[ f(x) = \\sin^2(x) + \\cos^2(x) =1 \\] Por lo tanto:\n\nDominio: dado que la función es constante: \\(D_f = \\mathbb{R}\\) o \\((-\\infty, \\infty)\\).\nRango: sin importar el valor que tome \\(x\\), la función siempre da como resultado 1. Por lo tanto, el rango es un único valor: \\(R_f = \\{1\\}\\).\n\n\n\n\n\n\n\nNoteNotación de intervalos\n\n\n\nUn error muy común que hemos identificado en sus tareas es la notación de los intervalos para indicar dominio y rango. Siempre tengan en mente lo siguiente:\nOrden Los intervalos se leen de izquierda a derecha. Cada valor representa un extremo del conjunto de números que estamos indicando, de esta manera el valor de la izquierda indica el número más pequeño y el de la derecha el de mayor tamaño. Por ejemplo, \\([0,10]\\)\nIntervalo abierto \\((\\quad)\\): Este tipo de intervalo NO incluye los valores de los extremos, pero si los valores que estan entre ellos. Para denotarlo se utilizan paréntesis \\(( \\quad )\\), por ejemplo el intervalo \\((0, 10)\\) contiene todos los valores mayores a \\(0\\) y menores a \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)), pero NUNCA \\(0\\) y \\(10\\). Asimismo, por convención cualquier infinito utiliza la notación de intervalo abierto, por ejemplo \\((-\\infty, \\infty)\\), ya que son valores que desconocemos y a los que nos podemos acercar indefinidamente.\nIntervalo cerrado \\([\\quad]\\): Por el contrario, este tipo de intervalo incluye tanto los valores de los extremos y los valores intermedios. Para denotarlo se utilizan corchetes \\([ \\quad ]\\), por ejemplo el intervalo \\([0, 10]\\) contiene todos los valores desde el \\(0\\) al \\(10\\), ya sean enteros (\\(1,2,...,9\\)) o decimales (\\(0.0001, 9.9999\\)).\nIntervalos abiertos y cerrados: En la práctica, podemos combinar ambos tipos de notaciones pues existen funciones que parten de un valor específico y se extienden al infinito o que estan indeterminadas en algún punto. Por ejemplo la función \\(f(x)=\\sqrt{x}\\) tiene un dominio que va del \\(0\\) al \\(\\infty\\), en notación \\([0,\\infty)\\).",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Tarea 02</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tarea 02</span>"
     ]
   },
   {
@@ -359,7 +370,7 @@
     "text": "1. \\(\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x}\\)\nPor lo tanto:\n\\[\\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x} = e \\approx 2.71828\\]",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tarea 03</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tarea 03</span>"
     ]
   },
   {
@@ -370,7 +381,7 @@
     "text": "Propiedades fundamentales de los límites\nAsumiendo que \\(\\lim_{x\\to a} f(x) = L\\) y \\(\\lim_{x\\to a} g(x) = M\\), y que ambos límites existen:\n\n\n\n\n\n\nNotePropiedades de los límites\n\n\n\n\nConstante: El límite de una constante es la constante misma. \\[\\lim_{x\\to a} c = c\\]\nSuma y diferencia: El límite de una suma es la suma de los límites. \\[\\lim_{x\\to a} [f(x) \\pm g(x)] = L \\pm M\\]\nConstante por una función: \\[\\lim_{x\\to a} [c \\cdot f(x)] = c \\cdot L\\]\nProducto y cociente:\n\n\nProducto: \\(\\lim_{x\\to a} [f(x) \\cdot g(x)] = L \\cdot M\\)\nCociente: \\(\\lim_{x\\to a} \\left[\\frac{f(x)}{g(x)}\\right] = \\frac{L}{M}\\), siempre que el denominador \\(M \\neq 0\\).\n\n\nPotencia: \\[\\lim_{x\\to a} [f(x)]^n = L^n\\]",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Tarea 03</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tarea 03</span>"
     ]
   },
   {
@@ -381,7 +392,7 @@
     "text": "NoteDerivada por definición\n\n\n\nPara resolver esta tarea, utilizaremos la definición formal de la derivada como un límite. Esta fórmula representa la tasa de cambio instantánea de la función:\n\\[f'(x) = \\lim_{h\\to0} \\frac{f(x+h) - f(x)}{h}\\]\n\n\n\n\n1. \\(f(x) = (x - 3)^3\\)\nSustituimos en la definición: \\[f'(x) = \\lim_{h\\to0} \\frac{(x + h - 3)^3 - (x - 3)^3}{h}\\]\nPara facilitar las operaciones, podemos agrupar el término \\((x-3)\\) y desarrollar el binomio al cubo usando la regla \\((A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3\\), donde \\(A = (x-3)\\) y \\(B = h\\):\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} \\frac{[(x - 3) + h]^3 - (x - 3)^3}{h} \\\\\n&= \\lim_{h\\to0} \\frac{(x - 3)^3 + 3(x - 3)^2h + 3(x - 3)h^2 + h^3 - (x - 3)^3}{h}\n\\end{aligned}\n\\]\nEliminamos términos similares \\((x - 3)^3\\) y factorizamos \\(h\\) en el numerador:\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} \\frac{h[3(x - 3)^2 + 3(x - 3)h + h^2]}{h} \\\\\n&= \\lim_{h\\to0} [3(x - 3)^2 + 3(x - 3)h + h^2]\n\\end{aligned}\n\\]\nEvaluamos el límite cuando \\(h \\to 0\\):\n\\[\n\\begin{aligned}\nf'(x) &= \\lim_{h\\to0} [3(x - 3)^2 + 3(x - 3)h + h^2] \\\\\n&= [3(x - 3)^2 + 3(x - 3)(0) + (0)^2]\n\\end{aligned}\n\\]\nResultado: \\[f'(x) = 3(x - 3)^2\\]\n\n\n\n2. \\(g(x) = \\ln(x)\\)\nSustituimos en la definición y usamos las propiedades de los logaritmos para operar: \\[\n\\begin{aligned}\ng'(x) &= \\lim_{h\\to0} \\frac{\\ln(x + h) - \\ln(x)}{h} \\\\\n&= \\lim_{h\\to0} \\frac{1}{h} \\ln\\left(\\frac{x + h}{x}\\right) \\\\\n&= \\lim_{h\\to0} \\frac{1}{h} \\ln\\left(1 + \\frac{h}{x}\\right)\n\\end{aligned}\n\\]\nUsamos la propiedad de la potencia del logaritmo (\\(n \\ln A = \\ln A^n\\)): \\[g'(x) = \\lim_{h\\to0} \\ln\\left(1 + \\frac{h}{x}\\right)^{\\frac{1}{h}}\\]\nHacemos un cambio de variable. Sea \\(u = \\frac{x}{h}\\), entonces \\(\\frac{1}{h} = \\frac{u}{x}\\). Cuando \\(h \\to 0\\), \\(u \\to \\infty\\): \\[g'(x) = \\lim_{u\\to\\infty} \\ln\\left(1 + \\frac{1}{u}\\right)^{\\frac{u}{x}} = \\lim_{u\\to\\infty} \\ln\\left[\\left(1 + \\frac{1}{u}\\right)^u\\right]^{\\frac{1}{x}}\\]\nRecordando el límite especial del número \\(e\\) (\\(\\lim_{u\\to\\infty}(1 + \\frac{1}{u})^u = e\\)): \\[g'(x) = \\ln\\left(e^{\\frac{1}{x}}\\right) = \\frac{1}{x} \\ln(e)\\] Resultado: \\[g'(x) = \\frac{1}{x}\\]\n\n\n\n3. \\(h(x) = \\sqrt{x}\\)\nSustituimos en la definición: \\[h'(x) = \\lim_{h\\to0} \\frac{\\sqrt{x + h} - \\sqrt{x}}{h}\\]\nPara resolver la indeterminación (\\(\\frac{0}{0}\\)), racionalizamos multiplicando por \\(1=\\frac{\\sqrt{x + h} + \\sqrt{x}}{\\sqrt{x + h} + \\sqrt{x}}\\): \\[\n\\begin{aligned}\nh'(x) &= \\lim_{h\\to0} \\left[ \\frac{\\sqrt{x + h} - \\sqrt{x}}{h} \\cdot \\frac{\\sqrt{x + h} + \\sqrt{x}}{\\sqrt{x + h} + \\sqrt{x}} \\right] \\\\\n&= \\lim_{h\\to0} \\left[ \\frac{(\\sqrt{x + h})^2+ \\sqrt{x}(\\sqrt{x + h})- \\sqrt{x}(\\sqrt{x + h})-(\\sqrt{x})^2}{h(\\sqrt{x + h} + \\sqrt{x})} \\right] \\\\\n&= \\lim_{h\\to0} \\frac{(\\sqrt{x + h})^2 - (\\sqrt{x})^2}{h(\\sqrt{x + h} + \\sqrt{x})} \\\\\n&= \\lim_{h\\to0} \\frac{x + h - x}{h(\\sqrt{x + h} + \\sqrt{x})} \\\\\n&= \\lim_{h\\to0} \\frac{h}{h(\\sqrt{x + h} + \\sqrt{x})}\n\\end{aligned}\n\\]\nSimplificamos \\(h\\) y evaluamos el límite: \\[h'(x) = \\lim_{h\\to0} \\frac{1}{\\sqrt{x + h} + \\sqrt{x}} = \\frac{1}{\\sqrt{x + 0} + \\sqrt{x}}\\] Resultado: \\[h'(x) = \\frac{1}{2\\sqrt{x}}\\]\n\n\n\n4. \\(i(x) = e^x\\)\nSustituimos en la definición: \\[i'(x) = \\lim_{h\\to0} \\frac{e^{x+h} - e^x}{h}\\]\nPor las leyes de los exponentes (\\(e^{x+h} = e^x \\cdot e^h\\)), podemos factorizar \\(e^x\\): \\[\n\\begin{aligned}\ni'(x) &= \\lim_{h\\to0} \\frac{e^x \\cdot e^h - e^x}{h} \\\\\n&= \\lim_{h\\to0} \\frac{e^x(e^h - 1)}{h}\n\\end{aligned}\n\\]\nComo \\(e^x\\) no depende de \\(h\\), podemos tratarlo como una constante y aplicar propiedades de los límites: \\[i'(x) = e^x \\cdot \\lim_{h\\to0} \\frac{e^h - 1}{h}\\]\nPor definición, \\(e^h\\) se puede expresar como una serie de Taylor de la siguiente manera:\n\\[e^h= 1+h+\\frac{h^2}{2!}+\\frac{h^3}{3!}+\\frac{h^4}{4!}+...++\\frac{h^n}{n!}\\]\nA partir de la expresión anterior podemos llegar a la misma expresión que en nuestro límite usando solamente álgebra:\n\\[e^h-1= h \\left[ 1+\\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right] \\]\n\\[\\frac{e^h-1}{h}= \\left[ \\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right] \\]\nPor lo anterior: \\[i'(x) = e^x \\cdot \\lim_{h\\to0} \\frac{e^h - 1}{h}= e^x \\cdot\\lim_{h\\to0}\\left[1+ \\frac{h}{2!}+\\frac{h^2}{3!}+\\frac{h^3}{4!}+...++\\frac{h^{n-1}}{n!} \\right]\\]\nAl evaluar el límite, tenemos que:\n\\[\ni'(x) = e^x \\cdot\\lim_{h\\to0}\\left[1+ \\frac{0}{2!}+\\frac{0^2}{3!}+\\frac{0^3}{4!}+...++\\frac{0^{n-1}}{n!} \\right] \\\\\ni'(x) = e^x \\cdot 1=e^x\n\\]\nResultado: \\[i'(x) = e^x\\]\n\n\n\n5. \\(j(x) = |x|\\)\nSustituimos en la definición: \\[j'(x) = \\lim_{h\\to0} \\frac{|x + h| - |x|}{h}\\]\nDebemos analizar la derivada por casos, ya que el valor absoluto cambia su comportamiento dependiendo del signo de \\(x\\):\n\nCaso 1: \\(x &gt; 0\\) Para valores de \\(h\\) suficientemente pequeños, \\(x + h &gt; 0\\). Entonces \\(|x+h| = x+h\\) y \\(|x| = x\\).\n\\[j'(x) = \\lim_{h\\to0} \\frac{(x + h) - x}{h} = \\lim_{h\\to0} \\frac{h}{h} = 1\\]\nCaso 2: \\(x &lt; 0\\) Para valores de \\(h\\) suficientemente pequeños, \\(x + h &lt; 0\\). Entonces \\(|x+h| = -(x+h)\\) y \\(|x| = -x\\).\n\\[j'(x) = \\lim_{h\\to0} \\frac{-(x + h) - (-x)}{h} = \\lim_{h\\to0} \\frac{-x - h + x}{h} = \\lim_{h\\to0} \\frac{-h}{h} = -1\\]\nCaso 3: \\(x = 0\\)\n\\[j'(0) = \\lim_{h\\to0} \\frac{|0 + h| - |0|}{h} = \\lim_{h\\to0} \\frac{|h|}{h}\\]\nEste límite no existe porque los límites laterales son diferentes (+1 por la derecha, -1 por la izquierda).\n\nResultado: \\[j'(x) = \\begin{cases} 1 & \\text{si } x &gt; 0 \\\\ -1 & \\text{si } x &lt; 0 \\\\ \\text{No existe} & \\text{si } x = 0 \\end{cases}\\]\n\n\n\n6. \\(k(x) = \\sin(x)\\)\nSustituimos en la definición: \\[k'(x) = \\lim_{h\\to0} \\frac{\\sin(x + h) - \\sin(x)}{h}\\]\nUtilizamos la identidad trigonométrica para la suma de ángulos: \\(\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B\\). \\[\n\\begin{aligned}\nk'(x) &= \\lim_{h\\to0} \\frac{\\sin(x)\\cos(h) + \\cos(x)\\sin(h) - \\sin(x)}{h}\n\\end{aligned}\n\\]\nAgrupamos los términos que contienen \\(\\sin(x)\\) y factorizamos: \\[\n\\begin{aligned}\nk'(x) &= \\lim_{h\\to0} \\frac{\\sin(x)[\\cos(h) - 1] + \\cos(x)\\sin(h)}{h} \\\\\n&= \\lim_{h\\to0} \\left[ \\sin(x)\\left(\\frac{\\cos(h) - 1}{h}\\right) + \\cos(x)\\left(\\frac{\\sin(h)}{h}\\right) \\right]\n\\end{aligned}\n\\]\nAplicamos las propiedades del límite de una suma y evaluamos usando los límites trigonométricos especiales \\(\\lim_{h\\to0} \\frac{\\cos(h) - 1}{h} = 0\\) y \\(\\lim_{h\\to0} \\frac{\\sin(h)}{h} = 1\\): \\[\n\\begin{aligned}\nk'(x) &= \\sin(x) \\cdot (0) + \\cos(x) \\cdot (1)\n\\end{aligned}\n\\] Resultado: \\[k'(x) = \\cos(x)\\]",
     "crumbs": [
       "Tareas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Tarea 04</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Tarea 04</span>"
     ]
   }
 ]
