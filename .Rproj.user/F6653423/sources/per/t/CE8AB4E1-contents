@@ -1,0 +1,289 @@
+---
+title: "Tarea 05"
+subtitle: "Fecha de entrega: 20 de marzo de 2026"
+---
+
+```{r}
+#| label: setup
+#| echo: false
+#| message: false
+#| warning: false
+
+library(highcharter)
+library(dplyr)
+```
+
+
+::: {.callout-note icon=false}
+## Criterio de la segunda derivada
+Para encontrar los puntos máximos y mínimos relativos de una función, utilizamos el siguiente procedimiento:
+
+1. **Obtener la primera derivada** $f'(x)$.
+2. **Encontrar los puntos críticos** igualando la primera derivada a cero ($f'(x) = 0$) y resolviendo para $x$.
+3. **Obtener la segunda derivada** $f''(x)$.
+4. **Evaluar los puntos críticos en la segunda derivada** para determinar su naturaleza:
+   * Si $f''(x) > 0$, la función es cóncava hacia arriba y tenemos un **mínimo**.
+   * Si $f''(x) < 0$, la función es cóncava hacia abajo y tenemos un **máximo**.
+5. **Calcular la coordenada $y$** evaluando el punto crítico en la función original.
+
+:::
+---
+
+::: panel-tabset
+
+### $f(x) = x^3 - 3x^2 + 2x - 3$
+
+**1. Primera derivada**
+
+$$f'(x) = 3x^2 - 6x+2$$
+
+**2. Puntos críticos ($f'(x) = 0$)**
+
+Factorizamos $f'(x)$, como no es fácilmente factorizable, utilizamos la fórmula general ($x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$):
+
+$$
+\begin{aligned}
+x &= \frac{-(-6) \pm \sqrt{(-6)^2 - 4(3)(2)}}{2(3)} \\
+x &= \frac{6 \pm \sqrt{36 - 24}}{6} \\
+x &= \frac{6 \pm \sqrt{12}}{6}
+\end{aligned}
+$$
+Simplificando el radical ($\sqrt{12} = \sqrt{4 \cdot 3} = 2\sqrt{3}$) tenemos que:
+
+$$
+x = \frac{6 \pm 2\sqrt{3}}{6} = 1 \pm \frac{\sqrt{3}}{3}
+$$
+Nuestros puntos críticos son:
+
+* $x_1 = 1 - \frac{\sqrt{3}}{3}$
+* $x_2 = 1 + \frac{\sqrt{3}}{3}$
+
+**3. Segunda derivada**
+$$f''(x) = 6x - 6$$
+
+**4. Evaluamos puntos críticos**
+
+* Para $x_1= 1 - \frac{\sqrt{3}}{3}$: 
+
+$$
+f''(1 - \frac{\sqrt{3}}{3}) = 6(1 - \frac{\sqrt{3}}{3}) - 6\\
+f''(1 - \frac{\sqrt{3}}{3}) = 6- \frac{6\sqrt{3}}{3} - 6\\
+f''(1 - \frac{\sqrt{3}}{3}) = - 2\sqrt{3}
+$$ 
+
+Por el signo negativo podemos inferor que es un valor menor a cero, por lo tanto hay un **máximo**.
+
+* Para $x_2= 1 + \frac{\sqrt{3}}{3}$: 
+
+$$
+f''(1 + \frac{\sqrt{3}}{3}) = 6(1 + \frac{\sqrt{3}}{3}) - 6 \\
+f''(1 + \frac{\sqrt{3}}{3}) = 6 + \frac{6\sqrt{3}}{3} - 6 \\
+f''(1 + \frac{\sqrt{3}}{3}) = 2\sqrt{3}
+$$
+
+Este valor es mayor a cero, por lo tanto tenemos un **mínimo**.
+
+
+**5. Coordenadas finales**
+
+Evaluamos los puntos críticos en la función original $f(x)$:
+* $x_1 = 1 - \frac{\sqrt{3}}{3}$
+* $x_2 = 1 + \frac{\sqrt{3}}{3}$
+
+* $f(1 - \frac{\sqrt{3}}{3}) = (0.42)^3 - 3(0.42)^2 + 2(0.42) - 3 \approx -2.62 \implies \text{Punto Máximo: } \mathbf{(0.42, -2.62)}$
+* $f(1.58) = (1.58)^3 - 3(1.58)^2 + 2(1.58) - 3 \approx -3.38 \implies \text{Punto Mínimo: } \mathbf{(1.58, -3.38)}$
+
+Evaluamos los puntos críticos exactos en la función original $f(x) = x^3 - 3x^2 + 2x - 3$. 
+*(Nota algebraica: Al desarrollar los binomios al cubo y al cuadrado, muchos términos con raíces se cancelan o simplifican)*.
+
+* Evaluando el máximo ($x = 1 - \frac{\sqrt{3}}{3}$):
+
+$$
+\begin{aligned}
+f\left(1 - \frac{\sqrt{3}}{3}\right) &= \left(1 - \frac{\sqrt{3}}{3}\right)^3 - 3\left(1 - \frac{\sqrt{3}}{3}\right)^2 + 2\left(1 - \frac{\sqrt{3}}{3}\right) - 3 \\
+&= -3 + \frac{2\sqrt{3}}{9}
+\end{aligned}
+$$
+Por lo tanto, el **punto máximo**:  $\mathbf{\left(1 - \frac{\sqrt{3}}{3}, -3 + \frac{2\sqrt{3}}{9}\right)}$
+
+* Evaluando el mínimo ($x = 1 + \frac{\sqrt{3}}{3}$):
+
+$$
+\begin{aligned}
+f\left(1 + \frac{\sqrt{3}}{3}\right) &= \left(1 + \frac{\sqrt{3}}{3}\right)^3 - 3\left(1 + \frac{\sqrt{3}}{3}\right)^2 + 2\left(1 + \frac{\sqrt{3}}{3}\right) - 3 \\
+&= -3 - \frac{2\sqrt{3}}{9}
+\end{aligned}
+$$
+Por lo tanto, el **punto mínimo**: $\mathbf{\left(1 + \frac{\sqrt{3}}{3}, -3 - \frac{2\sqrt{3}}{9}\right)}$
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+
+x_1 <- seq(-0.5, 2.5, by = 0.05)
+y_1 <- x_1^3 - 3*x_1^2 + 2*x_1 - 3
+df_1 <- data.frame(x = round(x_1, 3), y = round(y_1, 3))
+
+x_max <- 1 - sqrt(3)/3
+y_max <- -3 + (2*sqrt(3))/9
+
+x_min <- 1 + sqrt(3)/3
+y_min <- -3 - (2*sqrt(3))/9
+
+
+pts_1 <- data.frame(
+  x = c(round(x_max, 4), round(x_min, 4)), 
+  y = c(round(y_max, 4), round(y_min, 4)),
+  label = c("Máximo (1 - √3/3, -3 + 2√3/9)", "Mínimo (1 + √3/3, -3 - 2√3/9)"),
+  color = c("#E74C3C", "#27AE60") # Rojo para max, verde para min
+)
+
+hchart(df_1, "line", hcaes(x = x, y = y), color = "#2980B9", name = "f(x) = x³ - 3x² + 2x - 3") %>%
+  hc_add_series(data = pts_1, type = "scatter", hcaes(x = x, y = y, color = color), 
+                name = "Puntos Críticos", 
+                marker = list(radius = 6),
+                tooltip = list(pointFormat = "<b>{point.label}</b>")) %>%
+  hc_plotOptions(scatter = list(dataLabels = list(enabled = TRUE, format = "{point.label}", y = -15, style = list(fontSize = "11px")))) %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "f(x)"))
+```
+
+### $g(x) = x^4 - 4x^2$
+
+**$g(x) = x^4 - 4x^2$**
+
+**1. Primera derivada**
+$$g'(x) = 4x^3 - 8x$$
+
+**2. Puntos críticos ($g'(x) = 0$)**
+
+Primero factorizamos por factor común:
+$$
+\begin{aligned}
+4x(x^2 - 2) &= 0 
+\end{aligned}
+$$
+Esto nos da un punto crítico en $x = 0$. 
+
+Para el paréntesis, resolvemos: 
+$$
+\begin{aligned}
+x^2 - 2 &= 0 \\
+x^2 &= 2 \\
+x &= \pm\sqrt{2}
+\end{aligned}
+$$. 
+
+Nuestros puntos críticos son:
+
+* $x = 0$
+* $x =+\sqrt{2}$
+* $x=-\sqrt{2}$.
+
+**3. Segunda derivada**
+$$g''(x) = 12x^2 - 8$$
+
+**4. Evaluar puntos críticos**
+
+* Para $x = 0$: $g''(0) = -8$. Es menor a cero, por lo tanto hay un **máximo**.
+* Para $x = \sqrt{2}$: $g''(\sqrt{2}) = 12(2) - 8 = 16$. Es mayor a cero, por lo tanto hay un **mínimo**.
+* Para $x = -\sqrt{2}$: $g''(-\sqrt{2}) = 12(2) - 8 = 16$. Es mayor a cero, por lo tanto hay un **mínimo**.
+
+**5. Coordenadas finales**
+
+Evaluamos en la función original $g(x)$:
+
+* $g(0) = 0 \implies \text{Punto máximo: } \mathbf{(0, 0)}$
+* $g(\sqrt{2}) = (\sqrt{2})^4 - 4(\sqrt{2})^2 = 4 - 8 = -4 \implies \text{Punto mínimo: } \mathbf{(\sqrt{2}, -4)}$
+* $g(-\sqrt{2}) = (-\sqrt{2})^4 - 4(-\sqrt{2})^2 = 4 - 8 = -4 \implies \text{Punto mínimo: } \mathbf{(-\sqrt{2}, -4)}$
+
+```{r}
+#| echo: false
+#| label: fig-ejercicio2
+x_2 <- seq(-2.5, 2.5, by = 0.05)
+y_2 <- x_2^4 - 4*x_2^2
+df_2 <- data.frame(x = round(x_2, 2), y = round(y_2, 2))
+
+pts_2 <- data.frame(
+  x = c(-sqrt(2), 0, sqrt(2)), y = c(-4, 0, -4),
+  label = c("Mínimo (-√2, -4)", "Máximo (0, 0)", "Mínimo (√2, -4)"),
+  color = c("#27AE60", "#E74C3C", "#27AE60")
+)
+
+hchart(df_2, "line", hcaes(x = x, y = y), color = "#8E44AD", name = "g(x) = x⁴ - 4x²") %>%
+  hc_add_series(data = pts_2, type = "scatter", hcaes(x = x, y = y, color = color), 
+                name = "Puntos Críticos", 
+                marker = list(radius = 6),
+                tooltip = list(pointFormat = "<b>{point.label}</b>")) %>%
+  hc_plotOptions(scatter = list(dataLabels = list(enabled = TRUE, format = "{point.label}", y = -15))) %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "g(x)"))
+```
+
+### $h(x) = x^2 + 3x + 2$
+
+**$h(x) = x^2 + 3x + 2$**
+
+**1. Primera derivada**
+
+$$h'(x) = 2x + 3$$
+
+**2. Puntos críticos ($h'(x) = 0$)**
+
+Despejamos $x$:
+
+$$
+\begin{aligned}
+2x + 3 &= 0 \\
+2x &= -3 \\
+x &= \frac{-3}{2}
+\end{aligned}
+$$
+
+Nuestro único punto crítico está en $x = \frac{-3}{2}$.
+
+**3. Segunda derivada**
+
+$$h''(x) = 2$$
+
+**4. Evaluar puntos críticos**
+
+Dado que la segunda derivada es una constante positiva ($2 > 0$), cualquier punto que evaluemos será cóncavo hacia arriba. Por lo tanto, en $x = \frac{-3}{2}$ hay un **mínimo**.
+
+**5. Coordenadas finales**
+
+Evaluamos en la función original $h(x)$:
+
+$$
+h(\frac{-3}{2}) = (\frac{-3}{2})^2 + 3(\frac{-3}{2}) + 2 \\
+h(\frac{-3}{2}) = \frac{-9}{4}-\frac{9}{2}+\frac{8}{4} \\
+h(\frac{-3}{2}) = -\frac{1}{4}
+$$
+
+Por lo tanto, nuestra coordenada es $\mathbf{(\frac{-3}{2}, -\frac{1}{4})}$
+
+```{r}
+#| echo: false
+#| label: fig-ejercicio3
+x_3 <- seq(-4, 1, by = 0.1)
+y_3 <- x_3^2 + 3*x_3 + 2
+df_3 <- data.frame(x = round(x_3, 2), y = round(y_3, 2))
+
+pts_3 <- data.frame(
+  x = c(-1.5), y = c(-0.25),
+  label = c("Mínimo (-3/2, -1/4)"),
+  color = c("#27AE60")
+)
+
+hchart(df_3, "line", hcaes(x = x, y = y), color = "#E67E22", name = "h(x) = x² + 3x + 2") %>%
+  hc_add_series(data = pts_3, type = "scatter", hcaes(x = x, y = y, color = color), 
+                name = "Punto Crítico", 
+                marker = list(radius = 6),
+                tooltip = list(pointFormat = "<b>{point.label}</b>")) %>%
+  hc_plotOptions(scatter = list(dataLabels = list(enabled = TRUE, format = "{point.label}", y = -15))) %>%
+  hc_xAxis(title = list(text = "x"), crosshair = TRUE) %>%
+  hc_yAxis(title = list(text = "h(x)"))
+```
+:::

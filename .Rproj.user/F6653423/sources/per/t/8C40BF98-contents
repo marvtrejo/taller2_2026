@@ -34,6 +34,7 @@ book:
     - 02_tarea.qmd
     - 03_tarea.qmd
     - 04_tarea.qmd
+    - 05_tarea.qmd
 
     
 format:
