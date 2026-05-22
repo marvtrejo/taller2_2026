@@ -1,0 +1,7 @@
+[1,"==> quarto preview 07_clase.qmd --to html --no-watch-inputs --no-browse\n\n"]
+[1,"pandoc \n  to: html\n  output-file: 07_clase.html\n  standalone: true\n  toc: true\n  number-sections: false\n  title-prefix: Taller de Economía Cuantitativa II\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  css:\n    - styles.css\n  number-offset:\n    - 8\n  variables: {}\n  \nmetadata\n  crossref:\n    chapters: true\n  document-css: false\n  link-citations: true\n  date-format: long\n  lang: en\n  published-title: Última actualización\n  engines:\n    - path: F:\\RStudio\\RESOUR~1\\app\\bin\\quarto\\share\\extension-subtrees\\julia-engine\\_extensions\\julia-engine\\julia-engine.js\n  theme: flatly\n  toc-location: right\n  toc-title: Contenido\n  smooth-scroll: true\n  title: '[07 Derivada parcial]{.chapter-title}'\n  hide-description: true\n  \n"]
+[1,"Output created: docs\\07_clase.html\n\nTerminating existing preview server....DONE\n\n"]
+[1,"Preparing to preview\n"]
+[1,"\nWatching files for changes\nBrowse at http://localhost:5915/07_clase.html\nListening on http://127.0.0.1:5915/\n"]
+[1,"GET: /07_clase.html\n"]
+[1,"GET: /08_clase.html\n"]

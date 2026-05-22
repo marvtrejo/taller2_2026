@@ -1,0 +1,130 @@
+---
+title: "08 Integrales"
+---
+
+
+## ¿Por qué la derivada es el inverso de la integral?
+
+Sabemos que $f'(x) = \frac{\Delta y}{\Delta x}$. En este sentido, en una función $f(x)$ podemos ver la velocidad de la función y la derivamos podemos conocer la aceleración.
+
+Si $f(x)$ representa la velocidad y $x$ es el tiempo **¿cómo sabríamos qué distancia se recorre?**
+
+La aceleración, es decir, la derivada de $f(x)$ nos dice cómo cambia la velocidad en un punto en toda la función. Sabemos que:
+
+$$
+v = \frac{d}{t} \quad ; \quad f'(x) = \frac{\Delta y \text{ (distancia)}}{\Delta x \text{ (tiempo)}} \quad  \quad 
+$$
+
+Entonces, para conocer la distancia en toda la función podemos despejar $d$ como $d = v \cdot t$.
+
+Para conocer la distancia en todos los puntos formamos rectángulos con área igual a $f(x) \cdot \Delta x$. 
+La suma de los rectángulos puede dar un área aproximada:
+
+$$
+\sum_{i=1}^{n} f(x_i) \cdot \Delta x_i
+$$
+
+Sin embargo, aunque se hagan muchos rectángulos, siempre habrá remanentes, por lo tanto, se usa un límite:
+
+$$
+\lim_{x \to \infty} \sum f(x) \Delta x = \int f(x) dx
+$$
+
+## La integral como función primitiva
+
+La integral siempre regresa a la función primitiva. 
+
+Por ejemplo, si contamos con una función del costo marginal, la integral te regresará a la función del Costo Total.
+
+$$
+CMg = 3q^2 + 4q - 3
+$$
+
+Integramos el Costo Marginal con respecto a $q$:
+
+$$
+\int CMg \, dq \Rightarrow \frac{3q^3}{3} + \frac{4q^2}{2} - 3q + C = q^3 + 2q^2 - 3q + C
+$$
+
+Obteniendo la función original:
+$$
+C_{TOTAL} = q^3 + 2q^2 - 3q + C
+$$
+
+::: {.callout-note icon=false}
+## Integrales inmediatas
+
+A continuación se presentan algunas funciones básicas de integración
+
+* $\int k \, dx = kx + C$
+* $\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)$
+* $\int \frac{1}{x} \, dx = \ln|x| + C$
+* $\int e^x \, dx = e^x + C$
+* $\int a^x \, dx = \frac{a^x}{\ln a} + C$
+
+:::
+
+
+## Ejercicios
+
+### 1. $\int (\sin^2\theta + \cos^2\theta) \, d\theta$
+
+Antes de intentar integrar, aplicamos la identidad trigonométrica fundamental ($\sin^2\theta + \cos^2\theta = 1$) para simplificar la expresión.
+
+$$
+\int 1 \, d\theta = \mathbf{\theta + C}
+$$
+
+### 2. $\int \frac{3}{t} \, dt$
+
+Por propiedades de las integrales, sacamos la constante ($3$) de la integral y aplicamos la regla del logaritmo natural.
+
+$$
+3 \int \frac{1}{t} \, dt = \mathbf{3\ln|t| + C}
+$$
+
+### 3. $\int \pi e^x \, dx$
+
+Dado que $\pi$ es un número constante, sale de la integral. La integral de la función exponencial $e^x$ es simplemente $e^x$.
+
+$$
+\pi \int e^x \, dx = \mathbf{\pi e^x + C}
+$$
+
+### 4. $\int \frac{x^2 + 1}{x^2} \, dx$
+
+Para evitar métodos complejos, separamos la fracción en dos términos distintos y simplificamos mediante álgebra básica antes de integrar.
+$$
+\int \left(\frac{x^2}{x^2} + \frac{1}{x^2}\right) \, dx = \int (1 + x^{-2}) \, dx
+$$
+
+Ahora integramos ambos términos de forma directa:
+
+$$
+x + \frac{x^{-1}}{-1} + C = \mathbf{x - \frac{1}{x} + C}
+$$
+
+### 5. $\int (3x^2 + 4x-7) \, dx$
+
+Integramos cada término por separado utilizando la regla de la potencia.
+
+$$
+\int 3x^2 \, dx + \int 4x \, dx-\int 7 \, dx = 3\left(\frac{x^3}{3}\right) + 4\left(\frac{x^2}{2}\right) -7x + C = \mathbf{x^3 + 2x^2-7x + C}
+$$
+
+
+### 6. $\int \sqrt{x} \, dx$
+
+Reescribimos la raíz cuadrada como un exponente ($x^{1/2}$) y aplicamos la regla de la potencia sumando $1$ al exponente.
+
+$$
+\int x^{1/2} \, dx = \frac{x^{1/2 + 1}}{1/2 + 1} + C = \frac{x^{3/2}}{3/2} + C = \mathbf{\frac{2}{3}x^{3/2} + C}
+$$
+
+### 7. $\int (7x^3 - 4x^2) \, dx$
+
+Integramos cada término por separado utilizando la regla de la potencia.
+
+$$
+\int 7x^3 \, dx - \int 4x^2 \, dx = 7\left(\frac{x^4}{4}\right) - 4\left(\frac{x^3}{3}\right) + C = \mathbf{\frac{7}{4}x^4 - \frac{4}{3}x^3 + C}
+$$

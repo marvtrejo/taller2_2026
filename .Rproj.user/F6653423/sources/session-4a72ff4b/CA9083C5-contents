@@ -1,0 +1,289 @@
+---
+title: "07 Derivada parcial"
+---
+
+Dada $f(x_{1},x_{2},..., x_{n})$, la derivada parcial respecto a $x_i$ mide la tasa de cambio de $f$ cuando solo varía $x_i$ y todas las demás se mantienen constantes. 
+
+$$
+\frac{\partial f}{\partial x}
+$$
+
+Las derivadas parciales corresponden a los cortes de la superficie paralela a cada eje.
+
+## Ejemplos
+
+**1. $f(x,y)=2x^{3}y^{\frac{1}{2}}$**
+
+* Derivando respecto a $x$ obtenemos:
+
+$$
+\begin{aligned}
+\frac{\partial f}{\partial x}&= 2(3)x^{3-1}y^{\frac{1}{2}}\\\\
+\frac{\partial f}{\partial x}&=6x^{2}y^{\frac{1}{2}}=6x^2 \sqrt y
+\end{aligned}
+$$
+
+* Derivando respecto a $y$ obtenemos:
+
+$$
+\begin{aligned}
+\frac{\partial f}{\partial y}&= 2(\frac{1}{2})x^{3}y^{\frac{1}{2}-1}\\\\
+\frac{\partial f}{\partial y}&=x^{3}y^{-\frac{1}{2}}=\frac{x^3}{\sqrt y}
+\end{aligned}
+$$
+
+
+**2. Función Cobb-Douglas: $f(k,L)=2k^{0.4}L^{0.6}$**
+
+Esta función nos permite conocer cuánto aumenta o disminuye la productividad por cada unidad adicional de capital ($k$) o trabajo ($L$), manteniendo fijo el otro factor de la producción.
+
+* Al derivar respecto a $k$ obtenemos la Productividad Marginal del Capital $PM_gK$
+
+$$
+\begin{aligned}
+\frac{\partial f}{\partial k}&=2(0.4)k^{0.4-1}L^{0.6} \\\\
+\frac{\partial f}{\partial k}&=0.8k^{-0.6}L^{0.6}
+\end{aligned}
+$$
+
+
+* Al derivar respecto a $L$ obtenemos la Productividad Marginal del Trabajo $PM_gL$
+
+$$
+\begin{aligned}
+\frac{\partial f}{\partial L}&=2(0.6)k^{0.4}L^{0.6-1} \\\\
+\frac{\partial f}{\partial L}&=1.2k^{0.4}L^{-0.4}
+\end{aligned}
+$$
+
+En este caso, ambas derivadas son positivas, lo que indica que una mayor productividad requiere mayores cantidades de capital y trabajo.
+
+**3. Función de utilidad: $U(x,y)=x^2y+3xy^2-5x+2y$**
+
+Esta función nos indica cuánto cambia la utilidad por cada unidad adicional del bien $x$ o $y$, manteniendo el otro constante.
+
+* Al derivar respecto a $x$ obtenemos la utilidad marginal de $x$ ($UM_gx$):
+
+$$
+\begin{aligned}
+\frac{\partial U}{\partial x}&=2x^{2-1}y+3(1)y^2-5 \\\\
+\frac{\partial U}{\partial x}&=2xy+3y^2-5
+\end{aligned}
+$$
+
+* Al derivar respecto a $y$ obtenemos la utilidad marginal de $y$ ($UM_gy$):
+
+$$
+\begin{aligned}
+\frac{\partial U}{\partial y}&=x^{2}(1)+3(2)xy^{2-1}+2 \\\\
+\frac{\partial U}{\partial y}&=x^{2}+6xy+2
+\end{aligned}
+$$
+
+Para encontrar los máximos y mínimos se debe resolver el sistema de ecuaciones no lineales, tal que:
+
+$$
+\frac{\partial U}{\partial x}=0;\frac{\partial U}{\partial y}=0
+$$
+
+**4. Función de costos: $C(k,L)=3k^2+2kL+L^2-4k-6L+10$**
+
+* Derivando respecto a $k$ obtenemos el Costo Marginal del Capital $CM_gk$:
+
+$$
+\begin{aligned}
+\frac{\partial C}{\partial k}&=3(2)k^{2-1}+2(1)L-4(1) \\\\
+\frac{\partial C}{\partial k}&=6k+2L-4
+\end{aligned}
+$$
+
+* Derivando respecto a $L$ obtenemos el Costo Marginal del Trabajo $CM_gL$:
+
+$$
+\begin{aligned}
+\frac{\partial C}{\partial L}&=2k(1)+2L^{2-1}-6(1) \\\\
+\frac{\partial C}{\partial L}&=2k+2L-6
+\end{aligned}
+$$
+
+Una forma de obtener los puntos críticos es mediante el Hessiano, definido como
+
+$$
+H=\frac{\partial^{''} C}{\partial k} \cdot\frac{\partial^{''} C}{\partial L}-\left(\frac{\partial^{''} C}{\partial k\partial L}\right)^2
+$$
+
+:::{.callout-note icon=true}
+### Nota
+La notación $\partial^{''}$ indica la segunda derivada de la función.
+:::
+
+En este ejercicio tenemos que:
+
+$$
+\begin{aligned}
+\frac{\partial C}{\partial k}&=6k+2L-4 \implies \frac{\partial^{''} C}{\partial k}=6 \\\\
+\frac{\partial C}{\partial L}&=2k+2L-6 \implies \frac{\partial^{''} C}{\partial k}=2 \\\\
+\end{aligned}
+$$
+
+En el caso del término $\frac{\partial^{''} C}{\partial k\partial L}$, lo que tenemos que hacer es derivar **primero** respecto a $k$ y **después** respecto a $L$
+
+$$
+\begin{aligned}
+\frac{\partial C}{\partial k}&=6k+2L-4 \implies \frac{\partial^{''} C}{\partial k\partial L}=2 
+\end{aligned}
+$$
+
+Por lo tanto:
+
+$$
+H=(6)(2)-(2)^{2}=8
+$$
+
+Dado que $H>0$ tenemos un mínimo relativo o local.
+
+## Ejercicios
+
+### 1. $f(x) = (2x^3 + 3)^5$
+
+Primero consideraremos $u= 2x^3 + 3$ y sustituimos para derivar.
+
+$$
+\begin{aligned}
+f(x)&=(2x^3 + 3)^5=u^5 \\
+f'(x)&= 5u^4 \cdot \frac{du}{dx}
+\end{aligned}
+$$
+
+Derivamos la función $u$ respecto a $x$ y multiplicamos.
+
+$$
+\begin{aligned}
+f'(x)&= 5(2x^3 + 3)^4 \cdot \frac{d}{dx}(2x^3 + 3)\\
+f'(x)&= 5(2x^3 + 3)^4 \cdot (6x^2)
+\end{aligned}
+$$
+
+Simplificamos multiplicando términos.
+$$f'(x) = \mathbf{30x^2(2x^3 + 3)^4}$$
+
+### 2. $f(x) = \sqrt{x^2 + 1}$
+
+Reescribimos la raíz como un exponente.
+$$f(x) = \sqrt{x^2 + 1}=(x^2 + 1)^{1/2}$$
+
+Consideramos $u=x^2 + 1$ y derivamos.
+
+$$f'(x) = \frac{1}{2}u^{-1/2} \cdot \frac{du}{dx}$$
+$$f'(x) = \frac{1}{2}(x^2 + 1)^{-1/2} \cdot \frac{d}{dx}(x^2 + 1)$$
+$$f'(x) = \frac{1}{2\sqrt{x^2 + 1}} \cdot (2x)$$
+
+$$f'(x) = \mathbf{\frac{x}{\sqrt{x^2 + 1}}}$$
+
+---
+
+### 3. $f(x) = e^{(x^2 + 2x)(3x + 4)}$
+
+La derivada de $e^u$ es $e^u \cdot u'$, por lo que consideraremos el exponente como $u=(x^2 + 2x)(3x + 4)$.
+
+$$f'(x)=e^u \cdot \frac{du}{dx}$$
+
+
+$$f'(x) = e^{(x^2 + 2x)(3x + 4)} \cdot \frac{d}{dx}[(x^2 + 2x)(3x + 4)]$$
+
+Para derivar el exponente, utilizamos la regla del producto $(uv)' = u'v + uv'$.
+
+$$u = x^2 + 2x \implies u' = 2x + 2$$
+$$v = 3x + 4 \implies v' = 3$$
+Por lo tanto, la derivada del exponente es: 
+$$(uv)'=(2x + 2)(3x + 4) + (x^2 + 2x)(3)$$
+
+$$(uv)'= (6x^2 + 8x + 6x + 8) + (3x^2 + 6x)$$
+$$(uv)'= 9x^2 + 20x + 8$$
+
+Multiplicamos el resultado por la función original.
+
+$$f'(x) = \mathbf{(9x^2 + 20x + 8) e^{(x^2 + 2x)(3x + 4)}}$$
+
+---
+
+### 4. $f(x) = \ln(x^3 + 2x)$
+
+La derivada de $\ln(u)$ es $\frac{1}{u} \cdot u'$. Consideramos $u=x^3 + 2x$ 
+
+$$f(x)=\ln(u)$$
+$$f'(x) = \frac{1}{x^3 + 2x} \cdot \frac{d}{dx}(x^3 + 2x)$$
+
+Derivando $u$, tenemos que
+
+$$f'(x) = \frac{1}{x^3 + 2x} \cdot (3x^2 + 2) = \mathbf{\frac{3x^2 + 2}{x^3 + 2x}}$$
+
+---
+
+### 5. $f(x) = \ln(x^4)$
+
+Antes de derivar, aplicamos la propiedad de los logaritmos $\ln(a^b) = b\ln(a)$ para simplificar.
+
+$$f(x) = 4\ln(x)$$
+
+Derivamos de forma directa ya que las constantes se mantienen.
+
+$$f'(x) = 4 \left(\frac{1}{x}\right) = \mathbf{\frac{4}{x}}$$
+
+---
+
+### 6. $f(x) = e^{\sqrt{x}}$
+
+Consideramos $u=\sqrt x$, por lo que:
+
+$$f'(x) = e^{\sqrt{x}} \cdot \frac{d}{dx}(\sqrt{x})$$
+
+La derivada de $\sqrt{x}$ (o $x^{1/2}$) es $\frac{1}{2\sqrt{x}}$
+
+$$f'(x) = e^{\sqrt{x}} \cdot \left(\frac{1}{2\sqrt{x}}\right) = \mathbf{\frac{e^{\sqrt{x}}}{2\sqrt{x}}}$$
+
+---
+
+### 7. $f(x) = \ln\left( \frac{\text{sen}(x^2+1)}{\cos(x^3)} \right)$
+
+Primero aplicamos la propiedad de división de los logaritmos $\ln(\frac{a}{b}) = \ln(a) - \ln(b)$.
+
+$$f(x) = \ln(\text{sen}(x^2+1)) - \ln(\cos(x^3))$$
+
+Derivamos cada término por separado usando la regla de la cadena:
+
+* **$\ln(\text{sen}(x^2+1))$:** 
+
+$$\frac{1}{\text{sen}(x^2+1)} \cdot \cos(x^2+1) \cdot (2x) = 2x \frac{\cos(x^2+1)}{\text{sen}(x^2+1)} = 2x\cot(x^2+1)$$
+
+* **$\ln(\cos(x^3))$:** 
+
+$$\frac{1}{\cos(x^3)} \cdot (-\text{sen}(x^3)) \cdot (3x^2) = -3x^2 \frac{\text{sen}(x^3)}{\cos(x^3)} = -3x^2\tan(x^3)$$
+
+Unimos los resultados en la función original, observen que los signos se invierten en el segundo término
+
+$$f'(x) = \mathbf{2x\cot(x^2+1) + 3x^2\tan(x^3)}$$
+
+---
+
+### 8. $f(x) = \frac{x^2 + 2x - 3}{x^5 + 6}$
+
+Primero aplicamos la regla del cociente $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$.
+
+* $u = x^2 + 2x - 3 \implies u' = 2x + 2$
+* $v = x^5 + 6 \implies v' = 5x^4$
+
+Sustituimos en la fórmula.
+
+$$f'(x) = \frac{(2x + 2)(x^5 + 6) - (x^2 + 2x - 3)(5x^4)}{(x^5 + 6)^2}$$
+
+Desarrollamos los productos del numerador.
+
+* Primera parte: $2x^6 + 12x + 2x^5 + 12$
+* Segunda parte: $-(5x^6 + 10x^5 - 15x^4)$
+
+Sumamos términos semejantes.
+
+$$f'(x) = \frac{2x^6 + 2x^5 + 12x + 12 - 5x^6 - 10x^5 + 15x^4}{(x^5 + 6)^2}$$
+
+$$f'(x) = \mathbf{\frac{-3x^6 - 8x^5 + 15x^4 + 12x + 12}{(x^5 + 6)^2}}$$
