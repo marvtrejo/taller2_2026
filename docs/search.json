@@ -471,5 +471,38 @@
       "Tareas",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Tarea 05</span>"
     ]
+  },
+  {
+    "objectID": "06_tarea.html",
+    "href": "06_tarea.html",
+    "title": "Tarea 06",
+    "section": "",
+    "text": "Integrales indefinidas",
+    "crumbs": [
+      "Tareas",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tarea 06</span>"
+    ]
+  },
+  {
+    "objectID": "06_tarea.html#integrales-indefinidas",
+    "href": "06_tarea.html#integrales-indefinidas",
+    "title": "Tarea 06",
+    "section": "",
+    "text": "Note\n\n\n\nRecuerda que al resolver una integral indefinida, siempre debemos agregar la constante de integración \\(C\\).\n\n\n\n1. \\(\\int x^4 \\, dx\\)\n\\[\n\\begin{aligned}\n\\int x^4 \\, dx &= \\frac{x^{4+1}}{4+1} + C\n\\\\\\\\\n&= \\mathbf{\\frac{x^5}{5} + C}\n\\end{aligned}\n\\]\n\n\n2. \\(\\int 7x^3 \\, dx\\)\n\\[\n\\begin{aligned}\n7 \\int x^3 \\, dx &= 7 \\left( \\frac{x^{3+1}}{3+1} \\right) + C\n\\\\\\\\\n&= \\mathbf{\\frac{7}{4}x^4 + C}\n\\end{aligned}\n\\]\n\n\n3. \\(\\int (5x^2 - 3x + 1) \\, dx\\)\n\\[\n\\begin{aligned}\n\\int (5x^2 - 3x + 1) \\, dx&= \\int 5x^2 \\, dx - \\int 3x \\, dx + \\int 1 \\, dx\n\\\\\\\\\n&=5\\left(\\frac{x^{2+1}}{2+1}\\right) - 3\\left(\\frac{x^{1+1}}{1+1}\\right) + x + C\n\\\\\\\\\n&= \\mathbf{\\frac{5}{3}x^3 - \\frac{3}{2}x^2 + x + C}\n\\end{aligned}\n\\]\n\n\n4. \\(\\int \\sqrt{x} \\, dx\\)\n\\[\n\\begin{aligned}\n\\int x^{1/2} \\, dx &= \\frac{x^{\\frac{1}{2}+\\frac{2}{2}}}{\\frac{1}{2}+\\frac{2}{2}} + C\n\\\\\\\\\n&=\\frac{x^{\\frac{3}{2}}}{\\frac{3}{2}} + C\n\\\\\\\\\n&= \\mathbf{\\frac{2}{3}x^{\\frac{3}{2}} + C}\n\\end{aligned}\n\\]\n\n\n5. \\(\\int \\frac{1}{x^2} \\, dx\\)\n\\[\n\\begin{aligned}\n\\int x^{-2} \\, dx &= \\frac{x^{-2+1}}{-2+1} + C\n\\\\\\\\\n&= \\frac{x^{-1}}{-1} + C\n\\\\\\\\\n&= \\mathbf{-\\frac{1}{x} + C}\n\\end{aligned}\n\\]\n\n\n6. \\(\\int (2x^{5/2} - 4x^{-1/2}) \\, dx\\)\n\\[\n\\begin{aligned}\n\\int (2x^{\\frac{5}{2}} - 4x^{-\\frac{1}{2}}) \\, dx&=2\\int x^{\\frac{5}{2}} dx\\, - 4\\int x^{-\\frac{1}{2}}dx \\,\n\\\\\\\\\n&=2\\left( \\frac{x^{\\frac{5}{2}+\\frac{2}{2}}}{\\frac{5}{2}+\\frac{2}{2}} \\right) - 4\\left( \\frac{x^{-\\frac{1}{2}+\\frac{2}{2}}}{-\\frac{1}{2}+\\frac{2}{2}} \\right) + C\n\\\\\\\\\n&= 2\\left( \\frac{x^{\\frac{7}{2}}}{\\frac{7}{2}} \\right) - 4\\left( \\frac{x^{\\frac{1}{2}}}{\\frac{1}{2}} \\right) + C\n\\\\\\\\\n&= 2\\left( \\frac{2}{7}x^{\\frac{7}{2}} \\right) - 4\\left( 2x^{\\frac{1}{2}} \\right) + C\n\\\\\\\\\n&= \\mathbf{\\frac{4}{7}x^{\\frac{7}{2}} - 8x^{\\frac{1}{2}} + C}\n\\end{aligned}\n\\]\n\n\n7. \\(\\int \\frac{4}{t} \\, dt\\)\n\\[ 4 \\int \\frac{1}{t} \\, dt = \\mathbf{4\\ln|t| + C} \\]\n\n\n8. \\(\\int \\left(\\frac{3}{t} + \\frac{2}{t^3}\\right) \\, dt\\)\n\\[\n\\begin{aligned}\n\\int \\left(\\frac{3}{t} + \\frac{2}{t^3}\\right) \\, dt &= 3\\int \\frac{1}{t} \\, dt + 2\\int t^{-3} \\, dt\n\\\\\\\\\n&= 3\\ln|t| + 2\\left( \\frac{t^{-3+1}}{-3+1} \\right) + C\n\\\\\\\\\n&= 3\\ln|t| + 2\\left( \\frac{t^{-2}}{-2} \\right) + C\n\\\\\\\\\n&= \\mathbf{3\\ln|t| - \\frac{1}{t^2} + C}\n\\end{aligned}\n\\]\n\n\n9. \\(\\int 5e^x \\, dx\\)\n\\[ \\int 5e^x \\, dx=5 \\int e^x \\, dx = \\mathbf{5e^x + C} \\]\n\n\n10. \\(\\int 2^x \\, dx\\)\n\\[ \\int 2^x \\, dx = \\mathbf{\\frac{2^x}{\\ln(2)} + C} \\]\n\n\n11. \\(\\int 3 \\cdot 2^x \\, dx\\)\n\\[ \\int 3 \\cdot 2^x \\, dx=3 \\int 2^x \\, dx = \\mathbf{\\frac{3 \\cdot 2^x}{\\ln(2)} + C} \\]\n\n\n12. \\(\\int \\cos x \\, dx\\)\n\\[ \\int \\cos x \\, dx = \\mathbf{\\sin x + C} \\]",
+    "crumbs": [
+      "Tareas",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tarea 06</span>"
+    ]
+  },
+  {
+    "objectID": "06_tarea.html#integrales-definidas",
+    "href": "06_tarea.html#integrales-definidas",
+    "title": "Tarea 06",
+    "section": "Integrales definidas",
+    "text": "Integrales definidas\n\n\n\n\n\n\nNote\n\n\n\nEvaluamos utilizando el teorema fundamental del cálculo: \\(\\int_{a}^{b} f(x)dx = F(b) - F(a)\\).\n\n\n\n1. \\(\\int_{2}^{5} x^6 \\, dx\\)\n\\[\n\\begin{aligned}\n\\int_{2}^{5} x^6 \\, dx &= \\left[ \\frac{x^6+1}{6+1} \\right]_{2}^{5}=\\left[ \\frac{x^7}{7} \\right]_{2}^{5}\n\\\\\\\\\n\\left[ \\frac{x^7}{7} \\right]_{2}^{5}&= \\frac{5^7}{7} - \\frac{2^7}{7} = \\frac{78125}{7} - \\frac{128}{7} = \\mathbf{\\frac{77997}{7}}\n\\end{aligned}\n\\]\n\n\n2. \\(\\int_{0}^{3} 6x^2 \\, dx\\)\n\\[\n\\begin{aligned}\n\\int_{0}^{3} 6x^2 \\, dx&=6\\left[ \\frac{x^{2+1}}{2+1} \\right]_{0}^{3} =\n\\left[ \\frac{6x^3}{3} \\right]_{0}^{3} =\\left[ 2x^3 \\right]_{0}^{3}\n\\\\\\\\\n\\left[ 2x^3 \\right]_{0}^{3} &= 2(3^3) - 2(0^3) = 2(27) - 0 = \\mathbf{54}\n\\end{aligned}\n\\]\n\n\n3. \\(\\int_{1}^{4} (5x^2 - 3x + 1) \\, dx\\)\n\\[\n\\begin{aligned}\n\\int_{1}^{4} (5x^2 - 3x + 1) \\, dx&=5\\int_{1}^{4} x^2 \\, - 3\\int_{1}^{4}x + \\int_{1}^{4}dx\\,\n\\\\\\\\\n&=5\\left( \\frac{x^{2+1}}{2+1} \\right)-3\\left( \\frac{x^{1+1}}{1+1} \\right)+x\n\\\\\\\\\n&=\\left[ \\frac{5}{3}x^3 - \\frac{3}{2}x^2 + x \\right]_{1}^{4}\n\\end{aligned}\n\\]\nEvaluando en el límite superior (4):\n\\[\n\\begin{aligned}\n\\left[ \\frac{5}{3}x^3 - \\frac{3}{2}x^2 + x \\right]_{1}^{4}&=\n\\frac{5}{3}(4)^3 - \\frac{3}{2}(4)^2 + 4\n\\\\\\\\\n&=\n\\frac{5}{3}(64) - \\frac{3}{2}(16) + 4\n\\\\\\\\\n&= \\frac{320}{3} - 24 + 4 = \\frac{320}{3} - 20 = \\frac{320}{3}-\\frac{60}{3}\n\\\\\\\\\n&=\\frac{260}{3}\n\\end{aligned}\n\\]\nEvaluando en el límite inferior (1):\n\\[\n\\begin{aligned}\n\\left[ \\frac{5}{3}x^3 - \\frac{3}{2}x^2 + x \\right]_{1}^{4}&=\n\\frac{5}{3}(1)^3 - \\frac{3}{2}(1)^2 + 1\n\\\\\\\\\n&= \\frac{10}{6} - \\frac{9}{6} + \\frac{6}{6} = \\frac{7}{6}\n\\end{aligned}\n\\] Restando los resultados:\n\\[ \\frac{260}{3} - \\frac{7}{6} = \\frac{520}{6} - \\frac{7}{6} = \\frac{513}{6} = \\mathbf{\\frac{171}{2}} \\]\n\n\n4. \\(\\int_{0}^{10} \\sqrt{x} \\, dx\\)\n\\[\n\\begin{aligned}\n\\int_{0}^{10} \\sqrt{x} \\, dx &= \\int_{0}^{10} x^\\frac{1}{2} \\, dx\n\\\\\\\\\n&= \\frac{x^{\\frac{1}{2}+\\frac{2}{2}}}{\\frac{1}{2}+\\frac{2}{2}}\n=\\frac{x^{\\frac{3}{2}}}{\\frac{3}{2}}=\\left[ \\frac{2}{3}x^{\\frac{3}{2}} \\right]_{0}^{10}\n\\\\\\\\\n\\left[ \\frac{2}{3}x^{\\frac{3}{2}} \\right]_{0}^{10} &= \\frac{2}{3}(10)^{\\frac{3}{2}} - 0 = \\frac{2}{3}\\sqrt{1000}\n\\\\\\\\\n&= \\mathbf{\\frac{20\\sqrt{10}}{3}}\n\\end{aligned}\n\\]\n\n\n5. \\(\\int_{0}^{1} \\frac{1}{x} \\, dx\\)\n\\[\n\\int_{0}^{1} \\frac{1}{x} \\, dx=[\\ln|x|]_{0}^{1}\n\\]\nSi intentamos evaluar directamente, obtenemos \\([\\ln|x|]_{0}^{1} = \\ln(1) - \\ln(0)\\). Sin embargo, el logaritmo natural de cero no está definido.\nDado que la función tiene una asíntota vertical en \\(x=0\\), debemos evaluarla mediante un límite:\n\\[ \\lim_{a \\to 0^+} \\int_{a}^{1} \\frac{1}{x} \\, dx = \\lim_{a \\to 0^+} (\\ln(1) - \\ln(a)) = 0 - (-\\infty) = \\infty \\]\nPor lo anterior, se concluye que el área bajo la curva es infinita.\n\n\n6. \\(\\int_{0}^{1} \\cos x \\, dx\\)\n\\[\n\\begin{aligned}\n\\int_{0}^{1} \\cos x \\, dx&=\\left[ \\sin x \\right]_{0}^{1}\n\\\\\\\\\n\\left[ \\sin x \\right]_{0}^{1}&=\\sin(1) - \\sin(0) = \\mathbf{\\sin(1)} \\approx \\mathbf{0.8415}\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Tareas",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tarea 06</span>"
+    ]
   }
 ]

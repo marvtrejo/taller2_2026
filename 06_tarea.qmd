@@ -1,0 +1,225 @@
+---
+title: "Tarea 06"
+subtitle: "Fecha de entrega: 22 de mayo de 2026"
+---
+
+## Integrales indefinidas
+
+::: {.callout-note icon=false}
+Recuerda que al resolver una integral indefinida, siempre debemos agregar la constante de integración **$C$**.
+:::
+
+### 1. $\int x^4 \, dx$
+
+$$ 
+\begin{aligned}
+\int x^4 \, dx &= \frac{x^{4+1}}{4+1} + C 
+\\\\
+&= \mathbf{\frac{x^5}{5} + C} 
+\end{aligned}
+$$
+
+### 2. $\int 7x^3 \, dx$
+
+$$
+\begin{aligned}
+7 \int x^3 \, dx &= 7 \left( \frac{x^{3+1}}{3+1} \right) + C 
+\\\\
+&= \mathbf{\frac{7}{4}x^4 + C} 
+\end{aligned}
+$$
+
+### 3. $\int (5x^2 - 3x + 1) \, dx$
+
+$$ 
+\begin{aligned}
+\int (5x^2 - 3x + 1) \, dx&= \int 5x^2 \, dx - \int 3x \, dx + \int 1 \, dx 
+\\\\
+&=5\left(\frac{x^{2+1}}{2+1}\right) - 3\left(\frac{x^{1+1}}{1+1}\right) + x + C 
+\\\\
+&= \mathbf{\frac{5}{3}x^3 - \frac{3}{2}x^2 + x + C}
+\end{aligned}
+$$
+
+### 4. $\int \sqrt{x} \, dx$
+
+$$ 
+\begin{aligned}
+\int x^{1/2} \, dx &= \frac{x^{\frac{1}{2}+\frac{2}{2}}}{\frac{1}{2}+\frac{2}{2}} + C 
+\\\\ 
+&=\frac{x^{\frac{3}{2}}}{\frac{3}{2}} + C 
+\\\\
+&= \mathbf{\frac{2}{3}x^{\frac{3}{2}} + C} 
+\end{aligned}
+$$
+
+### 5. $\int \frac{1}{x^2} \, dx$
+
+$$ 
+\begin{aligned}
+\int x^{-2} \, dx &= \frac{x^{-2+1}}{-2+1} + C 
+\\\\
+&= \frac{x^{-1}}{-1} + C 
+\\\\
+&= \mathbf{-\frac{1}{x} + C} 
+\end{aligned}
+$$
+
+### 6. $\int (2x^{5/2} - 4x^{-1/2}) \, dx$
+
+$$
+\begin{aligned}
+\int (2x^{\frac{5}{2}} - 4x^{-\frac{1}{2}}) \, dx&=2\int x^{\frac{5}{2}} dx\, - 4\int x^{-\frac{1}{2}}dx \, 
+\\\\
+&=2\left( \frac{x^{\frac{5}{2}+\frac{2}{2}}}{\frac{5}{2}+\frac{2}{2}} \right) - 4\left( \frac{x^{-\frac{1}{2}+\frac{2}{2}}}{-\frac{1}{2}+\frac{2}{2}} \right) + C 
+\\\\
+&= 2\left( \frac{x^{\frac{7}{2}}}{\frac{7}{2}} \right) - 4\left( \frac{x^{\frac{1}{2}}}{\frac{1}{2}} \right) + C 
+\\\\
+&= 2\left( \frac{2}{7}x^{\frac{7}{2}} \right) - 4\left( 2x^{\frac{1}{2}} \right) + C 
+\\\\
+&= \mathbf{\frac{4}{7}x^{\frac{7}{2}} - 8x^{\frac{1}{2}} + C}
+\end{aligned}
+$$
+
+### 7. $\int \frac{4}{t} \, dt$
+
+$$ 4 \int \frac{1}{t} \, dt = \mathbf{4\ln|t| + C} $$
+
+### 8. $\int \left(\frac{3}{t} + \frac{2}{t^3}\right) \, dt$
+
+$$ 
+\begin{aligned}
+\int \left(\frac{3}{t} + \frac{2}{t^3}\right) \, dt &= 3\int \frac{1}{t} \, dt + 2\int t^{-3} \, dt 
+\\\\
+&= 3\ln|t| + 2\left( \frac{t^{-3+1}}{-3+1} \right) + C
+\\\\
+&= 3\ln|t| + 2\left( \frac{t^{-2}}{-2} \right) + C 
+\\\\
+&= \mathbf{3\ln|t| - \frac{1}{t^2} + C} 
+\end{aligned}
+$$
+
+### 9. $\int 5e^x \, dx$
+
+$$ \int 5e^x \, dx=5 \int e^x \, dx = \mathbf{5e^x + C} $$
+
+### 10. $\int 2^x \, dx$
+
+$$ \int 2^x \, dx = \mathbf{\frac{2^x}{\ln(2)} + C} $$
+
+### 11. $\int 3 \cdot 2^x \, dx$
+
+$$ \int 3 \cdot 2^x \, dx=3 \int 2^x \, dx = \mathbf{\frac{3 \cdot 2^x}{\ln(2)} + C} $$
+
+### 12. $\int \cos x \, dx$
+
+$$ \int \cos x \, dx = \mathbf{\sin x + C} $$
+
+## Integrales definidas
+
+::: {.callout-note icon=false}
+Evaluamos utilizando el **teorema fundamental del cálculo**: $\int_{a}^{b} f(x)dx = F(b) - F(a)$.
+:::
+
+### 1. $\int_{2}^{5} x^6 \, dx$
+
+$$ 
+\begin{aligned}
+\int_{2}^{5} x^6 \, dx &= \left[ \frac{x^6+1}{6+1} \right]_{2}^{5}=\left[ \frac{x^7}{7} \right]_{2}^{5}
+\\\\
+\left[ \frac{x^7}{7} \right]_{2}^{5}&= \frac{5^7}{7} - \frac{2^7}{7} = \frac{78125}{7} - \frac{128}{7} = \mathbf{\frac{77997}{7}}
+\end{aligned}
+$$
+
+### 2. $\int_{0}^{3} 6x^2 \, dx$
+
+$$ 
+\begin{aligned}
+\int_{0}^{3} 6x^2 \, dx&=6\left[ \frac{x^{2+1}}{2+1} \right]_{0}^{3} =
+\left[ \frac{6x^3}{3} \right]_{0}^{3} =\left[ 2x^3 \right]_{0}^{3} 
+\\\\
+\left[ 2x^3 \right]_{0}^{3} &= 2(3^3) - 2(0^3) = 2(27) - 0 = \mathbf{54} 
+\end{aligned}
+$$
+
+### 3. $\int_{1}^{4} (5x^2 - 3x + 1) \, dx$
+
+$$ 
+\begin{aligned}
+\int_{1}^{4} (5x^2 - 3x + 1) \, dx&=5\int_{1}^{4} x^2 \, - 3\int_{1}^{4}x + \int_{1}^{4}dx\,
+\\\\
+&=5\left( \frac{x^{2+1}}{2+1} \right)-3\left( \frac{x^{1+1}}{1+1} \right)+x
+\\\\
+&=\left[ \frac{5}{3}x^3 - \frac{3}{2}x^2 + x \right]_{1}^{4} 
+\end{aligned}
+$$
+
+Evaluando en el límite superior (4):
+
+$$ 
+\begin{aligned}
+\left[ \frac{5}{3}x^3 - \frac{3}{2}x^2 + x \right]_{1}^{4}&=
+\frac{5}{3}(4)^3 - \frac{3}{2}(4)^2 + 4
+\\\\
+&=
+\frac{5}{3}(64) - \frac{3}{2}(16) + 4
+\\\\
+&= \frac{320}{3} - 24 + 4 = \frac{320}{3} - 20 = \frac{320}{3}-\frac{60}{3}
+\\\\
+&=\frac{260}{3} 
+\end{aligned}
+$$
+
+Evaluando en el límite inferior (1):
+
+$$ 
+\begin{aligned}
+\left[ \frac{5}{3}x^3 - \frac{3}{2}x^2 + x \right]_{1}^{4}&=
+\frac{5}{3}(1)^3 - \frac{3}{2}(1)^2 + 1 
+\\\\
+&= \frac{10}{6} - \frac{9}{6} + \frac{6}{6} = \frac{7}{6} 
+\end{aligned}
+$$
+Restando los resultados:
+
+$$ \frac{260}{3} - \frac{7}{6} = \frac{520}{6} - \frac{7}{6} = \frac{513}{6} = \mathbf{\frac{171}{2}} $$
+
+### 4. $\int_{0}^{10} \sqrt{x} \, dx$
+
+$$ 
+\begin{aligned}
+\int_{0}^{10} \sqrt{x} \, dx &= \int_{0}^{10} x^\frac{1}{2} \, dx
+\\\\
+&= \frac{x^{\frac{1}{2}+\frac{2}{2}}}{\frac{1}{2}+\frac{2}{2}}
+=\frac{x^{\frac{3}{2}}}{\frac{3}{2}}=\left[ \frac{2}{3}x^{\frac{3}{2}} \right]_{0}^{10}
+\\\\
+\left[ \frac{2}{3}x^{\frac{3}{2}} \right]_{0}^{10} &= \frac{2}{3}(10)^{\frac{3}{2}} - 0 = \frac{2}{3}\sqrt{1000} 
+\\\\
+&= \mathbf{\frac{20\sqrt{10}}{3}}
+\end{aligned}
+$$
+
+### 5. $\int_{0}^{1} \frac{1}{x} \, dx$
+
+$$
+\int_{0}^{1} \frac{1}{x} \, dx=[\ln|x|]_{0}^{1}
+$$
+
+Si intentamos evaluar directamente, obtenemos $[\ln|x|]_{0}^{1} = \ln(1) - \ln(0)$. Sin embargo, el logaritmo natural de cero **no está definido**. 
+
+Dado que la función tiene una asíntota vertical en $x=0$, debemos evaluarla mediante un límite:
+
+$$ \lim_{a \to 0^+} \int_{a}^{1} \frac{1}{x} \, dx = \lim_{a \to 0^+} (\ln(1) - \ln(a)) = 0 - (-\infty) = \infty $$
+
+Por lo anterior, se concluye que el área bajo la curva es infinita. 
+
+
+### 6. $\int_{0}^{1} \cos x \, dx$
+
+$$ 
+\begin{aligned}
+\int_{0}^{1} \cos x \, dx&=\left[ \sin x \right]_{0}^{1} 
+\\\\
+\left[ \sin x \right]_{0}^{1}&=\sin(1) - \sin(0) = \mathbf{\sin(1)} \approx \mathbf{0.8415} 
+\end{aligned}
+$$
